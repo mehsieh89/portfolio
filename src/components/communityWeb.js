@@ -8,6 +8,7 @@ class CommunityWeb extends Component {
   }
 
   handleOnClick() {
+    //send the name, img src, github URL
     this.props.toggleProjectDialog();
   }
 

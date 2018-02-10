@@ -8,7 +8,8 @@ class FridgrMobile extends Component {
   }
 
   handleOnClick() {
-    // window.open('https://docs.google.com/document/d/1mgIRVlWnKR_TSXsI059vwkh-fhbnFT-tZhtA9-VeXAo/edit?usp=sharing');
+    //send the name, img src, github URL
+    this.props.toggleProjectDialog();
   }
 
   render() {
