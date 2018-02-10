@@ -21,3 +21,41 @@ ReactDOM.render(
 );
 
 registerServiceWorker();
+
+// const muiTheme = getMuiTheme({
+//   palette: {
+//     accent1Color: deepOrange500
+//   },
+//   raisedButton: {
+//     primaryColor: '#31575B',
+//     secondaryColor: '#C22B33'
+//   },
+//   flatButton: {
+//     textColor: '#31575B',
+//     primaryTextColor: '#31575B',
+//     secondaryColor: '#C22B33'
+//   },
+//   tabs: {
+//     backgroundColor: 'white',
+//   },
+//   tab: {
+//     fontWeight: 'bold',
+//   },
+//   theme: {
+//     fontFamily: 'Roboto'
+//   },
+//   datePicker: {
+//     selectColor: '#31575B',
+//   },
+//   timePicker: {
+//     accentColor: '#31575B',
+//     clockColor: '#31575B',
+//     headerColor: '#31575B',
+//   },
+//   textField: {
+//     focusColor: '#31575B',
+//   },
+//   dialog: {
+//     textColor: '#C22B33',
+//   }
+// });

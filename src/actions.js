@@ -4,3 +4,9 @@ export const changeName = (text) => {
     payload: text
   };
 };
+
+export const toggleAboutDialog = () => {
+  return {
+    type: 'TOGGLE_ABOUT_DIALOG',
+  };
+};
