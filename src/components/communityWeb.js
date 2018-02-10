@@ -8,12 +8,12 @@ class CommunityWeb extends Component {
   }
 
   handleOnClick() {
-    // window.open('https://docs.google.com/document/d/1mgIRVlWnKR_TSXsI059vwkh-fhbnFT-tZhtA9-VeXAo/edit?usp=sharing');
+    this.props.toggleProjectDialog();
   }
 
   render() {
     return (
-      <b className="project" onClick={this.handleOnClick.bind(this)}> Community Web </b>
+      <b className="project" onClick={this.handleOnClick}> Community Web </b>
     );
   }
 }

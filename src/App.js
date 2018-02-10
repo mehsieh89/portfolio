@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import { changeName } from './actions.js';
 import Resume from './components/resume.js';
 import About from './components/about.js';
 import AboutDialog from './components/aboutDialog.js';
@@ -10,7 +9,8 @@ import CommunityMobile from './components/communityMobile.js';
 import FridgrMobile from './components/fridgrMobile.js';
 import Moodify from './components/moodify.js';
 import Profile from './components/profilePicture.js';
-import { toggleAboutDialog } from './actions.js';
+import ProjectDialog from './components/projectDialog.js';
+import { toggleAboutDialog, toggleProjectDialog } from './actions.js';
 import './App.css';
 
 class App extends Component {
@@ -23,19 +23,26 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <h1 className="App-title">{this.props.name}</h1>
-          <CommunityWeb/>
+          <CommunityWeb
+            dialog={this.props.dialog}
+            toggleProjectDialog={this.props.toggleProjectDialog}
+          />
           <CommunityMobile/>
           <FridgrMobile/>
           <Moodify/>
           <Resume/>
           <About
-            aboutDialog={this.props.aboutDialog}
+            dialog={this.props.dialog}
             toggleAboutDialog={this.props.toggleAboutDialog}
           />
         </header>
         <AboutDialog
-          aboutDialog={this.props.aboutDialog}
+          dialog={this.props.dialog}
           toggleAboutDialog={this.props.toggleAboutDialog}
+        />
+        <ProjectDialog
+          dialog={this.props.dialog}
+          toggleProjectDialog={this.props.toggleProjectDialog}
         />
         <Profile/>
       </div>
@@ -45,15 +52,14 @@ class App extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    name: state.name,
-    aboutDialog: state.aboutDialog,
+    dialog: state.dialog,
   };
 };
 
 const matchDispatchToProps = (dispatch) => {
   return bindActionCreators({
-    changeName: changeName,
     toggleAboutDialog: toggleAboutDialog,
+    toggleProjectDialog: toggleProjectDialog,
   }, dispatch);
 };
 

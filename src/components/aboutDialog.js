@@ -13,12 +13,22 @@ class AboutDialog extends Component {
   }
 
   render() {
-    if (this.props.aboutDialog.showAboutDialog) {
+    if (this.props.dialog.showAboutDialog) {
       return (
         <Dialog
           title="About Me"
           onRequestClose={this.handleClose}
-          open={this.props.aboutDialog.showAboutDialog === true}/>
+          open={this.props.dialog.showAboutDialog}
+        >
+          <div>
+            I am a software engineer looking for opportunities to learn and grow.
+            I enjoy working in teams and am looking to improve my skills from both mentors and peers.
+            I like companies and projects that benefit people; technology that makes life easier and better.
+          </div>
+          <img src="https://i.imgur.com/r1u3MEB.jpg" alt="" height="300" width="225" >
+          </img>
+          <b> e-mail: mehsieh89@gmail.com </b>
+        </Dialog>
       );
     } else {return null }
   }
