@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import CommunityMobSS from '../media/communityMob.jpg';
+import Projects from '../media/projectsReel.gif';
 
 class Profile extends Component {
   render() {
     return (
       <div id="profileDiv">
-        <img className="profilePicture" src={CommunityMobSS} alt=""/>
+        <img className="profilePicture" src={Projects} alt=""/>
       </div>
     );
   }
