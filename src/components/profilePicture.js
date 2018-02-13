@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Projects from '../media/projectsReel.gif';
+import Projects from '../media/projectReel.gif';
 
 class Profile extends Component {
   render() {
