@@ -7,6 +7,11 @@ class AboutDialog extends Component {
   constructor(props) {
     super(props);
     this.handleClose = this.handleClose.bind(this);
+    this.handleOnClick = this.handleOnClick.bind(this);
+  }
+
+  handleOnClick() {
+    window.open('https://github.com/mehsieh89');
   }
 
   handleClose() {
@@ -29,6 +34,7 @@ class AboutDialog extends Component {
           <img src={selfImage} alt="" height="300" width="225" >
           </img>
           <b> e-mail: mehsieh89@gmail.com </b>
+          <div id="github" onClick={this.handleOnClick}> Github </div>
         </Dialog>
       );
     } else {return null }
