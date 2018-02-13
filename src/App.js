@@ -23,31 +23,33 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <h1 className="App-title"> Mel Hsieh </h1>
-          <CommunityWebContainer
-            dialog={this.props.dialog}
-            toggleProjectDialog={this.props.toggleProjectDialog}
-            importProjectDialog={this.props.importProjectDialog}
-          />
-          <CommunityMobContainer
-            dialog={this.props.dialog}
-            toggleProjectDialog={this.props.toggleProjectDialog}
-            importProjectDialog={this.props.importProjectDialog}
-          />
-          <FridgrContainer
-            dialog={this.props.dialog}
-            toggleProjectDialog={this.props.toggleProjectDialog}
-            importProjectDialog={this.props.importProjectDialog}
-          />
-          <MoodifyContainer
-            dialog={this.props.dialog}
-            toggleProjectDialog={this.props.toggleProjectDialog}
-            importProjectDialog={this.props.importProjectDialog}
-          />
-          <ResumeContainer/>
-          <AboutContainer
-            dialog={this.props.dialog}
-            toggleAboutDialog={this.props.toggleAboutDialog}
-          />
+          <div id="buttonContainer">
+            <CommunityWebContainer
+              dialog={this.props.dialog}
+              toggleProjectDialog={this.props.toggleProjectDialog}
+              importProjectDialog={this.props.importProjectDialog}
+            />
+            <CommunityMobContainer
+              dialog={this.props.dialog}
+              toggleProjectDialog={this.props.toggleProjectDialog}
+              importProjectDialog={this.props.importProjectDialog}
+            />
+            <FridgrContainer
+              dialog={this.props.dialog}
+              toggleProjectDialog={this.props.toggleProjectDialog}
+              importProjectDialog={this.props.importProjectDialog}
+            />
+            <MoodifyContainer
+              dialog={this.props.dialog}
+              toggleProjectDialog={this.props.toggleProjectDialog}
+              importProjectDialog={this.props.importProjectDialog}
+            />
+            <ResumeContainer/>
+            <AboutContainer
+              dialog={this.props.dialog}
+              toggleAboutDialog={this.props.toggleAboutDialog}
+            />
+          </div>
         </header>
         <AboutDialog
           dialog={this.props.dialog}

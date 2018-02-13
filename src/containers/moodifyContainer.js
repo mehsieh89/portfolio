@@ -2,18 +2,46 @@ import React, { Component } from 'react';
 import Moodify from '../components/moodify.js';
 
 class MoodifyContainer extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isHovering: false,
+    };
+    this.handleMouseHover = this.handleMouseHover.bind(this);
+    this.toggleHoverState = this.toggleHoverState.bind(this);
+  }
+
+  handleMouseHover() {
+    this.setState(this.toggleHoverState);
+  }
+
+  toggleHoverState() {
+    return {
+      isHovering: !this.state.isHovering,
+    };
+  }
 
   render() {
+    const isHovering = this.state.isHovering;
+
+    let bar = null;
+    if (isHovering) {
+      bar = <div id="colorBar"></div>;
+    } else {
+      bar = null;
+    }
+
     return (
-      <b className="projectBox">
-        <span className="box">
-          <Moodify
-            dialog={this.props.dialog}
-            toggleProjectDialog={this.props.toggleProjectDialog}
-            importProjectDialog={this.props.importProjectDialog}
-          />
-        </span>
-        <div id="test"></div>
+      <b className="projectBox"
+        onMouseEnter={this.handleMouseHover}
+        onMouseLeave={this.handleMouseHover}
+      >
+        <Moodify
+          dialog={this.props.dialog}
+          toggleProjectDialog={this.props.toggleProjectDialog}
+          importProjectDialog={this.props.importProjectDialog}
+        />
+        {bar}
       </b>
     );
   }
