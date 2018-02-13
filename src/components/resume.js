@@ -13,7 +13,7 @@ class Resume extends Component {
 
   render() {
     return (
-      <b className="project" onClick={this.handleOnClick.bind(this)}> Resume </b>
+      <div className="project" onClick={this.handleOnClick.bind(this)}> resume </div>
     );
   }
 }

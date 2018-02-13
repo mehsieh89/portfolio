@@ -18,7 +18,7 @@ class Moodify extends Component {
 
   render() {
     return (
-      <b className="project" onClick={this.handleOnClick.bind(this)}> Moodify </b>
+      <div className="project" onClick={this.handleOnClick.bind(this)}> moodify </div>
     );
   }
 }

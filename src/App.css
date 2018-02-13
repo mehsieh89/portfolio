@@ -22,30 +22,6 @@
   flex-basis: 50px;
 }
 
-.project {
-  cursor: pointer;
-}
-
-.projectBox {
-  padding-right: 30px;
-  padding-left: 30px;
-  height: 50px;
-  wdith: 100px;
-}
-
-#profileDiv {
-  margin-left: 25px;
-}
-
-#github {
-  cursor: pointer;
-}
-
-.profilePicture {
-  height: 500px;
-  width: 1150px;
-}
-
 #colorBar {
   background-color: grey;
   padding: 5px;
@@ -53,11 +29,28 @@
   display: block;
 }
 
-/* .App-intro {
-  font-size: large;
+#github {
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-} */
+#profileDiv {
+  margin-left: 25px;
+  height: 100%;
+  width: 100%;
+}
+
+.project {
+  cursor: pointer;
+}
+
+.projectBox {
+  padding-right: 50px;
+  padding-left: 50px;
+  height: 50px;
+  wdith: 100px;
+}
+
+.profilePicture {
+  height: 500px;
+  width: 1150px;
+}

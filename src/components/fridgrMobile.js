@@ -18,7 +18,7 @@ class FridgrMobile extends Component {
 
   render() {
     return (
-      <b className="project" onClick={this.handleOnClick.bind(this)}> Fridgr Mobile </b>
+      <div className="project" onClick={this.handleOnClick.bind(this)}> fridgr mobile </div>
     );
   }
 }

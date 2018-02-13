@@ -18,7 +18,7 @@ class CommunityMobile extends Component {
 
   render() {
     return (
-        <b className="project" onClick={this.handleOnClick.bind(this)}> Community Mobile </b>
+      <div className="project" onClick={this.handleOnClick.bind(this)}> community mobile </div>
     );
   }
 }

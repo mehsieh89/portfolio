@@ -19,7 +19,7 @@ class CommunityWeb extends Component {
 
   render() {
     return (
-      <b className="project" onClick={this.handleOnClick}> Community Web </b>
+      <div className="project" onClick={this.handleOnClick}> community web </div>
     );
   }
 }
