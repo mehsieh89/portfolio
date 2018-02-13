@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import { RaisedButton } from 'material-ui';
+import CommunityWebDemo from '../media/communityWebDemo.gif'
 
 class CommunityWeb extends Component {
   constructor(props) {
@@ -8,7 +8,11 @@ class CommunityWeb extends Component {
   }
 
   handleOnClick() {
-    //send the name, img src, github URL
+    this.props.importProjectDialog({
+      name: 'Community Web App',
+      pathName: CommunityWebDemo,
+      githubURL: 'https://github.com/Warriorcodez/community',
+    })
     this.props.toggleProjectDialog();
   }
 

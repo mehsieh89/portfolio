@@ -16,3 +16,10 @@ export const toggleProjectDialog = () => {
     type: 'TOGGLE_PROJECT_DIALOG',
   };
 };
+
+export const importProjectDialog = (prop) => {
+  return {
+    type: 'IMPORT_PROJECT_DIALOG',
+    payload: prop
+  };
+};

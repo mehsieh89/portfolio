@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import { RaisedButton } from 'material-ui';
+import FridgrMobileImg from '../media/fridgrMob.png'
 
 class FridgrMobile extends Component {
   constructor(props) {
@@ -8,7 +8,11 @@ class FridgrMobile extends Component {
   }
 
   handleOnClick() {
-    //send the name, img src, github URL
+    this.props.importProjectDialog({
+      name: 'Fridgr Mobile App',
+      pathName: FridgrMobileImg,
+      githubURL: 'https://github.com/ninjacodez/fridgr',
+    })
     this.props.toggleProjectDialog();
   }
 

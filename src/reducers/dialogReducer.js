@@ -1,6 +1,11 @@
 const initialState = {
   showAboutDialog: false,
   showProjectDialog: false,
+  currentProject: {
+    name: null,
+    pathName: null,
+    githubURL: null
+  },
 };
 
 export default function(state = initialState, action) {
@@ -11,6 +16,11 @@ export default function(state = initialState, action) {
 
   case 'TOGGLE_PROJECT_DIALOG':
     return Object.assign({}, state, { showProjectDialog: !state.showProjectDialog });
+
+  case 'IMPORT_PROJECT_DIALOG' :
+   let newState = Object.assign({}, state);
+   newState.currentProject = action.payload;
+   return newState;
 
   default:
     return state;

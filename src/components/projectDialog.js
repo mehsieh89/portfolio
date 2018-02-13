@@ -1,11 +1,16 @@
 import React, { Component } from 'react';
 import { Dialog } from 'material-ui';
-// import { RaisedButton } from 'material-ui';
+import { RaisedButton } from 'material-ui';
 
 class ProjectDialog extends Component {
   constructor(props) {
     super(props);
     this.handleClose = this.handleClose.bind(this);
+    this.handleOnClick = this.handleOnClick.bind(this);
+  }
+
+  handleOnClick() {
+    window.open(this.props.dialog.currentProject.githubURL);
   }
 
   handleClose() {
@@ -16,12 +21,13 @@ class ProjectDialog extends Component {
     if (this.props.dialog.showProjectDialog) {
       return (
         <Dialog
-          title="project name"
+          title={this.props.dialog.currentProject.name}
           onRequestClose={this.handleClose}
           open={this.props.dialog.showProjectDialog}
         >
-          <img src="http://bit.ly/2sS0lLH" alt="" height="300" width="225" >
+          <img src={this.props.dialog.currentProject.pathName} alt="" height="300" width="225" >
           </img>
+          <RaisedButton label='Github Repo' onClick={this.handleOnClick} />
         </Dialog>
       );
     } else {return null }

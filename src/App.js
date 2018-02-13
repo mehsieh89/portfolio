@@ -10,7 +10,7 @@ import FridgrMobile from './components/fridgrMobile.js';
 import Moodify from './components/moodify.js';
 import Profile from './components/profilePicture.js';
 import ProjectDialog from './components/projectDialog.js';
-import { toggleAboutDialog, toggleProjectDialog } from './actions.js';
+import { toggleAboutDialog, toggleProjectDialog, importProjectDialog } from './actions.js';
 import './App.css';
 
 class App extends Component {
@@ -26,10 +26,23 @@ class App extends Component {
           <CommunityWeb
             dialog={this.props.dialog}
             toggleProjectDialog={this.props.toggleProjectDialog}
+            importProjectDialog={this.props.importProjectDialog}
           />
-          <CommunityMobile/>
-          <FridgrMobile/>
-          <Moodify/>
+          <CommunityMobile
+            dialog={this.props.dialog}
+            toggleProjectDialog={this.props.toggleProjectDialog}
+            importProjectDialog={this.props.importProjectDialog}
+          />
+          <FridgrMobile
+            dialog={this.props.dialog}
+            toggleProjectDialog={this.props.toggleProjectDialog}
+            importProjectDialog={this.props.importProjectDialog}
+          />
+          <Moodify
+            dialog={this.props.dialog}
+            toggleProjectDialog={this.props.toggleProjectDialog}
+            importProjectDialog={this.props.importProjectDialog}
+          />
           <Resume/>
           <About
             dialog={this.props.dialog}
@@ -60,6 +73,7 @@ const matchDispatchToProps = (dispatch) => {
   return bindActionCreators({
     toggleAboutDialog: toggleAboutDialog,
     toggleProjectDialog: toggleProjectDialog,
+    importProjectDialog: importProjectDialog,
   }, dispatch);
 };
 

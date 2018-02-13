@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import { RaisedButton } from 'material-ui';
+import MoodifyImage from '../media/moodifyDemo.gif'
 
 class Moodify extends Component {
   constructor(props) {
@@ -8,7 +8,11 @@ class Moodify extends Component {
   }
 
   handleOnClick() {
-    //send the name, img src, github URL
+    this.props.importProjectDialog({
+      name: 'Moodify Web App',
+      pathName: MoodifyImage,
+      githubURL: 'https://github.com/ninjacodez/moodify',
+    })
     this.props.toggleProjectDialog();
   }
 

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Dialog } from 'material-ui';
+import selfImage from '../media/selfImage.jpg';
 // import { RaisedButton } from 'material-ui';
 
 class AboutDialog extends Component {
@@ -25,7 +26,7 @@ class AboutDialog extends Component {
             I enjoy working in teams and am looking to improve my skills from both mentors and peers.
             I like companies and projects that benefit people; technology that makes life easier and better.
           </div>
-          <img src="https://i.imgur.com/r1u3MEB.jpg" alt="" height="300" width="225" >
+          <img src={selfImage} alt="" height="300" width="225" >
           </img>
           <b> e-mail: mehsieh89@gmail.com </b>
         </Dialog>
