@@ -13,14 +13,14 @@
 
 .project {
   // padding-left: 100px;
-  margin-right: 30px;
-  margin-left: 30px;
   cursor: pointer;
 }
 
-.project:hover {
-  color: gray;
-  text-decoration: underline;
+.projectBox {
+  margin-right: 30px;
+  margin-left: 30px;
+  height: 20px;
+  width: 30px;
 }
 
 #profileDiv {
@@ -35,6 +35,18 @@
   height: 500px;
   width: 1150px;
 }
+
+#test {
+  background-color: yellow;
+  padding: 5px;
+  display: none;
+}
+
+span.box:hover + div#test {
+  display: block;
+}
+
+
 /* .App-intro {
   font-size: large;
 }

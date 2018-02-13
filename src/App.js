@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import Resume from './components/resume.js';
-import About from './components/about.js';
+import ResumeContainer from './containers/resumeContainer.js';
+import AboutContainer from './containers/aboutContainer.js';
 import AboutDialog from './components/aboutDialog.js';
-import CommunityWeb from './components/communityWeb.js';
-import CommunityMobile from './components/communityMobile.js';
-import FridgrMobile from './components/fridgrMobile.js';
-import Moodify from './components/moodify.js';
+import CommunityWebContainer from './containers/communityWebContainer.js';
+import CommunityMobContainer from './containers/communityMobContainer.js';
+import FridgrContainer from './containers/fridgrContainer.js';
+import MoodifyContainer from './containers/moodifyContainer.js';
 import Profile from './components/profilePicture.js';
 import ProjectDialog from './components/projectDialog.js';
 import { toggleAboutDialog, toggleProjectDialog, importProjectDialog } from './actions.js';
@@ -23,28 +23,28 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <h1 className="App-title"> Mel Hsieh </h1>
-          <CommunityWeb
+          <CommunityWebContainer
             dialog={this.props.dialog}
             toggleProjectDialog={this.props.toggleProjectDialog}
             importProjectDialog={this.props.importProjectDialog}
           />
-          <CommunityMobile
+          <CommunityMobContainer
             dialog={this.props.dialog}
             toggleProjectDialog={this.props.toggleProjectDialog}
             importProjectDialog={this.props.importProjectDialog}
           />
-          <FridgrMobile
+          <FridgrContainer
             dialog={this.props.dialog}
             toggleProjectDialog={this.props.toggleProjectDialog}
             importProjectDialog={this.props.importProjectDialog}
           />
-          <Moodify
+          <MoodifyContainer
             dialog={this.props.dialog}
             toggleProjectDialog={this.props.toggleProjectDialog}
             importProjectDialog={this.props.importProjectDialog}
           />
-          <Resume/>
-          <About
+          <ResumeContainer/>
+          <AboutContainer
             dialog={this.props.dialog}
             toggleAboutDialog={this.props.toggleAboutDialog}
           />

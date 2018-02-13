@@ -13,7 +13,7 @@ class About extends Component {
 
   render() {
     return (
-      <b className="project" onClick={this.handleOnClick}> About </b>
+        <b className="project" onClick={this.handleOnClick}> About </b>
     );
   }
 }
