@@ -18,6 +18,11 @@
   cursor: pointer;
 }
 
+.project:hover {
+  color: gray;
+  text-decoration: underline;
+}
+
 #profileDiv {
   margin-left: 25px;
 }
