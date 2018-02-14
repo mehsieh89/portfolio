@@ -22,7 +22,7 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <h1 className="App-title"> Mel Hsieh </h1>
+          <h1 className="App-title"> MELVIN HSIEH </h1>
           <div id="buttonContainer">
             <CommunityWebContainer
               dialog={this.props.dialog}
