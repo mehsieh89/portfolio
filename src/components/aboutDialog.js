@@ -22,7 +22,7 @@ class AboutDialog extends Component {
     if (this.props.dialog.showAboutDialog) {
       return (
         <Dialog
-          title="About Me"
+          title="about me"
           onRequestClose={this.handleClose}
           open={this.props.dialog.showAboutDialog}
         >

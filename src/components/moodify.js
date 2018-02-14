@@ -9,9 +9,13 @@ class Moodify extends Component {
 
   handleOnClick() {
     this.props.importProjectDialog({
-      name: 'Moodify Web App',
+      name: 'moodify web app',
       pathName: MoodifyImage,
       githubURL: 'https://github.com/ninjacodez/moodify',
+      dimensions: {
+        height: '350',
+        width: '550',
+      }
     })
     this.props.toggleProjectDialog();
   }

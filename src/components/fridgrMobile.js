@@ -9,9 +9,13 @@ class FridgrMobile extends Component {
 
   handleOnClick() {
     this.props.importProjectDialog({
-      name: 'Fridgr Mobile App',
+      name: 'fridgr mobile app',
       pathName: FridgrMobileImg,
       githubURL: 'https://github.com/ninjacodez/fridgr',
+      dimensions: {
+        height: null,
+        width: null,
+      }
     })
     this.props.toggleProjectDialog();
   }

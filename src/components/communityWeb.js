@@ -10,9 +10,13 @@ class CommunityWeb extends Component {
 
   handleOnClick() {
     this.props.importProjectDialog({
-      name: 'Community Web App',
+      name: 'community web app',
       pathName: CommunityWebDemo,
       githubURL: 'https://github.com/Warriorcodez/community',
+      dimensions: {
+        height: '350px',
+        width: '550px',
+      }
     })
     this.props.toggleProjectDialog();
   }

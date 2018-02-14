@@ -9,11 +9,15 @@ class CommunityMobile extends Component {
 
   handleOnClick() {
     this.props.importProjectDialog({
-      name: 'Community Mobile App',
+      name: 'community mobile app',
       pathName: CommunityMobDemo,
       githubURL: 'https://github.com/Warriorcodez/community-mobile',
-    })
-    this.props.toggleProjectDialog();
+      dimensions: {
+        height: '',
+        width: '',
+      }
+    });
+    this.props.toggleProjectDialog()
   }
 
   render() {

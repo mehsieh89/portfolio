@@ -4,7 +4,11 @@ const initialState = {
   currentProject: {
     name: null,
     pathName: null,
-    githubURL: null
+    githubURL: null,
+    dimensions: {
+      height: '',
+      width: '',
+    }
   },
 };
 

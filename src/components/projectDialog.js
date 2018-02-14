@@ -18,24 +18,41 @@ class ProjectDialog extends Component {
   }
 
   render() {
+    const mediaHeight = this.props.dialog.currentProject.dimensions.height;
+    const mediaWidth = this.props.dialog.currentProject.dimensions.width;
+    console.log(mediaHeight);
+    console.log(mediaWidth);
+
+
     if (this.props.dialog.showProjectDialog) {
       return (
         <Dialog
           title={this.props.dialog.currentProject.name}
           onRequestClose={this.handleClose}
           open={this.props.dialog.showProjectDialog}
-          titleStyle={{ fontFamily: 'Alcubierre' }}
+          titleStyle={styles.title}
         >
-          <img className="projectIMG" src={this.props.dialog.currentProject.pathName} alt="" height="300" width="225" >
-          </img>
-          <RaisedButton id="RepoButton" label='Github Repo' onClick={this.handleOnClick} />
-          <div id="description">
-            <div> What if I told you there was an app on the market that allowed you to see cool events in the area? </div>
+          <div id="dialogDiv">
+              <img className="projectIMG" src={this.props.dialog.currentProject.pathName} alt="" height={mediaHeight} width={mediaWidth}>
+              </img>
+            <RaisedButton id="RepoButton" label='Github Repo' onClick={this.handleOnClick} />
           </div>
+          {/* <div id="description">
+            What if I told you there was an app on the market that allowed you to see cool events in the area?
+          </div> */}
         </Dialog>
       );
     } else { return null }
   }
+}
+
+
+const styles = {
+  title: {
+    fontSize: '26px',
+    fontFamily: 'Alcubierre',
+    textAlign: 'center',
+  },
 }
 
 export default ProjectDialog;
