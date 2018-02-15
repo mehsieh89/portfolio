@@ -8,11 +8,21 @@ class AboutDialog extends Component {
   constructor(props) {
     super(props);
     this.handleClose = this.handleClose.bind(this);
-    this.handleOnClick = this.handleOnClick.bind(this);
+    this.handleOnGithub = this.handleOnGithub.bind(this);
+    this.handleOnLinkedin = this.handleOnLinkedin.bind(this);
+    this.handleOnResume = this.handleOnResume.bind(this);
   }
 
-  handleOnClick() {
+  handleOnGithub() {
     window.open('https://github.com/mehsieh89');
+  }
+
+  handleOnLinkedin() {
+    window.open('https://www.linkedin.com/in/melvin-hsieh-5620399b/');
+  }
+
+  handleOnResume() {
+    window.open('https://docs.google.com/document/d/1mgIRVlWnKR_TSXsI059vwkh-fhbnFT-tZhtA9-VeXAo/edit?usp=sharing');
   }
 
   handleClose() {
@@ -41,14 +51,26 @@ class AboutDialog extends Component {
                 <br />
                 <a id="email" href="mailto:mehsieh89@gmail.com"> e-mail: mehsieh89@gmail.com </a>
               </div>
-              <RaisedButton
-                // variant="raised"
-                backgroundColor="#222"
-                labelStyle={styles.buttonLabel}
-                style={styles.repoButton}
-                label='github'
-                onClick={this.handleOnClick} />
-              {/* <div id="github" onClick={this.handleOnClick}> Github </div> */}
+              <div id="aboutButtonContainer">
+                <RaisedButton
+                  backgroundColor="#222"
+                  labelStyle={styles.buttonLabel}
+                  style={styles.button1}
+                  label='github'
+                  onClick={this.handleOnGithub} />
+                <RaisedButton
+                  backgroundColor="#222"
+                  labelStyle={styles.buttonLabel}
+                  style={styles.button2}
+                  label='linkedin'
+                  onClick={this.handleOnLinkedin} />
+                <RaisedButton
+                  backgroundColor="#222"
+                  labelStyle={styles.buttonLabel}
+                  style={styles.button3}
+                  label='resume'
+                  onClick={this.handleOnResume} />
+              </div>
             </div>
           </div>
         </Dialog>
@@ -68,7 +90,25 @@ const styles = {
       backgroundColor: 'white',
     }
   },
-  repoButton: {
+  button1: {
+    position: 'relative',
+    right: '10px',
+    marginTop: '20px',
+    marginLeft: 'auto',
+    marginRight: 'auto',
+    width: '100px',
+    display: 'block',
+  },
+  button2: {
+    marginTop: '20px',
+    marginLeft: 'auto',
+    marginRight: 'auto',
+    width: '100px',
+    display: 'block',
+  },
+  button3: {
+    position: 'relative',
+    left: '10px',
     marginTop: '20px',
     marginLeft: 'auto',
     marginRight: 'auto',

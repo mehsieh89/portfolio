@@ -50,6 +50,7 @@ const styles = {
   buttonLabel: {
     textTransform: 'lowercase',
     fontFamily: 'Alcubierre',
+    fontWeight: 'bold',
     fontSize: '20px',
     color: 'white',
     backgroundColor: '#222',
