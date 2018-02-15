@@ -1,5 +1,33 @@
 #aboutDesc {
   font-family: 'Alcubierre';
+  font-weight: bold;
+  font-size: 20px;
+  background-color: #222;
+  color: white;
+  padding-top: 25px;
+  padding-right: 17px;
+  padding-left: 17px;
+  padding-bottom: .1px;
+}
+
+#aboutDialogDiv {
+  display: flex;
+  flex-direction: row;
+}
+
+#aboutIMG {
+  float: left;
+  margin-top: 20px;
+}
+
+#aboutTextDiv {
+  width: 300px;
+  height: 100%;
+  position: relative;
+  margin-top: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: auto;
 }
 
 .App-header {
@@ -47,6 +75,13 @@
   margin-top: 27px;
   height: 470px;
   width: 100%;
+}
+
+#email {
+  color: white;
+}
+#email:hover {
+  color: #BEBEBE;
 }
 
 @font-face {

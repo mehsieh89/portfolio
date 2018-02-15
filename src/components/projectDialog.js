@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { Dialog } from 'material-ui';
-import { RaisedButton } from 'material-ui';
+import { Dialog, RaisedButton } from 'material-ui';
 
 class ProjectDialog extends Component {
   constructor(props) {
@@ -33,6 +32,7 @@ class ProjectDialog extends Component {
               <img className="projectIMG" src={this.props.dialog.currentProject.pathName} alt="" height={mediaHeight} width={mediaWidth}>
               </img>
             <RaisedButton
+              variant="raised"
               backgroundColor="#222"
               labelStyle={styles.buttonLabel}
               style={styles.repoButton}
