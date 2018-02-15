@@ -13,9 +13,9 @@ class Moodify extends Component {
       pathName: MoodifyImage,
       githubURL: 'https://github.com/ninjacodez/moodify',
       dimensions: {
-        height: '350',
-        width: '550',
-      }
+        height: '395',
+        width: '610',
+      },
     })
     this.props.toggleProjectDialog();
   }

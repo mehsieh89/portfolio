@@ -14,9 +14,9 @@ class CommunityWeb extends Component {
       pathName: CommunityWebDemo,
       githubURL: 'https://github.com/Warriorcodez/community',
       dimensions: {
-        height: '350px',
-        width: '550px',
-      }
+        height: '395px',
+        width: '610px',
+      },
     })
     this.props.toggleProjectDialog();
   }
