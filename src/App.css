@@ -1,3 +1,6 @@
+#aboutDesc {
+  font-family: 'Alcubierre';
+}
 
 .App-header {
   font-family: 'Alcubierre';
@@ -92,7 +95,4 @@
   margin-left: auto;
   margin-right: auto;
   margin-top: 50px;
-}
-
-.RepoButton {
 }

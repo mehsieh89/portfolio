@@ -20,9 +20,6 @@ class ProjectDialog extends Component {
   render() {
     const mediaHeight = this.props.dialog.currentProject.dimensions.height;
     const mediaWidth = this.props.dialog.currentProject.dimensions.width;
-    console.log(mediaHeight);
-    console.log(mediaWidth);
-
 
     if (this.props.dialog.showProjectDialog) {
       return (
@@ -35,11 +32,13 @@ class ProjectDialog extends Component {
           <div id="dialogDiv">
               <img className="projectIMG" src={this.props.dialog.currentProject.pathName} alt="" height={mediaHeight} width={mediaWidth}>
               </img>
-            <RaisedButton id="RepoButton" label='Github Repo' onClick={this.handleOnClick} />
+            <RaisedButton
+              backgroundColor="#222"
+              labelStyle={styles.buttonLabel}
+              style={styles.repoButton}
+              label='github repo'
+              onClick={this.handleOnClick} />
           </div>
-          {/* <div id="description">
-            What if I told you there was an app on the market that allowed you to see cool events in the area?
-          </div> */}
         </Dialog>
       );
     } else { return null }
@@ -48,10 +47,26 @@ class ProjectDialog extends Component {
 
 
 const styles = {
+  buttonLabel: {
+    textTransform: 'lowercase',
+    fontFamily: 'Alcubierre',
+    fontSize: '20px',
+    color: 'white',
+    backgroundColor: '#222',
+  },
+  repoButton: {
+    marginTop: '20px',
+    marginLeft: 'auto',
+    marginRight: 'auto',
+    width: '175px',
+    display: 'block',
+  },
   title: {
-    fontSize: '26px',
+    fontSize: '30px',
+    fontWeight: 'bold',
     fontFamily: 'Alcubierre',
     textAlign: 'center',
+    borderBottom: '5px solid #222',
   },
 }
 
