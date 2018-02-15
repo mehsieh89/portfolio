@@ -35,6 +35,12 @@
   margin-bottom: auto;
 }
 
+.App {
+  width: 100%;
+  min-Width: 960px;
+  margin: 0 auto;
+}
+
 .App-header {
   font-family: 'Alcubierre';
   background-color: #222;
