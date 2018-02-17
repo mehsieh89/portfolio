@@ -1,17 +1,24 @@
 import React, { Component } from 'react';
 import { Dialog, RaisedButton } from 'material-ui';
 import selfImage from '../media/selfImage.jpg';
-// import resume from '../media/resume.pdf';
-// import MyButton from './buttonCustom.js';
-// import { RaisedButton } from 'material-ui';
+import resume from '../media/resume.pdf';
+import { SocialIcon } from 'react-social-icons';
 
 class AboutDialog extends Component {
   constructor(props) {
     super(props);
+    this.state = {
+      isHovering: false,
+      isHovering2: false,
+    };
     this.handleClose = this.handleClose.bind(this);
     this.handleOnGithub = this.handleOnGithub.bind(this);
     this.handleOnLinkedin = this.handleOnLinkedin.bind(this);
     this.handleOnResume = this.handleOnResume.bind(this);
+    this.onMouseEnter = this.onMouseEnter.bind(this);
+    this.onMouseLeave = this.onMouseLeave.bind(this);
+    this.onMouseEnter2 = this.onMouseEnter2.bind(this);
+    this.onMouseLeave2 = this.onMouseLeave2.bind(this);
   }
 
   handleOnGithub() {
@@ -23,26 +30,72 @@ class AboutDialog extends Component {
   }
 
   handleOnResume() {
-    // window.open(resume);
+    window.open(resume);
   }
 
   handleClose() {
     this.props.toggleAboutDialog();
   }
 
+  onMouseEnter() {
+    this.setState({ isHovering: true });
+  }
+
+  onMouseLeave() {
+    this.setState({ isHovering: false });
+  }
+
+  onMouseEnter2() {
+    this.setState({ isHovering2: true });
+  }
+
+  onMouseLeave2() {
+    this.setState({ isHovering2: false });
+  }
+
   render() {
+    let hoverColor = "#222"
+    let hoverColor2 = "#222"
+
+    if(this.state.isHovering) {
+      hoverColor = '#BEBEBE';
+    }
+
+    if(this.state.isHovering2) {
+      hoverColor2 = '#BEBEBE';
+    }
+
     if (this.props.dialog.showAboutDialog) {
       return (
         <Dialog
-          title="about me"
+          title={
+            <div id="dialogTitleContainer">
+              <div id="aboutTitle"> about me </div>
+              <div id="dialogIconContainer">
+                <SocialIcon
+                  className="dialogIcon"
+                  network="linkedin"
+                  color={hoverColor}
+                  onMouseEnter={this.onMouseEnter}
+                  onMouseLeave={this.onMouseLeave}
+                />
+                <SocialIcon
+                  className="dialogIcon"
+                  network="github"
+                  color={hoverColor2}
+                  onMouseEnter={this.onMouseEnter2}
+                  onMouseLeave={this.onMouseLeave2}
+                />
+              </div>
+            </div>
+          }
           onRequestClose={this.handleClose}
           open={this.props.dialog.showAboutDialog}
           titleStyle={styles.title}
           bodyStyle={styles.body}
         >
           <div id="aboutDialogDiv">
-            <img id='aboutIMG' src={selfImage} alt="" height="400" width="300" >
-            </img>
+            <img id='aboutIMG' src={selfImage} alt="" height="400" width="300"></img>
             <div id="aboutTextDiv">
               <div id="aboutDesc">
                 Hello! I am a software engineer looking for opportunities to improve and grow.
@@ -123,8 +176,9 @@ const styles = {
   title: {
     fontSize: '30px',
     fontWeight: 'bold',
+    color: '#222',
     fontFamily: 'Alcubierre',
-    textAlign: 'center',
+    textAlign: 'left',
     borderBottom: '2px solid #222',
   },
 }
