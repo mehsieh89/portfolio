@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import { RaisedButton } from 'material-ui';
+import resume from '../media/resume.pdf';
 
 class Resume extends Component {
   constructor(props) {
@@ -8,7 +8,7 @@ class Resume extends Component {
   }
 
   handleOnClick() {
-    window.open('https://docs.google.com/document/d/1mgIRVlWnKR_TSXsI059vwkh-fhbnFT-tZhtA9-VeXAo/edit?usp=sharing');
+    window.open(resume);
   }
 
   render() {

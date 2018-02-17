@@ -24,6 +24,7 @@
 #aboutIMG {
   float: left;
   margin-top: 20px;
+  border: 3px solid #222;
 }
 
 #aboutTextDiv {
@@ -96,6 +97,14 @@
   float: left;
   max-width: 100%;
   max-height: 90%;
+  border: 3px solid #222;
+}
+
+#communityMobImage2 {
+  position: relative;
+  right: 45px;
+  height: 250px;
+  width: 440px;
   border: 3px solid #222;
 }
 

@@ -32,7 +32,7 @@ class ProjectDialog extends Component {
               <RaisedButton
                 backgroundColor="#222"
                 labelStyle={styles.buttonLabel}
-                style={styles.repoButton}
+                style={styles.repoButton2}
                 label='github repo'
                 onClick={this.handleOnClick} />
             </div>
@@ -83,6 +83,13 @@ const styles = {
   },
   repoButton: {
     marginTop: '20px',
+    marginLeft: 'auto',
+    marginRight: 'auto',
+    width: '175px',
+    display: 'block',
+  },
+  repoButton2: {
+    marginTop: '10px',
     marginLeft: 'auto',
     marginRight: 'auto',
     width: '175px',
