@@ -59,6 +59,8 @@ class ProjectDialog extends Component {
     if (this.props.dialog.showProjectDialog) {
       return (
         <Dialog
+          bodyStyle={styles.body}
+          autoDetectWindowHeight={true}
           title={this.props.dialog.currentProject.name}
           onRequestClose={this.handleClose}
           open={this.props.dialog.showProjectDialog}
@@ -73,6 +75,9 @@ class ProjectDialog extends Component {
 
 
 const styles = {
+  body: {
+    backgroundColor: '#BEBEBE',
+  },
   buttonLabel: {
     textTransform: 'lowercase',
     fontFamily: 'Alcubierre',
@@ -100,7 +105,7 @@ const styles = {
     fontWeight: 'bold',
     fontFamily: 'Alcubierre',
     textAlign: 'center',
-    borderBottom: '5px solid #222',
+    borderBottom: '2px solid #222',
   },
 }
 

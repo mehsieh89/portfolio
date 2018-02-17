@@ -38,6 +38,7 @@ class AboutDialog extends Component {
           onRequestClose={this.handleClose}
           open={this.props.dialog.showAboutDialog}
           titleStyle={styles.title}
+          bodyStyle={styles.body}
         >
           <div id="aboutDialogDiv">
             <img id='aboutIMG' src={selfImage} alt="" height="400" width="300" >
@@ -81,6 +82,9 @@ class AboutDialog extends Component {
 }
 
 const styles = {
+  body: {
+    backgroundColor: '#BEBEBE',
+  },
   buttonLabel: {
     textTransform: 'lowercase',
     fontFamily: 'Alcubierre',
@@ -121,7 +125,7 @@ const styles = {
     fontWeight: 'bold',
     fontFamily: 'Alcubierre',
     textAlign: 'center',
-    borderBottom: '5px solid #222',
+    borderBottom: '2px solid #222',
   },
 }
 
