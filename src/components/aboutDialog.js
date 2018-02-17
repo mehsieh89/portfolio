@@ -3,6 +3,9 @@ import { Dialog, RaisedButton } from 'material-ui';
 import selfImage from '../media/selfImage.jpg';
 import resume from '../media/resume.pdf';
 import { SocialIcon } from 'react-social-icons';
+import DocumentText from 'react-icons/lib/io/document-text';
+import Github from 'react-icons/lib/go/mark-github';
+import LinkedIn from 'react-icons/lib/io/social-linkedin';
 
 class AboutDialog extends Component {
   constructor(props) {
@@ -10,6 +13,7 @@ class AboutDialog extends Component {
     this.state = {
       isHovering: false,
       isHovering2: false,
+      isHovering3: false,
     };
     this.handleClose = this.handleClose.bind(this);
     this.handleOnGithub = this.handleOnGithub.bind(this);
@@ -19,6 +23,8 @@ class AboutDialog extends Component {
     this.onMouseLeave = this.onMouseLeave.bind(this);
     this.onMouseEnter2 = this.onMouseEnter2.bind(this);
     this.onMouseLeave2 = this.onMouseLeave2.bind(this);
+    this.onMouseEnter3 = this.onMouseEnter3.bind(this);
+    this.onMouseLeave3 = this.onMouseLeave3.bind(this);
   }
 
   handleOnGithub() {
@@ -53,9 +59,18 @@ class AboutDialog extends Component {
     this.setState({ isHovering2: false });
   }
 
+  onMouseEnter3() {
+    this.setState({ isHovering3: true });
+  }
+
+  onMouseLeave3() {
+    this.setState({ isHovering3: false });
+  }
+
   render() {
-    let hoverColor = "#222"
-    let hoverColor2 = "#222"
+    let hoverColor = "#222";
+    let hoverColor2 = "#222";
+    let hoverColor3 = "#222";
 
     if(this.state.isHovering) {
       hoverColor = '#BEBEBE';
@@ -65,6 +80,10 @@ class AboutDialog extends Component {
       hoverColor2 = '#BEBEBE';
     }
 
+    if(this.state.isHovering3) {
+      hoverColor3 = '#BEBEBE';
+    }
+
     if (this.props.dialog.showAboutDialog) {
       return (
         <Dialog
@@ -72,19 +91,30 @@ class AboutDialog extends Component {
             <div id="dialogTitleContainer">
               <div id="aboutTitle"> about me </div>
               <div id="dialogIconContainer">
-                <SocialIcon
+                <DocumentText
                   className="dialogIcon"
-                  network="linkedin"
+                  id="resumeIcon"
+                  color={hoverColor3}
+                  size={50}
+                  onMouseEnter={this.onMouseEnter3}
+                  onMouseLeave={this.onMouseLeave3}
+                  onClick={this.handleOnResume}
+                />
+                <LinkedIn
+                  className="dialogIcon"
+                  size={50}
                   color={hoverColor}
                   onMouseEnter={this.onMouseEnter}
                   onMouseLeave={this.onMouseLeave}
+                  onClick={this.handleOnLinkedin}
                 />
-                <SocialIcon
+                <Github
                   className="dialogIcon"
-                  network="github"
                   color={hoverColor2}
+                  size={40}
                   onMouseEnter={this.onMouseEnter2}
                   onMouseLeave={this.onMouseLeave2}
+                  onClick={this.handleOnGithub}
                 />
               </div>
             </div>
@@ -105,26 +135,6 @@ class AboutDialog extends Component {
                 <br />
                 <br />
                 <a id="email" href="mailto:mehsieh89@gmail.com"> e-mail: mehsieh89@gmail.com </a>
-              </div>
-              <div id="aboutButtonContainer">
-                <RaisedButton
-                  backgroundColor="#222"
-                  labelStyle={styles.buttonLabel}
-                  style={styles.button1}
-                  label='github'
-                  onClick={this.handleOnGithub} />
-                <RaisedButton
-                  backgroundColor="#222"
-                  labelStyle={styles.buttonLabel}
-                  style={styles.button2}
-                  label='linkedin'
-                  onClick={this.handleOnLinkedin} />
-                <RaisedButton
-                  backgroundColor="#222"
-                  labelStyle={styles.buttonLabel}
-                  style={styles.button3}
-                  label='resume'
-                  onClick={this.handleOnResume} />
               </div>
             </div>
           </div>

@@ -146,8 +146,8 @@
 
 .dialogIcon {
   cursor: pointer;
-  margin-left: 7px;
-  margin-right: 7px;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
 #dialogIconContainer {
@@ -225,4 +225,9 @@
   margin-left: auto;
   margin-right: auto;
   margin-top: 50px;
+}
+
+#resumeIcon {
+  position: relative;
+  left: 5px;
 }
