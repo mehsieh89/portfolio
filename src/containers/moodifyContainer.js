@@ -7,18 +7,16 @@ class MoodifyContainer extends Component {
     this.state = {
       isHovering: false,
     };
-    this.handleMouseHover = this.handleMouseHover.bind(this);
-    this.toggleHoverState = this.toggleHoverState.bind(this);
+    this.handleMouseHoverE = this.handleMouseHoverE.bind(this);
+    this.handleMouseHoverL = this.handleMouseHoverL.bind(this);
   }
 
-  handleMouseHover() {
-    this.setState(this.toggleHoverState);
+  handleMouseHoverE() {
+    this.setState({ isHovering: true });
   }
 
-  toggleHoverState() {
-    return {
-      isHovering: !this.state.isHovering,
-    };
+  handleMouseHoverL() {
+    this.setState({ isHovering: false });
   }
 
   render() {
@@ -33,8 +31,8 @@ class MoodifyContainer extends Component {
 
     return (
       <b className="projectBox"
-        onMouseEnter={this.handleMouseHover}
-        onMouseLeave={this.handleMouseHover}
+        onMouseEnter={this.handleMouseHoverE}
+        onMouseLeave={this.handleMouseHoverL}
       >
         <Moodify
           dialog={this.props.dialog}
