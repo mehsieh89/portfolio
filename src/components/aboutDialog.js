@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Dialog, RaisedButton } from 'material-ui';
 import selfImage from '../media/selfImage.jpg';
-import resume from '../media/resume.pdf';
+// import resume from '../media/resume.pdf';
 // import MyButton from './buttonCustom.js';
 // import { RaisedButton } from 'material-ui';
 
@@ -23,7 +23,7 @@ class AboutDialog extends Component {
   }
 
   handleOnResume() {
-    window.open(resume);
+    // window.open(resume);
   }
 
   handleClose() {
