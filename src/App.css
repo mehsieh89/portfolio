@@ -7,12 +7,13 @@
   font-family: 'Alcubierre';
   font-weight: bold;
   font-size: 20px;
-  background-color: #222;
-  color: white;
-  padding-top: 25px;
+  color: #222;
+  padding-top: 10px;
   padding-right: 17px;
   padding-left: 17px;
-  padding-bottom: .1px;
+  padding-bottom: 10px;
+  border: 3px solid #222;
+  margin-top: 20px;
 }
 
 #aboutDialogDiv {
@@ -77,19 +78,59 @@
   display: block;
 }
 
+#communityMobDesc {
+  position: relative;
+  color: #222;
+  padding: 5px;
+  border: 3px solid #222;
+  font-family: 'Alcubierre';
+  font-weight: bold;
+  font-size: 20px;
+}
+
+#communityMobImage {
+  display: block;
+  position: relative;
+  left: 30px;
+  top: 20px;
+  float: left;
+  max-width: 100%;
+  max-height: 90%;
+  border: 3px solid #222;
+}
+
+#communityMobTxt {
+  width: 350px;
+  height: 100%;
+  position: relative;
+  left: 30px;
+  margin-top: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: auto;
+}
+
 #description {
   font-family: "Alcubierre";
   width: 100px;
 }
 
 #dialogDiv {
-  margin-top: 27px;
-  height: 470px;
+  margin-top: 15px;
+  height: 475px;
   width: 100%;
 }
 
+#dialogDivMob {
+  margin-top: 15px;
+  height: 475px;
+  width: 100%;
+  display: flex;
+  direction: row;
+}
+
 #email {
-  color: white;
+  color: #222;
 }
 #email:hover {
   color: #BEBEBE;
@@ -126,12 +167,22 @@
   wdith: 100px;
 }
 
+.projectDesc {
+  color: #222;
+  font-weight: bold;
+  font-family: 'Alcubierre';
+  font-size: 20px;
+  padding: 5px;
+  border: 3px solid #222;
+}
+
 .projectIMG {
   display: block;
   max-width: 100%;
   max-height: 90%;
   margin-left: auto;
   margin-right: auto;
+  border: 3px solid #222;
 }
 
 .profilePicture {

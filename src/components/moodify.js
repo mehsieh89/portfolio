@@ -13,9 +13,10 @@ class Moodify extends Component {
       pathName: MoodifyImage,
       githubURL: 'https://github.com/ninjacodez/moodify',
       dimensions: {
-        height: '395',
-        width: '610',
+        height: '325',
+        width: '500',
       },
+      description: "What if I told you there is an app on the market that analyzes emotions portrayed in song lyrics",
     })
     this.props.toggleProjectDialog();
   }

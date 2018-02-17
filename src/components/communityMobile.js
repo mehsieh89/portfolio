@@ -15,7 +15,8 @@ class CommunityMobile extends Component {
       dimensions: {
         height: '',
         width: '',
-      }
+      },
+      description: "What if I told you there is an app on the market that allows you to explore social events and create events based on geolocation"
     });
     this.props.toggleProjectDialog()
   }

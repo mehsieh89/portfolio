@@ -14,10 +14,11 @@ class CommunityWeb extends Component {
       pathName: CommunityWebDemo,
       githubURL: 'https://github.com/Warriorcodez/community',
       dimensions: {
-        height: '395px',
-        width: '610px',
+        height: '325px',
+        width: '500px',
       },
-    })
+      description: "What if I told you there is an app on the market that allows you to explore social events and create events based on geolocation",
+    });
     this.props.toggleProjectDialog();
   }
 

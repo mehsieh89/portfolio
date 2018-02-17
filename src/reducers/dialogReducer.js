@@ -9,6 +9,7 @@ const initialState = {
       height: '',
       width: '',
     },
+    description: '',
   },
 };
 

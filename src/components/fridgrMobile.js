@@ -13,9 +13,10 @@ class FridgrMobile extends Component {
       pathName: FridgrMobileImg,
       githubURL: 'https://github.com/ninjacodez/fridgr',
       dimensions: {
-        height: null,
-        width: null,
-      }
+        height: '325',
+        width: '500',
+      },
+      description: "What if I told you there is an app on the market that manages fridge inventories with interactive lists"
     })
     this.props.toggleProjectDialog();
   }
