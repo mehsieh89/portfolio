@@ -29,12 +29,7 @@ class ProjectDialog extends Component {
             <div id="communityMobTxt">
               <p id="communityMobDesc"> {this.props.dialog.currentProject.description} </p>
               <img id="communityMobImage2" src={CommMob} alt=""></img>
-              <RaisedButton
-                backgroundColor="#222"
-                labelStyle={styles.buttonLabel}
-                style={styles.repoButton2}
-                label='github repo'
-                onClick={this.handleOnClick} />
+
             </div>
           </div>
         )
@@ -44,12 +39,6 @@ class ProjectDialog extends Component {
             <p className="projectDesc"> {this.props.dialog.currentProject.description} </p>
             <img className="projectIMG" src={this.props.dialog.currentProject.pathName} alt="" height={mediaHeight} width={mediaWidth}>
             </img>
-            <RaisedButton
-              backgroundColor="#222"
-              labelStyle={styles.buttonLabel}
-              style={styles.repoButton}
-              label='github repo'
-              onClick={this.handleOnClick} />
           </div>
         )
       }
@@ -61,11 +50,21 @@ class ProjectDialog extends Component {
         <Dialog
           bodyStyle={styles.body}
           autoDetectWindowHeight={true}
-          title={this.props.dialog.currentProject.name}
           onRequestClose={this.handleClose}
           open={this.props.dialog.showProjectDialog}
           titleStyle={styles.title}
-        >
+          title={
+            <div id="dialogTitleContainer">
+              <div id="aboutTitle"> {this.props.dialog.currentProject.name} </div>
+              <RaisedButton
+                backgroundColor="#222"
+                labelStyle={styles.buttonLabel}
+                style={styles.repoButton}
+                label='github repo'
+                onClick={this.handleOnClick}
+              />
+            </div>
+          }>
           {layoutAdjust()}
         </Dialog>
       );
@@ -87,16 +86,8 @@ const styles = {
     backgroundColor: '#222',
   },
   repoButton: {
-    marginTop: '20px',
-    marginLeft: 'auto',
-    marginRight: 'auto',
-    width: '175px',
-    display: 'block',
-  },
-  repoButton2: {
-    marginTop: '10px',
-    marginLeft: 'auto',
-    marginRight: 'auto',
+    position: 'absolute',
+    right: '20px',
     width: '175px',
     display: 'block',
   },
