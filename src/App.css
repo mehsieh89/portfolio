@@ -121,7 +121,8 @@
 #communityMobImage2 {
   position: relative;
   right: 45px;
-  height: 250px;
+  top: 60px;
+  height: 200px;
   width: 440px;
   // border: 1px solid #C7D8C6;
 }

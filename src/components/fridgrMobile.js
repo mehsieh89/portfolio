@@ -16,7 +16,7 @@ class FridgrMobile extends Component {
         height: '325',
         width: '500',
       },
-      description: "What if I told you there is an app on the market that manages fridge inventories with interactive lists"
+      description: "Fridgr is a mobile application built for homes with co-habitants. The application manages inventories with interactive lists and includes a barcode scanning input system."
     })
     this.props.toggleProjectDialog();
   }

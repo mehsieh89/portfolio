@@ -17,7 +17,7 @@ class CommunityWeb extends Component {
         height: '325px',
         width: '500px',
       },
-      description: "What if I told you there is an app on the market that allows you to explore social events and create events based on geolocation",
+      description: "What if I told you there is an app on the market that allows you to explore and create social events based on geolocation.",
     });
     this.props.toggleProjectDialog();
   }

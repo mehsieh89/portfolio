@@ -16,7 +16,7 @@ class Moodify extends Component {
         height: '325',
         width: '500',
       },
-      description: "What if I told you there is an app on the market that analyzes emotions portrayed in song lyrics",
+      description: "Moodify utilizes the Watson API to analyze emotions portrayed in song lyrics. Lyrics are pulled from MusixMatch and song clips are pulled from Spotify.",
     })
     this.props.toggleProjectDialog();
   }

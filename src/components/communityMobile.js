@@ -16,7 +16,7 @@ class CommunityMobile extends Component {
         height: '',
         width: '',
       },
-      description: "What if I told you there is an app on the market that allows you to explore social events and create events based on geolocation"
+      description: "Mobile variation of the Community application. Built for socialites who are already out and about or are feeling spontaneous."
     });
     this.props.toggleProjectDialog()
   }
