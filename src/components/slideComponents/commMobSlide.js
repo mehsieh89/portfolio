@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 // import { RaisedButton } from 'material-ui';
-import CommunityWeb from '../../media/communityWeb.png';
+import CommunityMob from '../../media/communityMob.jpg';
 
 
 class CommMobSlide extends Component {
@@ -15,7 +15,7 @@ class CommMobSlide extends Component {
 
   render() {
     return (
-      <img className="sliderImg" src={CommunityWeb}></img>
+      <img id="sliderImgCommMob" src={CommunityMob}></img>
     );
   }
 }

@@ -138,6 +138,10 @@
   margin-bottom: auto;
 }
 
+#commMobSlideComponent {
+  position: relative;
+}
+
 #description {
   font-family: "HelveticaNeue";
   width: 100px;
@@ -276,6 +280,7 @@
   margin: 0 auto;
   padding: 40px;
   width: 80%;
+  position: relative;
 }
 
 .sliderImg {
@@ -284,6 +289,18 @@
   margin-right: auto;
   height: 550px;
   width: 850px;
+}
+
+#sliderImgCommMob {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 370px;
+  width: 850px;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  margin: 115px 0 0 -425px;
 }
 
 .slick-prev,
