@@ -185,7 +185,7 @@ const styles = {
     fontFamily: "HelveticaNeue",
     textAlign: 'left',
     // borderBottom: '2px solid #CCCBC6',
-    backgroundColor: '#CCCBC6',
+    backgroundColor: '#A9B7C0',
   },
 }
 

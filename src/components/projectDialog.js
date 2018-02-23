@@ -97,7 +97,7 @@ const styles = {
     color: 'white',
     fontFamily: "HelveticaNeue",
     textAlign: 'center',
-    backgroundColor: '#CCCBC6',
+    backgroundColor: '#A9B7C0' ,
     // borderBottom: '2px solid #CCCBC6',
   },
 }
