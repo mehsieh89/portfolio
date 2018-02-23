@@ -272,15 +272,18 @@
   color: #A9B7C0;
 }
 
-#container {
+#sliderContainer {
   margin: 0 auto;
   padding: 40px;
   width: 80%;
 }
 
-#sliderArrows {
-  height: 100px;
-  width: 100px;
+.sliderImg {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 550px;
+  width: 850px;
 }
 
 .slick-prev,
@@ -291,6 +294,7 @@
 
     position: absolute;
     top: 50%;
+    z-index: 1;
 
     display: block;
 

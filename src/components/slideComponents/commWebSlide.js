@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import { RaisedButton } from 'material-ui';
+import CommunityWeb from '../../media/communityWeb.png';
 
 class CommWebSlide extends Component {
   constructor(props) {
@@ -13,9 +13,7 @@ class CommWebSlide extends Component {
 
   render() {
     return (
-      <div>
-        <img src='../media/communityWeb.png'></img>
-      </div>
+        <img className="sliderImg" src={CommunityWeb}></img>
     );
   }
 }

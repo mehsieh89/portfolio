@@ -16,35 +16,21 @@ class Main extends Component {
 
     const settings = {
         infinite: true,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 4500
+        // autoplay: true,
+        // autoplaySpeed: 4500
     };
     return (
-      <div id="container">
+      <div id="sliderContainer">
         <Slider
           {...settings}
           prevArrow={ArrowLeft}
           nextArrow={ArrowRight}
-          // nextArrow={
-          //   <NextArrow
-          //     id="sliderArrows"
-          //     color='#A9B7C0'>
-          //   </NextArrow>
-          // }
-          // prevArrow={
-          //   <PrevArrow
-          //     id="sliderArrows"
-          //     color='#A9B7C0'>
-          //   </PrevArrow>
-          // }
         >
           <div>
-            <CommMobSlide/>
+            <CommWebSlide/>
           </div>
           <div>
-            <CommWebSlide/>
+            <CommMobSlide/>
           </div>
           <div>
             <FridgrSlide/>
