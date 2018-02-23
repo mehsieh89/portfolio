@@ -31,13 +31,13 @@ class FridgrContainer extends Component {
 
     let bar = null;
     if (isHovering) {
-      bar = <div id="colorBar"></div>;
+      bar = <div id="colorBar2"></div>;
     } else {
       bar = null;
     }
 
     return (
-      <b className="projectBox"
+      <b className="selfButtonBox"
         onMouseEnter={this.handleMouseHoverE}
         onMouseLeave={this.handleMouseHoverL}
       >

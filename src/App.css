@@ -54,7 +54,6 @@
   font-family: 'Alcubierre';
   background-color: #222;
   height: 100px;
-  padding: 10px;
   color: white;
 }
 
@@ -63,7 +62,10 @@
   text-align: right;
   position: relative;
   right: 40px;
-  top: 45px;
+  height: 0px;
+  top: 5px;
+  margin: auto;
+  display: block;
 }
 
 .box {
@@ -76,13 +78,21 @@
   flex-direction: row;
   flex-basis: 50px;
   position: relative;
-  bottom: 5px;
+  top: 15px;
 }
 
 #colorBar {
   background-color: white;
   padding: 5px;
   margin-top: 2.7px;
+  display: block;
+}
+
+#colorBar2 {
+  background-color: white;
+  padding: 5px;
+  position: relative;
+  bottom: 23px;
   display: block;
 }
 
@@ -196,7 +206,6 @@
   padding-right: 40px;
   padding-left: 40px;
   height: 50px;
-  wdith: 100px;
 }
 
 .projectDesc {
@@ -230,4 +239,32 @@
 #resumeIcon {
   position: relative;
   left: 5px;
+}
+
+#selfContainer {
+  display: flex;
+  flex-direction: row-reverse;
+  flex-basis: 50px;
+  position: relative;
+  right: 15px;
+}
+
+.selfButtonBox {
+  padding-right: 30px;
+  padding-left: 30px;
+  height: 50px;
+}
+
+.selfButton {
+  cursor: pointer;
+  font-size: 18px;
+  color: white;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.selfButton:hover {
+  color: #BEBEBE;
 }

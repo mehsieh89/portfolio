@@ -22,6 +22,13 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
+          <div id="selfContainer">
+            <ResumeContainer/>
+            <AboutContainer
+              dialog={this.props.dialog}
+              toggleAboutDialog={this.props.toggleAboutDialog}
+            />
+          </div>
           <h1 className="App-title"> MELVIN HSIEH </h1>
           <div id="buttonContainer">
             <CommunityWebContainer
@@ -43,11 +50,6 @@ class App extends Component {
               dialog={this.props.dialog}
               toggleProjectDialog={this.props.toggleProjectDialog}
               importProjectDialog={this.props.importProjectDialog}
-            />
-            <ResumeContainer/>
-            <AboutContainer
-              dialog={this.props.dialog}
-              toggleAboutDialog={this.props.toggleAboutDialog}
             />
           </div>
         </header>

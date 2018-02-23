@@ -13,7 +13,7 @@ class Resume extends Component {
 
   render() {
     return (
-      <div className="project" onClick={this.handleOnClick.bind(this)}> resume </div>
+      <div className="selfButton" onClick={this.handleOnClick.bind(this)}> resume </div>
     );
   }
 }
