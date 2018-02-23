@@ -4,7 +4,7 @@ import selfImage from '../media/selfImage.jpg';
 import resume from '../media/resume.pdf';
 import { SocialIcon } from 'react-social-icons';
 import DocumentText from 'react-icons/lib/io/document-text';
-import Github from 'react-icons/lib/go/mark-github';
+import Github from 'react-icons/lib/fa/github';
 import LinkedIn from 'react-icons/lib/io/social-linkedin';
 
 class AboutDialog extends Component {
@@ -68,20 +68,20 @@ class AboutDialog extends Component {
   }
 
   render() {
-    let hoverColor = "#222";
-    let hoverColor2 = "#222";
-    let hoverColor3 = "#222";
+    let hoverColor = "white";
+    let hoverColor2 = "white";
+    let hoverColor3 = "white";
 
     if(this.state.isHovering) {
-      hoverColor = '#BEBEBE';
+      hoverColor = '#A9B7C0';
     }
 
     if(this.state.isHovering2) {
-      hoverColor2 = '#BEBEBE';
+      hoverColor2 = '#A9B7C0';
     }
 
     if(this.state.isHovering3) {
-      hoverColor3 = '#BEBEBE';
+      hoverColor3 = '#A9B7C0';
     }
 
     if (this.props.dialog.showAboutDialog) {
@@ -111,7 +111,7 @@ class AboutDialog extends Component {
                 <Github
                   className="dialogIcon"
                   color={hoverColor2}
-                  size={40}
+                  size={50}
                   onMouseEnter={this.onMouseEnter2}
                   onMouseLeave={this.onMouseLeave2}
                   onClick={this.handleOnGithub}
@@ -144,7 +144,7 @@ class AboutDialog extends Component {
 
 const styles = {
   body: {
-    // backgroundColor: '#BEBEBE',
+    // backgroundColor: '#CCCBC6',
   },
   buttonLabel: {
     textTransform: 'lowercase',
@@ -181,10 +181,11 @@ const styles = {
   title: {
     fontSize: '30px',
     fontWeight: 'bold',
-    color: '#222',
+    color: 'white',
     fontFamily: "HelveticaNeue",
     textAlign: 'left',
-    borderBottom: '2px solid #222',
+    // borderBottom: '2px solid #CCCBC6',
+    backgroundColor: '#CCCBC6',
   },
 }
 

@@ -6,13 +6,13 @@
 #aboutDesc {
   font-family: "HelveticaNeue";
   font-weight: bold;
-  font-size: 20px;
-  color: #222;
+  font-size: 30px;
+  color: #A9B7C0;
   padding-top: 10px;
   padding-right: 17px;
   padding-left: 17px;
   padding-bottom: 10px;
-  // border: 1px solid #222;
+  // border: 1px solid #C7D8C6;
   margin-top: 20px;
   background-color: white;
 }
@@ -20,13 +20,13 @@
 #aboutDialogDiv {
   display: flex;
   flex-direction: row;
-  // background-color: #BEBEBE;
+  // background-color: #CCCBC6;
 }
 
 #aboutIMG {
   float: left;
   margin-top: 20px;
-  // border: 1px solid #222;
+  // border: 1px solid #C7D8C6;
 }
 
 #aboutTextDiv {
@@ -52,7 +52,7 @@
 
 .App-header {
   font-family: "HelveticaNeue";
-  background-color: #222;
+  background-color: #C7D8C6;
   height: 100px;
   color: white;
 }
@@ -82,25 +82,25 @@
 }
 
 #colorBar {
-  background-color: white;
+  background-color: #A9B7C0;
   padding: 5px;
-  margin-top: 2.7px;
+  margin-top: 3.5px;
   display: block;
 }
 
 #colorBar2 {
-  background-color: white;
+  background-color: #A9B7C0;
   padding: 5px;
   position: relative;
-  bottom: 23px;
+  bottom: 20.6px;
   display: block;
 }
 
 #communityMobDesc {
   position: relative;
-  color: #222;
+  color: #A9B7C0;
   padding: 5px;
-  // border: 1px solid #222;
+  // border: 1px solid #C7D8C6;
   font-family: "HelveticaNeue";
   font-weight: bold;
   font-size: 20px;
@@ -115,7 +115,7 @@
   float: left;
   max-width: 100%;
   max-height: 90%;
-  // border: 2px solid #222;
+  // border: 2px solid #C7D8C6;
 }
 
 #communityMobImage2 {
@@ -123,7 +123,7 @@
   right: 45px;
   height: 250px;
   width: 440px;
-  // border: 1px solid #222;
+  // border: 1px solid #C7D8C6;
 }
 
 #communityMobTxt {
@@ -158,6 +158,8 @@
   cursor: pointer;
   margin-left: 5px;
   margin-right: 5px;
+  box-shadow: 1px 2px 1px #aaaaaa;
+  background-color: #C7D8C6;
 }
 
 #dialogIconContainer {
@@ -172,15 +174,13 @@
 }
 
 #email {
-  color: #222;
+  color: #C7D8C6;
 }
 #email:hover {
-  color: #BEBEBE;
+  color: #A9B7C0;
 }
 
 @font-face {
-   // font-family: "HelveticaNeue";
-   // src: url('./media/Alcubierre.otf');
    font-family: "HelveticaNeue";
    src: url('./media/HelveticaNeue Light.ttf');
 }
@@ -201,7 +201,7 @@
 }
 
 .project:hover {
-  color: #BEBEBE;
+  color: #CCCBC6;
 }
 
 .projectBox {
@@ -211,12 +211,12 @@
 }
 
 .projectDesc {
-  color: #222;
+  color: #A9B7C0;
   font-weight: bold;
   font-family: "HelveticaNeue";
   font-size: 20px;
   padding: 5px;
-  // border: 1px solid #222;
+  // border: 1px solid #C7D8C6;
   background-color: white;
 }
 
@@ -226,7 +226,7 @@
   max-height: 90%;
   margin-left: auto;
   margin-right: auto;
-  // border: 1px solid #222;
+  // border: 1px solid #C7D8C6;
 }
 
 .profilePicture {
@@ -240,7 +240,7 @@
 
 #resumeIcon {
   position: relative;
-  left: 5px;
+  // left: 5px;
 }
 
 #selfContainer {
@@ -268,5 +268,5 @@
 }
 
 .selfButton:hover {
-  color: #BEBEBE;
+  color: #CCCBC6;
 }

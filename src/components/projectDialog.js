@@ -57,7 +57,7 @@ class ProjectDialog extends Component {
             <div id="dialogTitleContainer">
               <div id="aboutTitle"> {this.props.dialog.currentProject.name} </div>
               <RaisedButton
-                backgroundColor="#222"
+                backgroundColor="#C7D8C6"
                 labelStyle={styles.buttonLabel}
                 style={styles.repoButton}
                 label='github repo'
@@ -75,7 +75,7 @@ class ProjectDialog extends Component {
 
 const styles = {
   body: {
-    // backgroundColor: '#BEBEBE',
+    // backgroundColor: '#CCCBC6',
   },
   buttonLabel: {
     textTransform: 'lowercase',
@@ -83,7 +83,7 @@ const styles = {
     fontWeight: 'bold',
     fontSize: '20px',
     color: 'white',
-    backgroundColor: '#222',
+    // backgroundColor: '#C7D8C6',
   },
   repoButton: {
     position: 'absolute',
@@ -94,9 +94,11 @@ const styles = {
   title: {
     fontSize: '30px',
     fontWeight: 'bold',
+    color: 'white',
     fontFamily: "HelveticaNeue",
     textAlign: 'center',
-    borderBottom: '2px solid #222',
+    backgroundColor: '#CCCBC6',
+    // borderBottom: '2px solid #CCCBC6',
   },
 }
 
