@@ -79,7 +79,7 @@ const styles = {
   },
   buttonLabel: {
     textTransform: 'lowercase',
-    fontFamily: 'Alcubierre',
+    fontFamily: "HelveticaNeue",
     fontWeight: 'bold',
     fontSize: '20px',
     color: 'white',
@@ -94,7 +94,7 @@ const styles = {
   title: {
     fontSize: '30px',
     fontWeight: 'bold',
-    fontFamily: 'Alcubierre',
+    fontFamily: "HelveticaNeue",
     textAlign: 'center',
     borderBottom: '2px solid #222',
   },

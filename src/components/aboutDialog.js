@@ -128,10 +128,8 @@ class AboutDialog extends Component {
             <img id='aboutIMG' src={selfImage} alt="" height="400" width="300"></img>
             <div id="aboutTextDiv">
               <div id="aboutDesc">
-                Hello! I am a software engineer looking for opportunities to improve and grow.
-                I enjoy working in teams and am looking to learn from both mentors and peers.
-                I like companies and projects that benefit people, products that makes life easier and better.
-                Have a look around and enjoy! Hope to hear from you!
+                "Hello!
+                Have a look around and enjoy. Hope to hear from you!" - Mel
                 <br />
                 <br />
                 <a id="email" href="mailto:mehsieh89@gmail.com"> e-mail: mehsieh89@gmail.com </a>
@@ -150,7 +148,7 @@ const styles = {
   },
   buttonLabel: {
     textTransform: 'lowercase',
-    fontFamily: 'Alcubierre',
+    fontFamily: "HelveticaNeue",
     fontWeight: 'bold',
     fontSize: '20px',
     color: 'white',
@@ -184,7 +182,7 @@ const styles = {
     fontSize: '30px',
     fontWeight: 'bold',
     color: '#222',
-    fontFamily: 'Alcubierre',
+    fontFamily: "HelveticaNeue",
     textAlign: 'left',
     borderBottom: '2px solid #222',
   },

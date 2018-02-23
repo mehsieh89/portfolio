@@ -4,7 +4,7 @@
 }
 
 #aboutDesc {
-  font-family: 'Alcubierre';
+  font-family: "HelveticaNeue";
   font-weight: bold;
   font-size: 20px;
   color: #222;
@@ -51,7 +51,7 @@
 }
 
 .App-header {
-  font-family: 'Alcubierre';
+  font-family: "HelveticaNeue";
   background-color: #222;
   height: 100px;
   color: white;
@@ -101,7 +101,7 @@
   color: #222;
   padding: 5px;
   // border: 1px solid #222;
-  font-family: 'Alcubierre';
+  font-family: "HelveticaNeue";
   font-weight: bold;
   font-size: 20px;
   background-color: white;
@@ -138,7 +138,7 @@
 }
 
 #description {
-  font-family: "Alcubierre";
+  font-family: "HelveticaNeue";
   width: 100px;
 }
 
@@ -179,8 +179,10 @@
 }
 
 @font-face {
-   font-family: "Alcubierre";
-   src: url('./media/Alcubierre.otf');
+   // font-family: "HelveticaNeue";
+   // src: url('./media/Alcubierre.otf');
+   font-family: "HelveticaNeue";
+   src: url('./media/HelveticaNeue Light.ttf');
 }
 
 #github {
@@ -211,7 +213,7 @@
 .projectDesc {
   color: #222;
   font-weight: bold;
-  font-family: 'Alcubierre';
+  font-family: "HelveticaNeue";
   font-size: 20px;
   padding: 5px;
   // border: 1px solid #222;
