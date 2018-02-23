@@ -8,7 +8,7 @@ import CommunityWebContainer from './containers/communityWebContainer.js';
 import CommunityMobContainer from './containers/communityMobContainer.js';
 import FridgrContainer from './containers/fridgrContainer.js';
 import MoodifyContainer from './containers/moodifyContainer.js';
-import Profile from './components/profilePicture.js';
+import Main from './components/mainBody.js';
 import ProjectDialog from './components/projectDialog.js';
 import { toggleAboutDialog, toggleProjectDialog, importProjectDialog } from './actions.js';
 import './App.css';
@@ -61,7 +61,7 @@ class App extends Component {
           dialog={this.props.dialog}
           toggleProjectDialog={this.props.toggleProjectDialog}
         />
-        <Profile/>
+        <Main/>
       </div>
     );
   }

@@ -202,7 +202,7 @@
 }
 
 .project:hover {
-  color: #CCCBC6;
+  color: #A9B7C0;
 }
 
 .projectBox {
@@ -269,5 +269,18 @@
 }
 
 .selfButton:hover {
-  color: #CCCBC6;
+  color: #A9B7C0;
+}
+
+#container {
+  margin: 0 auto;
+  padding: 40px;
+  width: 80%;
+  color: #333;
+  background: #419be0;
+}
+
+#sliderArrows {
+  height: 50px;
+  width: 50px;
 }

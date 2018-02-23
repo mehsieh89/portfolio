@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Dialog, RaisedButton } from 'material-ui';
 import selfImage from '../media/selfImage.jpg';
 import resume from '../media/resume.pdf';
-import { SocialIcon } from 'react-social-icons';
 import DocumentText from 'react-icons/lib/io/document-text';
 import Github from 'react-icons/lib/fa/github';
 import LinkedIn from 'react-icons/lib/io/social-linkedin';
