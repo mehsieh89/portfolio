@@ -13,7 +13,9 @@ class CommWebSlide extends Component {
 
   render() {
     return (
-      <div> how </div>
+      <div>
+        <img src='../media/communityWeb.png'></img>
+      </div>
     );
   }
 }

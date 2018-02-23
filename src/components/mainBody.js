@@ -4,23 +4,41 @@ import CommMobSlide from './slideComponents/commMobSlide.js';
 import CommWebSlide from './slideComponents/commWebSlide.js';
 import FridgrSlide from './slideComponents/fridgrSlide.js';
 import MoodifySlide from './slideComponents/moodifySlide.js';
-import LeftArrow from 'react-icons/lib/fa/angle-left';
-import RightArrow from 'react-icons/lib/fa/angle-right';
+// import NextArrow from 'react-icons/lib/fa/angle-right';
+// import PrevArrow from 'react-icons/lib/fa/angle-left';
+import NextArrow from './slideComponents/nextArrow.js';
+import PrevArrow from './slideComponents/prevArrow.js';
 
 class Main extends Component {
   render() {
+    const ArrowLeft = <PrevArrow/>;
+    const ArrowRight = <NextArrow/>;
+
+    const settings = {
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 4500
+    };
     return (
       <div id="container">
         <Slider
-          dots={true}
-          nextArrow={<RightArrow/>}
-          prevArrow={
-            <LeftArrow
-              id="sliderArrows"
-              color='black'>
-            </LeftArrow>}
-          // infinite={true}
-          // speed={500}
+          {...settings}
+          prevArrow={ArrowLeft}
+          nextArrow={ArrowRight}
+          // nextArrow={
+          //   <NextArrow
+          //     id="sliderArrows"
+          //     color='#A9B7C0'>
+          //   </NextArrow>
+          // }
+          // prevArrow={
+          //   <PrevArrow
+          //     id="sliderArrows"
+          //     color='#A9B7C0'>
+          //   </PrevArrow>
+          // }
         >
           <div>
             <CommMobSlide/>
