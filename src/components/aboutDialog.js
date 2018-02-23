@@ -130,7 +130,7 @@ class AboutDialog extends Component {
               <div id="aboutDesc">
                 Hello! I am a software engineer looking for opportunities to improve and grow.
                 I enjoy working in teams and am looking to learn from both mentors and peers.
-                I like companies and projects that benefit people; products that makes life easier and better.
+                I like companies and projects that benefit people, products that makes life easier and better.
                 Have a look around and enjoy! Hope to hear from you!
                 <br />
                 <br />
@@ -146,7 +146,7 @@ class AboutDialog extends Component {
 
 const styles = {
   body: {
-    backgroundColor: '#BEBEBE',
+    // backgroundColor: '#BEBEBE',
   },
   buttonLabel: {
     textTransform: 'lowercase',
@@ -154,9 +154,6 @@ const styles = {
     fontWeight: 'bold',
     fontSize: '20px',
     color: 'white',
-    '&:hover': {
-      backgroundColor: 'white',
-    }
   },
   button1: {
     position: 'relative',

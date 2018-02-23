@@ -75,7 +75,7 @@ class ProjectDialog extends Component {
 
 const styles = {
   body: {
-    backgroundColor: '#BEBEBE',
+    // backgroundColor: '#BEBEBE',
   },
   buttonLabel: {
     textTransform: 'lowercase',

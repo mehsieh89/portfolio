@@ -12,7 +12,7 @@
   padding-right: 17px;
   padding-left: 17px;
   padding-bottom: 10px;
-  border: 1px solid #222;
+  // border: 1px solid #222;
   margin-top: 20px;
   background-color: white;
 }
@@ -20,13 +20,13 @@
 #aboutDialogDiv {
   display: flex;
   flex-direction: row;
-  background-color: #BEBEBE;
+  // background-color: #BEBEBE;
 }
 
 #aboutIMG {
   float: left;
   margin-top: 20px;
-  border: 1px solid #222;
+  // border: 1px solid #222;
 }
 
 #aboutTextDiv {
@@ -100,7 +100,7 @@
   position: relative;
   color: #222;
   padding: 5px;
-  border: 1px solid #222;
+  // border: 1px solid #222;
   font-family: 'Alcubierre';
   font-weight: bold;
   font-size: 20px;
@@ -115,7 +115,7 @@
   float: left;
   max-width: 100%;
   max-height: 90%;
-  border: 2px solid #222;
+  // border: 2px solid #222;
 }
 
 #communityMobImage2 {
@@ -123,7 +123,7 @@
   right: 45px;
   height: 250px;
   width: 440px;
-  border: 1px solid #222;
+  // border: 1px solid #222;
 }
 
 #communityMobTxt {
@@ -214,7 +214,7 @@
   font-family: 'Alcubierre';
   font-size: 20px;
   padding: 5px;
-  border: 1px solid #222;
+  // border: 1px solid #222;
   background-color: white;
 }
 
@@ -224,7 +224,7 @@
   max-height: 90%;
   margin-left: auto;
   margin-right: auto;
-  border: 1px solid #222;
+  // border: 1px solid #222;
 }
 
 .profilePicture {
