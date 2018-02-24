@@ -308,11 +308,11 @@
 }
 
 .sliderImg:hover {
-  transform: scale(1.25);
+  transform: scale(1.10);
 }
 
 #sliderImgCommMob:hover {
-  transform: scale(1.25);
+  transform: scale(1.10);
 }
 
 .slick-prev,
