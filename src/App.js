@@ -61,7 +61,11 @@ class App extends Component {
           dialog={this.props.dialog}
           toggleProjectDialog={this.props.toggleProjectDialog}
         />
-        <Main/>
+        <Main
+          dialog={this.props.dialog}
+          toggleProjectDialog={this.props.toggleProjectDialog}
+          importProjectDialog={this.props.importProjectDialog}
+        />
       </div>
     );
   }

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-// import { RaisedButton } from 'material-ui';
-import CommunityWeb from '../../media/communityWeb.png';
+import MoodifyImage from '../../media/moodifyDemo.gif'
+import Moodify from '../../media/moodifyImage.png';
 
 
 class MoodifySlide extends Component {
@@ -10,12 +10,22 @@ class MoodifySlide extends Component {
   }
 
   handleOnClick() {
-    // this.props.toggleAboutDialog();
+    this.props.importProjectDialog({
+      name: 'moodify web app',
+      pathName: MoodifyImage,
+      githubURL: 'https://github.com/ninjacodez/moodify',
+      dimensions: {
+        height: '325',
+        width: '500',
+      },
+      description: "Moodify utilizes the Watson API to analyze emotions portrayed in song lyrics. Lyrics are pulled from MusixMatch and song clips are pulled from Spotify.",
+    })
+    this.props.toggleProjectDialog();
   }
 
   render() {
     return (
-      <img className="sliderImg" src={CommunityWeb}></img>
+      <img className="sliderImg" src={Moodify} onClick={this.handleOnClick}></img>
     );
   }
 }

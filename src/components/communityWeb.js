@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import { RaisedButton } from 'material-ui';
 import CommunityWebDemo from '../media/communityWebDemo.gif'
 
 class CommunityWeb extends Component {

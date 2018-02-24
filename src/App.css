@@ -289,6 +289,8 @@
   margin-right: auto;
   height: 550px;
   width: 850px;
+  cursor: pointer;
+  transition: transform .2s;
 }
 
 #sliderImgCommMob {
@@ -301,6 +303,16 @@
   top: 50%;
   left: 50%;
   margin: 115px 0 0 -425px;
+  cursor: pointer;
+  transition: transform .2s;
+}
+
+.sliderImg:hover {
+  transform: scale(1.25);
+}
+
+#sliderImgCommMob:hover {
+  transform: scale(1.25);
 }
 
 .slick-prev,

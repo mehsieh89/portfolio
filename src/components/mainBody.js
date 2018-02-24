@@ -10,12 +10,18 @@ import NextArrow from './slideComponents/nextArrow.js';
 import PrevArrow from './slideComponents/prevArrow.js';
 
 class Main extends Component {
+  constructor(props) {
+    super(props);
+    // this.handleOnClick = this.handleOnClick.bind(this);
+  }
+
   render() {
     const ArrowLeft = <PrevArrow/>;
     const ArrowRight = <NextArrow/>;
 
     const settings = {
         infinite: true,
+        dots: true,
         // autoplay: true,
         // autoplaySpeed: 4500
     };
@@ -27,16 +33,32 @@ class Main extends Component {
           nextArrow={ArrowRight}
         >
           <div>
-            <CommWebSlide/>
+            <CommWebSlide
+              dialog={this.props.dialog}
+              toggleProjectDialog={this.props.toggleProjectDialog}
+              importProjectDialog={this.props.importProjectDialog}
+            />
           </div>
           <div>
-            <CommMobSlide/>
+            <CommMobSlide
+              dialog={this.props.dialog}
+              toggleProjectDialog={this.props.toggleProjectDialog}
+              importProjectDialog={this.props.importProjectDialog}
+            />
           </div>
           <div>
-            <FridgrSlide/>
+            <FridgrSlide
+              dialog={this.props.dialog}
+              toggleProjectDialog={this.props.toggleProjectDialog}
+              importProjectDialog={this.props.importProjectDialog}
+            />
           </div>
           <div>
-            <MoodifySlide/>
+            <MoodifySlide
+              dialog={this.props.dialog}
+              toggleProjectDialog={this.props.toggleProjectDialog}
+              importProjectDialog={this.props.importProjectDialog}
+            />
           </div>
         </Slider>
       </div>
