@@ -1,15 +1,16 @@
 {
-  "main.css": "static/css/main.9f045f87.css",
-  "main.css.map": "static/css/main.9f045f87.css.map",
-  "main.js": "static/js/main.bdb14c19.js",
-  "main.js.map": "static/js/main.bdb14c19.js.map",
+  "main.css": "static/css/main.f797feb3.css",
+  "main.css.map": "static/css/main.f797feb3.css.map",
+  "main.js": "static/js/main.26e47bbf.js",
+  "main.js.map": "static/js/main.26e47bbf.js.map",
   "static/media/HelveticaNeue Light.ttf": "static/media/HelveticaNeue Light.0facaae9.ttf",
   "static/media/communityMob.jpg": "static/media/communityMob.a4e8100b.jpg",
   "static/media/communityMobDemo.gif": "static/media/communityMobDemo.934bf412.gif",
+  "static/media/communityWeb.png": "static/media/communityWeb.7b1ca243.png",
   "static/media/communityWebDemo.gif": "static/media/communityWebDemo.fb03e31b.gif",
   "static/media/fridgrMob.png": "static/media/fridgrMob.d1986b86.png",
   "static/media/moodifyDemo.gif": "static/media/moodifyDemo.ccd2a6f6.gif",
-  "static/media/projectReel.gif": "static/media/projectReel.ba0179a9.gif",
+  "static/media/moodifyImage.png": "static/media/moodifyImage.203a6ec3.png",
   "static/media/resume.pdf": "static/media/resume.4af48cf3.pdf",
   "static/media/selfImage.jpg": "static/media/selfImage.d2d62b42.jpg"
 }
