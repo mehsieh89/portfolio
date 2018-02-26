@@ -24,7 +24,7 @@ class FridgrSlide extends Component {
 
   render() {
     return (
-      <img className="sliderImg" src={FridgrMob} onClick={this.handleOnClick}></img>
+      <img className="sliderImg" src={FridgrMob} onClick={this.handleOnClick} alt=""></img>
     );
   }
 }

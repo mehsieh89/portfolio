@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import RightArrow from 'react-icons/lib/fa/angle-right';
 
 export default
-class NextArrow extends React.Component {
+class NextArrow extends Component {
 
     render() {
         return (

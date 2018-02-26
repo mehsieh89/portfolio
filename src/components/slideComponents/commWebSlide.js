@@ -24,7 +24,7 @@ class CommWebSlide extends Component {
 
   render() {
     return (
-        <img className="sliderImg" src={CommunityWeb} onClick={this.handleOnClick}></img>
+        <img className="sliderImg" src={CommunityWeb} onClick={this.handleOnClick} alt=""></img>
     );
   }
 }

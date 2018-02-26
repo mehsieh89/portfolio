@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Dialog, RaisedButton } from 'material-ui';
+import { Dialog } from 'material-ui';
 import selfImage from '../media/selfImage.jpg';
 import resume from '../media/resume.pdf';
 import DocumentText from 'react-icons/lib/io/document-text';

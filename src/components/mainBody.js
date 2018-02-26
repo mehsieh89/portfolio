@@ -10,10 +10,6 @@ import NextArrow from './slideComponents/nextArrow.js';
 import PrevArrow from './slideComponents/prevArrow.js';
 
 class Main extends Component {
-  constructor(props) {
-    super(props);
-    // this.handleOnClick = this.handleOnClick.bind(this);
-  }
 
   render() {
     const ArrowLeft = <PrevArrow/>;
@@ -22,8 +18,9 @@ class Main extends Component {
     const settings = {
         infinite: true,
         dots: true,
-        // autoplay: true,
-        // autoplaySpeed: 4500
+        autoplay: true,
+        autoplaySpeed: 4250,
+        pauseOnHover: true,
     };
     return (
       <div id="sliderContainer">
