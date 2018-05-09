@@ -12,7 +12,6 @@
   padding-right: 17px;
   padding-left: 17px;
   padding-bottom: 10px;
-  // border: 1px solid #C7D8C6;
   margin-top: 20px;
   background-color: white;
 }
@@ -20,13 +19,11 @@
 #aboutDialogDiv {
   display: flex;
   flex-direction: row;
-  // background-color: #CCCBC6;
 }
 
 #aboutIMG {
   float: left;
   margin-top: 20px;
-  // border: 1px solid #C7D8C6;
 }
 
 #aboutTextDiv {
@@ -283,31 +280,47 @@
   margin: 0 auto;
   padding: 40px;
   width: 80%;
-  position: relative;
+  justify-content: center;
+  height: 100%;
 }
+
 
 .sliderImg {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
   height: 550px;
   width: 850px;
   cursor: pointer;
   transition: transform .2s;
 }
 
+#sliderImgCommMobContainer {
+  height: 550px;
+  width: 850px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 #sliderImgCommMob {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
   height: 370px;
   width: 850px;
-  position: relative;
-  top: 50%;
-  left: 50%;
-  margin: 115px 0 0 -425px;
+  margin: 0 auto;
   cursor: pointer;
   transition: transform .2s;
+}
+
+@media only screen and (max-width: 1058px) {
+  .sliderImg {
+    height: 400px;
+    width: 600px;
+  }
+
+  #sliderImgCommMob {
+    height: 270px;
+    width: 600px;
+  }
 }
 
 .sliderImg:hover {

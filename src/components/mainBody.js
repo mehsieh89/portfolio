@@ -36,7 +36,7 @@ class Main extends Component {
               importProjectDialog={this.props.importProjectDialog}
             />
           </div>
-          <div>
+          <div id="sliderImgCommMobContainer">
             <CommMobSlide
               dialog={this.props.dialog}
               toggleProjectDialog={this.props.toggleProjectDialog}
