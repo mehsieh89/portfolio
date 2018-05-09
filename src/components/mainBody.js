@@ -21,6 +21,7 @@ class Main extends Component {
         autoplay: true,
         autoplaySpeed: 4250,
         pauseOnHover: true,
+        adaptiveHeight: true,
     };
     return (
       <div id="sliderContainer">

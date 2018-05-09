@@ -81,7 +81,7 @@
 
 #colorBar {
   background-color: #A9B7C0;
-  padding: 5px 0;
+  padding: 4px 0;
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -89,7 +89,7 @@
 
 #colorBar2 {
   background-color: #A9B7C0;
-  padding: 5px 0;
+  padding: 4px 0;
   width: 100%;
   position: absolute;
   top: 0;
@@ -311,18 +311,6 @@
   transition: transform .2s;
 }
 
-@media only screen and (max-width: 1058px) {
-  .sliderImg {
-    height: 400px;
-    width: 600px;
-  }
-
-  #sliderImgCommMob {
-    height: 270px;
-    width: 600px;
-  }
-}
-
 .sliderImg:hover {
   transform: scale(1.10);
 }
@@ -427,4 +415,30 @@
 [dir='rtl'] .slick-next:before
 {
     content: 'â†';
+}
+
+@media only screen and (max-width: 1058px) {
+  .projectBox {
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+
+  #buttonContainer {
+    margin-left: 30px;
+  }
+
+  .sliderImg {
+    height: 400px;
+    width: 600px;
+  }
+
+  #sliderImgCommMobContainer {
+    height: 400px;
+    width: 600px;
+  }
+
+  #sliderImgCommMob {
+    height: 270px;
+    width: 600px;
+  }
 }
