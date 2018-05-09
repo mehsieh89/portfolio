@@ -29,7 +29,6 @@ class ProjectDialog extends Component {
             <div id="communityMobTxt">
               <p id="communityMobDesc"> {this.props.dialog.currentProject.description} </p>
               <img id="communityMobImage2" src={CommMob} alt=""></img>
-
             </div>
           </div>
         )

@@ -114,16 +114,15 @@
   float: left;
   max-width: 100%;
   max-height: 90%;
-  // border: 2px solid #C7D8C6;
 }
 
 #communityMobImage2 {
-  position: relative;
-  right: 45px;
-  top: 60px;
-  height: 200px;
   width: 440px;
-  // border: 1px solid #C7D8C6;
+  margin: 0 auto;
+  height: 200px;
+  position: relative;
+  right: 40px;
+  top: 20px;
 }
 
 #communityMobTxt {
@@ -131,10 +130,8 @@
   height: 100%;
   position: relative;
   left: 30px;
-  margin-top: auto;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: auto;
+  margin: auto;
+  align-items: center;
 }
 
 #commMobSlideComponent {
@@ -418,6 +415,14 @@
 }
 
 @media only screen and (max-width: 1058px) {
+  .App-title {
+    right: 30px;
+  }
+  .selfButtonBox {
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+
   .projectBox {
     margin-right: 20px;
     margin-left: 20px;
@@ -441,4 +446,13 @@
     height: 270px;
     width: 600px;
   }
+}
+
+@media only screen and (max-width: 990px) {
+  #communityMobImage2 {
+    height: 150px;
+    width: 300px;
+    margin: 30px 20px;
+  }
+
 }
