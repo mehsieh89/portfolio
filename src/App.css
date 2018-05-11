@@ -457,6 +457,16 @@
   }
 }
 
+@media screen and (max-width: 950px) {
+  #selfContainer {
+    right: 40px;
+  }
+
+  .App-title {
+    right: 60px;
+  }
+}
+
 @media screen and (max-height: 670px) {
   #communityMobImage {
     height: 400px;
