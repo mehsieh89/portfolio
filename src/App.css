@@ -414,7 +414,7 @@
     content: 'â†';
 }
 
-@media only screen and (max-width: 1058px) {
+@media screen and (max-width: 1058px) {
   .App-title {
     right: 30px;
   }
@@ -448,7 +448,7 @@
   }
 }
 
-@media only screen and (max-width: 990px) {
+@media screen and (max-width: 990px) {
   #communityMobImage2 {
     height: 150px;
     width: 300px;
@@ -457,7 +457,7 @@
   }
 }
 
-@media only screen and (max-height: 670px) {
+@media screen and (max-height: 670px) {
   #communityMobImage {
     height: 400px;
     width: 200px;
