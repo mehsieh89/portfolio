@@ -218,7 +218,6 @@
   font-family: "HelveticaNeue";
   font-size: 20px;
   padding: 5px;
-  // border: 1px solid #C7D8C6;
   background-color: white;
 }
 
@@ -228,7 +227,6 @@
   max-height: 90%;
   margin-left: auto;
   margin-right: auto;
-  // border: 1px solid #C7D8C6;
 }
 
 .profilePicture {
@@ -464,6 +462,16 @@
 
   .App-title {
     right: 60px;
+  }
+}
+
+@media screen and (max-width: 910px) {
+  #selfContainer {
+    right: 60px;
+  }
+
+  .App-title {
+    right: 80px;
   }
 }
 
