@@ -23,7 +23,7 @@ class FridgrMobile extends Component {
 
   render() {
     return (
-      <div className="project" onClick={this.handleOnClick}> fridgr mobile </div>
+      <div className="project animated fadeInLeftBig" onClick={this.handleOnClick}> fridgr mobile </div>
     );
   }
 }

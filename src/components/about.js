@@ -13,7 +13,7 @@ class About extends Component {
 
   render() {
     return (
-      <div className="selfButton" onClick={this.handleOnClick}> about </div>
+      <div className="selfButton animated zoomInUp" onClick={this.handleOnClick}> about </div>
     );
   }
 }

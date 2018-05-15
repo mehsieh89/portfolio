@@ -24,7 +24,7 @@ class Main extends Component {
         adaptiveHeight: true,
     };
     return (
-      <div id="sliderContainer">
+      <div id="sliderContainer" className="animated zoomInUp">
         <Slider
           {...settings}
           prevArrow={ArrowLeft}

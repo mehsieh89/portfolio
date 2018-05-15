@@ -23,7 +23,7 @@ class CommunityMobile extends Component {
 
   render() {
     return (
-      <div className="project" onClick={this.handleOnClick.bind(this)}> community mobile </div>
+      <div className="project animated fadeInDownBig" onClick={this.handleOnClick.bind(this)}> community mobile </div>
     );
   }
 }
