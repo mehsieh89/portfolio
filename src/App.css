@@ -292,7 +292,7 @@
 #sliderImgCommMobContainer {
   height: 550px;
   width: 850px;
-  display: flex;
+  display: flex !important;
   flex-direction: column;
   justify-content: center;
 }

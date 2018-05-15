@@ -29,7 +29,7 @@ class App extends Component {
               toggleAboutDialog={this.props.toggleAboutDialog}
             />
           </div>
-          <h1 className="App-title"> MELVIN HSIEH </h1>
+          <h1 className="App-title animated bounceInLeft"> MELVIN HSIEH </h1>
           <div id="buttonContainer">
             <CommunityWebContainer
               dialog={this.props.dialog}
