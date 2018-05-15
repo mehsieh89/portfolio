@@ -16,6 +16,12 @@
   background-color: white;
 }
 
+.e-mailBox {
+  font-family: "HelveticaNeue";
+  font-weight: bold;
+  font-size: 30px;
+}
+
 #aboutDialogDiv {
   display: flex;
   flex-direction: row;
