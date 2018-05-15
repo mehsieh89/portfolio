@@ -59,11 +59,8 @@
   font-size: 34px;
   text-align: right;
   position: relative;
-  right: 40px;
-  height: 0px;
+  right: 38px;
   top: 15px;
-  margin: auto;
-  display: block;
 }
 
 .box {
@@ -187,10 +184,6 @@
 
 #github {
   cursor: pointer;
-}
-
-text {
-  color: white;
 }
 
 #profileDiv {
