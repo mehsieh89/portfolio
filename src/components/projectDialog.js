@@ -54,8 +54,9 @@ class ProjectDialog extends Component {
           titleStyle={styles.title}
           title={
             <div id="dialogTitleContainer">
-              <div id="aboutTitle"> {this.props.dialog.currentProject.name} </div>
+              <div id="aboutTitle" className="animated lightSpeedIn"> {this.props.dialog.currentProject.name} </div>
               <RaisedButton
+                className="animated fadeIn"
                 backgroundColor="#C7D8C6"
                 labelStyle={styles.buttonLabel}
                 style={styles.repoButton}
