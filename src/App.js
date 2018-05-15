@@ -29,7 +29,6 @@ class App extends Component {
               toggleAboutDialog={this.props.toggleAboutDialog}
             />
           </div>
-          {/* <h1 className="App-title animated bounceInLeft"> MELVIN HSIEH </h1> */}
           <div className="App-title">
             <svg xmlns="http://www.w3.org/2000/svg" id="logo" viewBox="0 0 1900 300"    width="250px">
             </svg>

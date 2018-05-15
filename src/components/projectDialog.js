@@ -43,18 +43,18 @@ class ProjectDialog extends Component {
       if (this.props.dialog.currentProject.name === "community mobile app") {
         return (
           <div id="dialogDivMob">
-            <img id="communityMobImage" src={this.props.dialog.currentProject.pathName} alt=""></img>
+            <img id="communityMobImage" className="animated fadeIn" src={this.props.dialog.currentProject.pathName} alt=""></img>
             <div id="communityMobTxt">
-              <p id="communityMobDesc"> {this.props.dialog.currentProject.description} </p>
-              <img id="communityMobImage2" src={CommMob} alt=""></img>
+              <p id="communityMobDesc" className="animated fadeIn"> {this.props.dialog.currentProject.description} </p>
+              <img id="communityMobImage2" className="animated fadeIn" src={CommMob} alt=""></img>
             </div>
           </div>
         )
       } else {
         return (
           <div id="dialogDiv">
-            <p className="projectDesc"> {this.props.dialog.currentProject.description} </p>
-            <img className="projectIMG" src={this.props.dialog.currentProject.pathName} alt="" height={mediaHeight} width={mediaWidth}>
+            <p className="projectDesc animated fadeIn" > {this.props.dialog.currentProject.description} </p>
+            <img className="projectIMG animated fadeIn" src={this.props.dialog.currentProject.pathName} alt="" height={mediaHeight} width={mediaWidth}>
             </img>
           </div>
         )

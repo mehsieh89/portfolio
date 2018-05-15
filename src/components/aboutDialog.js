@@ -124,15 +124,15 @@ class AboutDialog extends Component {
           bodyStyle={styles.body}
         >
           <div id="aboutDialogDiv">
-            <img id='aboutIMG' className="animated fadeInDown" src={selfImage} alt="" height="400" width="300"></img>
+            <img id='aboutIMG' className="animated fadeIn" src={selfImage} alt="" height="400" width="300"></img>
             <div id="aboutTextDiv">
-              <div id="aboutDesc" className="animated zoomIn">
+              <div id="aboutDesc" className="animated fadeIn">
                 "Hello!
                 Have a look around and enjoy. Hope to hear from you!" - Mel
                 <br />
                 <br />
               </div>
-              <div className="e-mailBox animated fadeInUp">
+              <div className="e-mailBox animated fadeIn">
                 <a id="email" href="mailto:mehsieh89@gmail.com"> e-mail: mehsieh89@gmail.com </a>
               </div>
             </div>

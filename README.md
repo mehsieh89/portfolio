@@ -4,6 +4,6 @@ https://mehsieh89.github.io/portfolio/
 
 styled with Material UI
 
-Other Technologies: Redux
+Other Technologies: Redux, Animate.css, Name animation inspired by Alexis Blondin.
 
 Deployed on Github Pages
