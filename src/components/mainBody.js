@@ -30,28 +30,28 @@ class Main extends Component {
           prevArrow={ArrowLeft}
           nextArrow={ArrowRight}
         >
-          <div>
+          <div id="sliderImgContainer">
             <CommWebSlide
               dialog={this.props.dialog}
               toggleProjectDialog={this.props.toggleProjectDialog}
               importProjectDialog={this.props.importProjectDialog}
             />
           </div>
-          <div id="sliderImgCommMobContainer">
+          <div id="sliderImgContainer">
             <CommMobSlide
               dialog={this.props.dialog}
               toggleProjectDialog={this.props.toggleProjectDialog}
               importProjectDialog={this.props.importProjectDialog}
             />
           </div>
-          <div>
+          <div id="sliderImgContainer">
             <FridgrSlide
               dialog={this.props.dialog}
               toggleProjectDialog={this.props.toggleProjectDialog}
               importProjectDialog={this.props.importProjectDialog}
             />
           </div>
-          <div>
+          <div id="sliderImgContainer">
             <MoodifySlide
               dialog={this.props.dialog}
               toggleProjectDialog={this.props.toggleProjectDialog}

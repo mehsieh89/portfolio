@@ -289,7 +289,7 @@
   transition: transform .2s;
 }
 
-#sliderImgCommMobContainer {
+#sliderImgContainer {
   height: 550px;
   width: 850px;
   display: flex !important;
