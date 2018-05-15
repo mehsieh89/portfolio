@@ -88,10 +88,10 @@ class AboutDialog extends Component {
         <Dialog
           title={
             <div id="dialogTitleContainer">
-              <div id="aboutTitle"> about me </div>
+              <div id="aboutTitle" className="animated lightSpeedIn"> about me </div>
               <div id="dialogIconContainer">
                 <DocumentText
-                  className="dialogIcon"
+                  className="dialogIcon animated rollIn"
                   id="resumeIcon"
                   color={hoverColor3}
                   size={50}
@@ -100,7 +100,7 @@ class AboutDialog extends Component {
                   onClick={this.handleOnResume}
                 />
                 <LinkedIn
-                  className="dialogIcon"
+                  className="dialogIcon animated rollIn"
                   size={50}
                   color={hoverColor}
                   onMouseEnter={this.onMouseEnter}
@@ -108,7 +108,7 @@ class AboutDialog extends Component {
                   onClick={this.handleOnLinkedin}
                 />
                 <Github
-                  className="dialogIcon"
+                  className="dialogIcon animated rollIn"
                   color={hoverColor2}
                   size={50}
                   onMouseEnter={this.onMouseEnter2}

@@ -1,12 +1,18 @@
 import React, { Component } from 'react';
 import { Dialog, RaisedButton } from 'material-ui';
 import CommMob from '../media/communityMob.jpg';
+import Github from 'react-icons/lib/fa/github';
 
 class ProjectDialog extends Component {
   constructor(props) {
     super(props);
+    this.state = {
+      isHovering2: false
+    }
     this.handleClose = this.handleClose.bind(this);
     this.handleOnClick = this.handleOnClick.bind(this);
+    this.onMouseEnter2 = this.onMouseEnter2.bind(this);
+    this.onMouseLeave2 = this.onMouseLeave2.bind(this);
   }
 
   handleOnClick() {
@@ -17,9 +23,21 @@ class ProjectDialog extends Component {
     this.props.toggleProjectDialog();
   }
 
+  onMouseEnter2() {
+    this.setState({ isHovering2: true });
+  }
+
+  onMouseLeave2() {
+    this.setState({ isHovering2: false });
+  }
+
   render() {
     const mediaHeight = this.props.dialog.currentProject.dimensions.height;
     const mediaWidth = this.props.dialog.currentProject.dimensions.width;
+    let hoverColor2 = "white";
+    if(this.state.isHovering2) {
+      hoverColor2 = '#A9B7C0';
+    }
 
     const layoutAdjust = () => {
       if (this.props.dialog.currentProject.name === "community mobile app") {
@@ -55,12 +73,12 @@ class ProjectDialog extends Component {
           title={
             <div id="dialogTitleContainer">
               <div id="aboutTitle" className="animated lightSpeedIn"> {this.props.dialog.currentProject.name} </div>
-              <RaisedButton
-                className="animated fadeIn"
-                backgroundColor="#C7D8C6"
-                labelStyle={styles.buttonLabel}
-                style={styles.repoButton}
-                label='github repo'
+              <Github
+                className="dialogIcon animated rollIn"
+                color={hoverColor2}
+                size={50}
+                onMouseEnter={this.onMouseEnter2}
+                onMouseLeave={this.onMouseLeave2}
                 onClick={this.handleOnClick}
               />
             </div>
