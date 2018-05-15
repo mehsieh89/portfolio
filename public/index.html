@@ -7,6 +7,7 @@
     <link rel="stylesheet" type="text/css" href="../src/reset.css">
     <link rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.4.1/snap.svg-min.js"></script>
   <!-- or -->
     <link rel="stylesheet" type="text/css" charset="UTF-8" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
@@ -33,6 +34,43 @@
       You need to enable JavaScript to run this app.
     </noscript>
     <div id="root"></div>
+
+    <script>
+      window.onload = function () {
+      	var l = Snap('#logo');
+      	var p = l.select('path');
+
+      	setTimeout( function() {
+      		// modify this one line below, and see the result !
+      		var title = 'MELVIN HSIEH';
+      		var logoRandom = '';
+      		var titleContainer = l.text(0, '98%', '');
+      		var possible = "-+*/|}{[]~\\\":;?/.><=+-_)(*&^%$#@!)}";
+      		titleContainer.attr({
+      			fontSize: 280,
+            fill: 'white',
+      			fontWeight: '600'
+      		});
+
+      		function generateRandomTitle(i, logoRandom) {
+      			setTimeout( function() {
+      				titleContainer.attr({ text: logoRandom });
+      			}, i*75 );
+      		}
+
+      		for( var i=0; i < title.length+1; i++ ) {
+      			logoRandom = title.substr(0, i);
+      			for( var j=i; j < title.length; j++ ) {
+      				logoRandom += possible.charAt(Math.floor(Math.random() * possible.length));
+      			}
+      			generateRandomTitle(i, logoRandom);
+      			logoRandom = '';
+      		}
+
+      	}, 500 );
+
+      }
+    </script>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.

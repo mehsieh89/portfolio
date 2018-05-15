@@ -99,7 +99,6 @@
   position: relative;
   color: #A9B7C0;
   padding: 5px;
-  // border: 1px solid #C7D8C6;
   font-family: "HelveticaNeue";
   font-weight: bold;
   font-size: 20px;
@@ -188,6 +187,10 @@
 
 #github {
   cursor: pointer;
+}
+
+text {
+  color: white;
 }
 
 #profileDiv {
