@@ -10,14 +10,11 @@ import FridgrContainer from './containers/fridgrContainer.js';
 import MoodifyContainer from './containers/moodifyContainer.js';
 import Main from './components/mainBody.js';
 import ProjectDialog from './components/projectDialog.js';
-import { toggleAboutDialog, toggleProjectDialog, importProjectDialog, changeSliderIndex } from './actions.js';
+import { toggleAboutDialog, toggleProjectDialog, importProjectDialog,
+  changeSliderIndex, projectIsHovered } from './actions.js';
 import './App.css';
 
 class App extends Component {
-  // constructor(props) {
-  //   super(props);
-  //
-  // }
   render() {
     return (
       <div className="App">
@@ -39,24 +36,28 @@ class App extends Component {
               changeSliderIndex={this.props.changeSliderIndex}
               toggleProjectDialog={this.props.toggleProjectDialog}
               importProjectDialog={this.props.importProjectDialog}
+              projectIsHovered={this.props.projectIsHovered}
             />
             <CommunityMobContainer
               dialog={this.props.dialog}
               changeSliderIndex={this.props.changeSliderIndex}
               toggleProjectDialog={this.props.toggleProjectDialog}
               importProjectDialog={this.props.importProjectDialog}
+              projectIsHovered={this.props.projectIsHovered}
             />
             <FridgrContainer
               dialog={this.props.dialog}
               changeSliderIndex={this.props.changeSliderIndex}
               toggleProjectDialog={this.props.toggleProjectDialog}
               importProjectDialog={this.props.importProjectDialog}
+              projectIsHovered={this.props.projectIsHovered}
             />
             <MoodifyContainer
               dialog={this.props.dialog}
               changeSliderIndex={this.props.changeSliderIndex}
               toggleProjectDialog={this.props.toggleProjectDialog}
               importProjectDialog={this.props.importProjectDialog}
+              projectIsHovered={this.props.projectIsHovered}
             />
           </div>
         </header>
@@ -72,6 +73,7 @@ class App extends Component {
           dialog={this.props.dialog}
           toggleProjectDialog={this.props.toggleProjectDialog}
           importProjectDialog={this.props.importProjectDialog}
+          projectIsHovered={this.props.projectIsHovered}
         />
       </div>
     );
@@ -90,6 +92,7 @@ const matchDispatchToProps = (dispatch) => {
     toggleProjectDialog: toggleProjectDialog,
     importProjectDialog: importProjectDialog,
     changeSliderIndex: changeSliderIndex,
+    projectIsHovered: projectIsHovered,
   }, dispatch);
 };
 

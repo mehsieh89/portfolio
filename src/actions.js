@@ -23,3 +23,13 @@ export const changeSliderIndex = (prop) => {
     payload: prop
   };
 };
+
+export const projectIsHovered = (index, bool) => {
+  return {
+    type: 'PROJECT_IS_HOVERED',
+    payload: {
+      index: index,
+      on: bool
+    }
+  };
+};

@@ -8,9 +8,16 @@ import NextArrow from './slideComponents/nextArrow.js';
 import PrevArrow from './slideComponents/prevArrow.js';
 
 class Main extends Component {
+  constructor(props) {
+    super(props);
+    this.handleOnChange = this.handleOnChange.bind(this);
+  }
   componentDidUpdate() {
-    console.log(this.props.dialog.sliderIndex);
     this.slider.slickGoTo(this.props.dialog.sliderIndex);
+  }
+
+  handleOnChange(index) {
+    this.props.projectIsHovered(index, true);
   }
 
   render() {
@@ -33,6 +40,7 @@ class Main extends Component {
           ref={slider => (this.slider = slider)}
           prevArrow={ArrowLeft}
           nextArrow={ArrowRight}
+          afterChange={this.handleOnChange}
         >
           <div id="sliderImgContainer">
             <CommWebSlide

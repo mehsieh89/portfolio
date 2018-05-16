@@ -2,6 +2,10 @@ const initialState = {
   showAboutDialog: false,
   showProjectDialog: false,
   sliderIndex: null,
+  hoverOn: {
+    index: 0,
+    on: false
+  },
   currentProject: {
     name: null,
     pathName: null,
@@ -32,6 +36,11 @@ export default function(state = initialState, action) {
     let newState2 = Object.assign({}, state);
     newState2.sliderIndex = action.payload;
     return newState2;
+
+  case 'PROJECT_IS_HOVERED' :
+    let newState3 = Object.assign({}, state);
+    newState3.hoverOn = action.payload;
+    return newState3;
 
   default:
     return state;
