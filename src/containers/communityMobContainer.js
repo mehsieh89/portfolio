@@ -13,6 +13,7 @@ class CommunityMobContainer extends Component {
 
   handleMouseHoverE() {
     this.setState({ isHovering: true });
+    this.props.changeSliderIndex(1);
   }
 
   handleMouseHoverL() {

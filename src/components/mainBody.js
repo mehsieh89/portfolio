@@ -8,7 +8,7 @@ import NextArrow from './slideComponents/nextArrow.js';
 import PrevArrow from './slideComponents/prevArrow.js';
 
 class Main extends Component {
-  componentWillReceiveProps() {
+  componentDidUpdate() {
     console.log(this.props.dialog.sliderIndex);
     this.slider.slickGoTo(this.props.dialog.sliderIndex);
   }

@@ -13,6 +13,7 @@ class MoodifyContainer extends Component {
 
   handleMouseHoverE() {
     this.setState({ isHovering: true });
+    this.props.changeSliderIndex(3);
   }
 
   handleMouseHoverL() {

@@ -13,6 +13,8 @@ class FridgrContainer extends Component {
 
   handleMouseHoverE() {
     this.setState({ isHovering: true });
+    this.props.changeSliderIndex(2);
+
   }
 
   handleMouseHoverL() {
