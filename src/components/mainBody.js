@@ -4,8 +4,6 @@ import CommMobSlide from './slideComponents/commMobSlide.js';
 import CommWebSlide from './slideComponents/commWebSlide.js';
 import FridgrSlide from './slideComponents/fridgrSlide.js';
 import MoodifySlide from './slideComponents/moodifySlide.js';
-// import NextArrow from 'react-icons/lib/fa/angle-right';
-// import PrevArrow from 'react-icons/lib/fa/angle-left';
 import NextArrow from './slideComponents/nextArrow.js';
 import PrevArrow from './slideComponents/prevArrow.js';
 
@@ -18,8 +16,7 @@ class Main extends Component {
     const settings = {
         infinite: true,
         dots: true,
-        autoplay: true,
-        autoplaySpeed: 4250,
+        accessibility: true,
         pauseOnHover: true,
         adaptiveHeight: true,
     };
