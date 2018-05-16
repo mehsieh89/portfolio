@@ -9,30 +9,23 @@ class MoodifyContainer extends Component {
     };
     this.handleMouseHoverE = this.handleMouseHoverE.bind(this);
     this.handleMouseHoverL = this.handleMouseHoverL.bind(this);
-    this.checkHover = this.checkHover.bind(this);
 
   }
 
   handleMouseHoverE() {
     this.setState({ isHovering: true });
     this.props.changeSliderIndex(3);
-    this.props.projectIsHovered(3, true);
   }
 
   handleMouseHoverL() {
     this.setState({ isHovering: false });
-    this.props.projectIsHovered(3, false);
-  }
-
-  checkHover() {
-    return this.props.dialog.hoverOn.on && this.props.dialog.hoverOn === 3;
   }
 
   render() {
     const isHovering = this.state.isHovering;
 
     let bar = null;
-    if (isHovering || this.checkHover()) {
+    if (isHovering) {
       bar = <div id="colorBar"></div>;
     } else {
       bar = null;

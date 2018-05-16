@@ -24,12 +24,14 @@ export const changeSliderIndex = (prop) => {
   };
 };
 
-export const projectIsHovered = (index, bool) => {
+export const decrementSliderIndex = () => {
   return {
-    type: 'PROJECT_IS_HOVERED',
-    payload: {
-      index: index,
-      on: bool
-    }
+    type: 'DECREMENT_SLIDER_INDEX',
+  };
+};
+
+export const incrementSliderIndex = () => {
+  return {
+    type: 'INCREMENT_SLIDER_INDEX',
   };
 };

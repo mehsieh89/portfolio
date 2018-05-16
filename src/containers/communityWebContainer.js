@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import CommunityWeb from '../components/communityWeb.js';
 
+var check = false;
+
 class CommunityWebContainer extends Component {
   constructor(props) {
     super(props);
@@ -9,30 +11,33 @@ class CommunityWebContainer extends Component {
     };
     this.handleMouseHoverE = this.handleMouseHoverE.bind(this);
     this.handleMouseHoverL = this.handleMouseHoverL.bind(this);
-    this.checkHover = this.checkHover.bind(this);
 
+  }
+
+  componentDidUpdate() {
+    console.log('meow');
+    if (this.props.dialog.sliderIndex === 0) {
+      check = true;
+    } else {
+      check = false;
+    }
   }
 
   handleMouseHoverE() {
     this.setState({ isHovering: true });
-    this.props.projectIsHovered(0, true);
     this.props.changeSliderIndex(0);
   }
 
   handleMouseHoverL() {
     this.setState({ isHovering: false });
-    this.props.projectIsHovered(0, false);
-  }
-
-  checkHover() {
-    return this.props.dialog.hoverOn.on && this.props.dialog.hoverOn === 1;
+    // this.props.changeSliderIndex(null);
   }
 
   render() {
     const isHovering = this.state.isHovering;
 
     let bar = null;
-    if (isHovering || this.checkHover()) {
+    if (isHovering || check) {
       bar = <div id="colorBar"></div>;
     } else {
       bar = null;

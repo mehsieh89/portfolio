@@ -1,11 +1,7 @@
 const initialState = {
   showAboutDialog: false,
   showProjectDialog: false,
-  sliderIndex: null,
-  hoverOn: {
-    index: 0,
-    on: false
-  },
+  sliderIndex: 0,
   currentProject: {
     name: null,
     pathName: null,
@@ -37,10 +33,23 @@ export default function(state = initialState, action) {
     newState2.sliderIndex = action.payload;
     return newState2;
 
-  case 'PROJECT_IS_HOVERED' :
+  case 'INCREMENT_SLIDER_INDEX' :
     let newState3 = Object.assign({}, state);
-    newState3.hoverOn = action.payload;
+    if (newState3.sliderIndex === 3) {
+      newState3.sliderIndex = 0;
+    } else {
+      newState3.sliderIndex++;
+    }
     return newState3;
+
+  case 'DECREMENT_SLIDER_INDEX' :
+    let newState4 = Object.assign({}, state);
+    if (newState4.sliderIndex === 0) {
+      newState4.sliderIndex = 3;
+    } else {
+      newState4.sliderIndex = newState3.sliderIndex--;
+    }
+    return newState4;
 
   default:
     return state;

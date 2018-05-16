@@ -9,30 +9,23 @@ class FridgrContainer extends Component {
     };
     this.handleMouseHoverE = this.handleMouseHoverE.bind(this);
     this.handleMouseHoverL = this.handleMouseHoverL.bind(this);
-    this.checkHover = this.checkHover.bind(this);
 
   }
 
   handleMouseHoverE() {
     this.setState({ isHovering: true });
-    this.props.projectIsHovered(2, true);
     this.props.changeSliderIndex(2);
   }
 
   handleMouseHoverL() {
     this.setState({ isHovering: false });
-    this.props.projectIsHovered(2, false);
-  }
-
-  checkHover() {
-    return this.props.dialog.hoverOn.on && this.props.dialog.hoverOn === 1;
   }
 
   render() {
     const isHovering = this.state.isHovering;
 
     let bar = null;
-    if (isHovering || this.checkHover()) {
+    if (isHovering) {
       bar = <div id="colorBar"></div>;
     } else {
       bar = null;

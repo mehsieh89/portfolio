@@ -10,25 +10,25 @@ import PrevArrow from './slideComponents/prevArrow.js';
 class Main extends Component {
   constructor(props) {
     super(props);
-    this.handleOnChange = this.handleOnChange.bind(this);
+    // this.handleOnChange = this.handleOnChange.bind(this);
   }
   componentDidUpdate() {
     this.slider.slickGoTo(this.props.dialog.sliderIndex);
   }
 
-  handleOnChange(index) {
-    this.props.projectIsHovered(index, true);
-  }
-
   render() {
-    const ArrowLeft = <PrevArrow/>;
-    const ArrowRight = <NextArrow/>;
+    const ArrowLeft = <PrevArrow
+                        dialog={this.props.dialog}
+                        decrementSliderIndex={this.props.decrementSliderIndex}
+                       />;
+    const ArrowRight = <NextArrow
+                        dialog={this.props.dialog}
+                        incrementSliderIndex={this.props.incrementSliderIndex}
+                       />;
 
     const settings = {
         infinite: true,
         dots: true,
-        // autoplay: true,
-        // autoplaySpeed: 5000,
         accessibility: true,
         pauseOnHover: true,
         adaptiveHeight: true,
