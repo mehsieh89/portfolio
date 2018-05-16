@@ -1,6 +1,7 @@
 const initialState = {
   showAboutDialog: false,
   showProjectDialog: false,
+  sliderIndex: null,
   currentProject: {
     name: null,
     pathName: null,
@@ -23,9 +24,14 @@ export default function(state = initialState, action) {
     return Object.assign({}, state, { showProjectDialog: !state.showProjectDialog });
 
   case 'IMPORT_PROJECT_DIALOG' :
-   let newState = Object.assign({}, state);
-   newState.currentProject = action.payload;
-   return newState;
+    let newState = Object.assign({}, state);
+    newState.currentProject = action.payload;
+    return newState;
+
+  case 'CHANGE_SLIDER_INDEX' :
+    let newState2 = Object.assign({}, state);
+    newState2.sliderIndex = action.payload;
+    return newState2;
 
   default:
     return state;

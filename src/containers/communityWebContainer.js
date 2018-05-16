@@ -13,10 +13,12 @@ class CommunityWebContainer extends Component {
 
   handleMouseHoverE() {
     this.setState({ isHovering: true });
+    this.props.changeSliderIndex(1);
   }
 
   handleMouseHoverL() {
     this.setState({ isHovering: false });
+    this.props.changeSliderIndex(null);
   }
 
   render() {

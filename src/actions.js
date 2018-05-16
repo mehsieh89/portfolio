@@ -16,3 +16,10 @@ export const importProjectDialog = (prop) => {
     payload: prop
   };
 };
+
+export const changeSliderIndex = (prop) => {
+  return {
+    type: 'CHANGE_SLIDER_INDEX',
+    payload: prop
+  };
+};

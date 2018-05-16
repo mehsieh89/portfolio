@@ -8,6 +8,10 @@ import NextArrow from './slideComponents/nextArrow.js';
 import PrevArrow from './slideComponents/prevArrow.js';
 
 class Main extends Component {
+  componentWillReceiveProps() {
+    console.log(this.props.dialog.sliderIndex);
+    this.slider.slickGoTo(this.props.dialog.sliderIndex);
+  }
 
   render() {
     const ArrowLeft = <PrevArrow/>;
@@ -16,8 +20,8 @@ class Main extends Component {
     const settings = {
         infinite: true,
         dots: true,
-        autoplay: true,
-        autoplaySpeed: 5000,
+        // autoplay: true,
+        // autoplaySpeed: 5000,
         accessibility: true,
         pauseOnHover: true,
         adaptiveHeight: true,
@@ -26,6 +30,7 @@ class Main extends Component {
       <div id="sliderContainer" className="animated zoomInUp">
         <Slider
           {...settings}
+          ref={slider => (this.slider = slider)}
           prevArrow={ArrowLeft}
           nextArrow={ArrowRight}
         >

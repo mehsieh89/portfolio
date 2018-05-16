@@ -10,7 +10,7 @@ import FridgrContainer from './containers/fridgrContainer.js';
 import MoodifyContainer from './containers/moodifyContainer.js';
 import Main from './components/mainBody.js';
 import ProjectDialog from './components/projectDialog.js';
-import { toggleAboutDialog, toggleProjectDialog, importProjectDialog } from './actions.js';
+import { toggleAboutDialog, toggleProjectDialog, importProjectDialog, changeSliderIndex } from './actions.js';
 import './App.css';
 
 class App extends Component {
@@ -36,6 +36,7 @@ class App extends Component {
           <div id="buttonContainer">
             <CommunityWebContainer
               dialog={this.props.dialog}
+              changeSliderIndex={this.props.changeSliderIndex}
               toggleProjectDialog={this.props.toggleProjectDialog}
               importProjectDialog={this.props.importProjectDialog}
             />
@@ -85,6 +86,7 @@ const matchDispatchToProps = (dispatch) => {
     toggleAboutDialog: toggleAboutDialog,
     toggleProjectDialog: toggleProjectDialog,
     importProjectDialog: importProjectDialog,
+    changeSliderIndex: changeSliderIndex,
   }, dispatch);
 };
 
