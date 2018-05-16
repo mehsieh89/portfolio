@@ -16,6 +16,8 @@ class Main extends Component {
     const settings = {
         infinite: true,
         dots: true,
+        autoplay: true,
+        autoplaySpeed: 5000,
         accessibility: true,
         pauseOnHover: true,
         adaptiveHeight: true,
