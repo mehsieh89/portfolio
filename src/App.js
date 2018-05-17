@@ -11,7 +11,7 @@ import MoodifyContainer from './containers/moodifyContainer.js';
 import Main from './components/mainBody.js';
 import ProjectDialog from './components/projectDialog.js';
 import { toggleAboutDialog, toggleProjectDialog, importProjectDialog,
-  changeSliderIndex, incrementSliderIndex, decrementSliderIndex } from './actions.js';
+  changeSliderIndex, toggleHovering } from './actions.js';
 import './App.css';
 
 class App extends Component {
@@ -36,24 +36,28 @@ class App extends Component {
               changeSliderIndex={this.props.changeSliderIndex}
               toggleProjectDialog={this.props.toggleProjectDialog}
               importProjectDialog={this.props.importProjectDialog}
+              toggleHovering={this.props.toggleHovering}
             />
             <CommunityMobContainer
               dialog={this.props.dialog}
               changeSliderIndex={this.props.changeSliderIndex}
               toggleProjectDialog={this.props.toggleProjectDialog}
               importProjectDialog={this.props.importProjectDialog}
+              toggleHovering={this.props.toggleHovering}
             />
             <FridgrContainer
               dialog={this.props.dialog}
               changeSliderIndex={this.props.changeSliderIndex}
               toggleProjectDialog={this.props.toggleProjectDialog}
               importProjectDialog={this.props.importProjectDialog}
+              toggleHovering={this.props.toggleHovering}
             />
             <MoodifyContainer
               dialog={this.props.dialog}
               changeSliderIndex={this.props.changeSliderIndex}
               toggleProjectDialog={this.props.toggleProjectDialog}
               importProjectDialog={this.props.importProjectDialog}
+              toggleHovering={this.props.toggleHovering}
             />
           </div>
         </header>
@@ -67,8 +71,7 @@ class App extends Component {
         />
         <Main
           dialog={this.props.dialog}
-          incrementSliderIndex={this.props.incrementSliderIndex}
-          decrementSliderIndex={this.props.decrementSliderIndex}
+          toggleHovering={this.props.toggleHovering}
           toggleProjectDialog={this.props.toggleProjectDialog}
           importProjectDialog={this.props.importProjectDialog}
         />
@@ -89,8 +92,7 @@ const matchDispatchToProps = (dispatch) => {
     toggleProjectDialog: toggleProjectDialog,
     importProjectDialog: importProjectDialog,
     changeSliderIndex: changeSliderIndex,
-    incrementSliderIndex: incrementSliderIndex,
-    decrementSliderIndex: decrementSliderIndex,
+    toggleHovering: toggleHovering
   }, dispatch);
 };
 

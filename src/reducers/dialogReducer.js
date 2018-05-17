@@ -2,6 +2,7 @@ const initialState = {
   showAboutDialog: false,
   showProjectDialog: false,
   sliderIndex: 0,
+  isHovering: [false, false, false, false],
   currentProject: {
     name: null,
     pathName: null,
@@ -33,23 +34,10 @@ export default function(state = initialState, action) {
     newState2.sliderIndex = action.payload;
     return newState2;
 
-  case 'INCREMENT_SLIDER_INDEX' :
-    let newState3 = Object.assign({}, state);
-    if (newState3.sliderIndex === 3) {
-      newState3.sliderIndex = 0;
-    } else {
-      newState3.sliderIndex++;
-    }
-    return newState3;
-
-  case 'DECREMENT_SLIDER_INDEX' :
-    let newState4 = Object.assign({}, state);
-    if (newState4.sliderIndex === 0) {
-      newState4.sliderIndex = 3;
-    } else {
-      newState4.sliderIndex = newState3.sliderIndex--;
-    }
-    return newState4;
+  case 'TOGGLE_IS_HOVERING':
+    let newState5 = Object.assign({}, state);
+    newState5.isHovering[action.index] = action.payload;
+    return newState5;
 
   default:
     return state;

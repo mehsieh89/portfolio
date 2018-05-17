@@ -13,19 +13,19 @@ class MoodifyContainer extends Component {
   }
 
   handleMouseHoverE() {
-    this.setState({ isHovering: true });
+    this.props.toggleHovering(3, true);
     this.props.changeSliderIndex(3);
   }
 
   handleMouseHoverL() {
-    this.setState({ isHovering: false });
+    this.props.toggleHovering(3, false);
   }
 
   render() {
     const isHovering = this.state.isHovering;
 
     let bar = null;
-    if (isHovering) {
+    if (this.props.dialog.isHovering[3]) {
       bar = <div id="colorBar"></div>;
     } else {
       bar = null;

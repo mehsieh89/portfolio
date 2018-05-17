@@ -1,43 +1,26 @@
 import React, { Component } from 'react';
 import CommunityWeb from '../components/communityWeb.js';
 
-var check = false;
-
 class CommunityWebContainer extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      isHovering: false,
-    };
     this.handleMouseHoverE = this.handleMouseHoverE.bind(this);
     this.handleMouseHoverL = this.handleMouseHoverL.bind(this);
 
   }
 
-  componentDidUpdate() {
-    console.log('meow');
-    if (this.props.dialog.sliderIndex === 0) {
-      check = true;
-    } else {
-      check = false;
-    }
-  }
-
   handleMouseHoverE() {
-    this.setState({ isHovering: true });
+    this.props.toggleHovering(0, true);
     this.props.changeSliderIndex(0);
   }
 
   handleMouseHoverL() {
-    this.setState({ isHovering: false });
-    // this.props.changeSliderIndex(null);
+    this.props.toggleHovering(0, false);
   }
 
   render() {
-    const isHovering = this.state.isHovering;
-
     let bar = null;
-    if (isHovering || check) {
+    if (this.props.dialog.isHovering[0]) {
       bar = <div id="colorBar"></div>;
     } else {
       bar = null;

@@ -24,14 +24,10 @@ export const changeSliderIndex = (prop) => {
   };
 };
 
-export const decrementSliderIndex = () => {
+export const toggleHovering = (index, bool) => {
   return {
-    type: 'DECREMENT_SLIDER_INDEX',
-  };
-};
-
-export const incrementSliderIndex = () => {
-  return {
-    type: 'INCREMENT_SLIDER_INDEX',
+    type: 'TOGGLE_IS_HOVERING',
+    payload: bool,
+    index: index,
   };
 };

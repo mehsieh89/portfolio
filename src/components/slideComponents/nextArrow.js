@@ -10,7 +10,6 @@ class NextArrow extends Component {
 
   handleOnClick(event) {
     this.props.onClick();
-    this.props.incrementSliderIndex();
   }
 
   render() {

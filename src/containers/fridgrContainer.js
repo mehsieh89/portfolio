@@ -13,19 +13,19 @@ class FridgrContainer extends Component {
   }
 
   handleMouseHoverE() {
-    this.setState({ isHovering: true });
+    this.props.toggleHovering(2, true);
     this.props.changeSliderIndex(2);
   }
 
   handleMouseHoverL() {
-    this.setState({ isHovering: false });
+    this.props.toggleHovering(2, false);
   }
 
   render() {
     const isHovering = this.state.isHovering;
 
     let bar = null;
-    if (isHovering) {
+    if (this.props.dialog.isHovering[2]) {
       bar = <div id="colorBar"></div>;
     } else {
       bar = null;

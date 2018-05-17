@@ -10,10 +10,21 @@ import PrevArrow from './slideComponents/prevArrow.js';
 class Main extends Component {
   constructor(props) {
     super(props);
-    // this.handleOnChange = this.handleOnChange.bind(this);
+    this.handleOnChange = this.handleOnChange.bind(this);
   }
+
   componentDidUpdate() {
     this.slider.slickGoTo(this.props.dialog.sliderIndex);
+  }
+
+  handleOnChange(something, newIndex) {
+    for (var i = 0; i < this.props.dialog.isHovering.length; i++) {
+      if (newIndex === i) {
+        this.props.toggleHovering(i, true);
+      } else {
+        this.props.toggleHovering(i, false);
+      }
+    }
   }
 
   render() {
@@ -40,7 +51,7 @@ class Main extends Component {
           ref={slider => (this.slider = slider)}
           prevArrow={ArrowLeft}
           nextArrow={ArrowRight}
-          afterChange={this.handleOnChange}
+          beforeChange={this.handleOnChange}
         >
           <div id="sliderImgContainer">
             <CommWebSlide

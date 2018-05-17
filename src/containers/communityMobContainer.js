@@ -12,19 +12,19 @@ class CommunityMobContainer extends Component {
   }
 
   handleMouseHoverE() {
-    this.setState({ isHovering: true });
+    this.props.toggleHovering(1, true);
     this.props.changeSliderIndex(1);
   }
 
   handleMouseHoverL() {
-    this.setState({ isHovering: false });
+    this.props.toggleHovering(1, false);
   }
 
   render() {
     const isHovering = this.state.isHovering;
 
     let bar = null;
-    if (isHovering) {
+    if (this.props.dialog.isHovering[1]) {
       bar = <div id="colorBar"></div>;
     } else {
       bar = null;
