@@ -11,6 +11,9 @@ class CommunityWebContainer extends Component {
 
   handleMouseHoverE() {
     this.props.toggleHovering(0, true);
+    this.props.toggleHovering(1, false);
+    this.props.toggleHovering(2, false);
+    this.props.toggleHovering(3, false);
     this.props.changeSliderIndex(0);
   }
 
@@ -21,7 +24,7 @@ class CommunityWebContainer extends Component {
   render() {
     let bar = null;
     if (this.props.dialog.isHovering[0]) {
-      bar = <div id="colorBar"></div>;
+      bar = <div id="colorBar" className="animated zoomIn"></div>;
     } else {
       bar = null;
     }

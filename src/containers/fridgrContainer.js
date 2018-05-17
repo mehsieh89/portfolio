@@ -14,6 +14,9 @@ class FridgrContainer extends Component {
 
   handleMouseHoverE() {
     this.props.toggleHovering(2, true);
+    this.props.toggleHovering(1, false);
+    this.props.toggleHovering(0, false);
+    this.props.toggleHovering(3, false);
     this.props.changeSliderIndex(2);
   }
 
@@ -26,7 +29,7 @@ class FridgrContainer extends Component {
 
     let bar = null;
     if (this.props.dialog.isHovering[2]) {
-      bar = <div id="colorBar"></div>;
+      bar = <div id="colorBar" className="animated zoomIn"></div>;
     } else {
       bar = null;
     }

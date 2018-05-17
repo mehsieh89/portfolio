@@ -69,11 +69,6 @@
   top: 15px;
 }
 
-.box {
-  height: 100%;
-  width: 100%;
-}
-
 #buttonContainer {
   display: flex;
   flex-direction: row;
@@ -84,18 +79,22 @@
 
 #colorBar {
   background-color: #A9B7C0;
-  padding: 4px 0;
+  padding: 2.5px 0;
   position: absolute;
   bottom: 0;
   width: 100%;
+  border-radius: 25px;
+  animation-duration: .25s;
 }
 
 #colorBar2 {
   background-color: #A9B7C0;
-  padding: 4px 0;
+  padding: 2.5px 0;
   width: 100%;
   position: absolute;
   top: 0;
+  border-radius: 25px;
+  animation-duration: .25s;
 }
 
 #communityMobDesc {
@@ -255,7 +254,7 @@
 .selfButtonBox {
   margin-right: 30px;
   margin-left: 30px;
-  height: 32px;
+  height: 38px;
   position: relative;
 }
 

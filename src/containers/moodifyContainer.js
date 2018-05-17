@@ -14,6 +14,9 @@ class MoodifyContainer extends Component {
 
   handleMouseHoverE() {
     this.props.toggleHovering(3, true);
+    this.props.toggleHovering(1, false);
+    this.props.toggleHovering(2, false);
+    this.props.toggleHovering(0, false);
     this.props.changeSliderIndex(3);
   }
 
@@ -26,7 +29,7 @@ class MoodifyContainer extends Component {
 
     let bar = null;
     if (this.props.dialog.isHovering[3]) {
-      bar = <div id="colorBar"></div>;
+      bar = <div id="colorBar" className="animated zoomIn"></div>;
     } else {
       bar = null;
     }

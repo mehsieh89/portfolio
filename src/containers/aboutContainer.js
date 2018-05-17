@@ -31,7 +31,7 @@ class FridgrContainer extends Component {
 
     let bar = null;
     if (isHovering) {
-      bar = <div id="colorBar2"></div>;
+      bar = <div id="colorBar2" className="animated zoomIn"></div>;
     } else {
       bar = null;
     }
