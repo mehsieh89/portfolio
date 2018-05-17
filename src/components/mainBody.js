@@ -28,14 +28,8 @@ class Main extends Component {
   }
 
   render() {
-    const ArrowLeft = <PrevArrow
-                        dialog={this.props.dialog}
-                        decrementSliderIndex={this.props.decrementSliderIndex}
-                       />;
-    const ArrowRight = <NextArrow
-                        dialog={this.props.dialog}
-                        incrementSliderIndex={this.props.incrementSliderIndex}
-                       />;
+    const ArrowLeft = <PrevArrow/>;
+    const ArrowRight = <NextArrow/>;
 
     const settings = {
         infinite: true,
