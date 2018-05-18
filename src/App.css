@@ -296,6 +296,15 @@
   display: flex !important;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+#sliderImgFrame {
+  height: 550px;
+  width: 850px;
+  overflow: hidden;
+  display: inline-block;
 }
 
 #sliderImgCommMob {
@@ -313,10 +322,6 @@
 
 #sliderImgCommMob:hover {
   transform: scale(1.10);
-}
-
-#test {
-  transform: translate(0px, 0px);
 }
 
 .slick-prev,
