@@ -43,7 +43,8 @@
 }
 
 #bodyContainer {
-  background-image: url("media/lantern.jpg");
+  background-image: url("media/lanternOpaque.png");
+  background-size: cover;
 }
 
 #aboutTitle {
@@ -348,8 +349,8 @@
 
     display: block;
 
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
     padding: 0;
     -webkit-transform: translate(0, -50%);
     -ms-transform: translate(0, -50%);
@@ -357,15 +358,15 @@
 
     cursor: pointer;
 
-    color: #A9B7C0;
+    color: white;
     border: none;
     outline: none;
     background: transparent;
 }
 
 .slick-dots li button::before {
-  font-size: 12px;
-  color: grey;
+  font-size: 14px;
+  color: #515951;
   opacity: 1;
 }
 

@@ -33,7 +33,6 @@ class Main extends Component {
 
     const settings = {
         infinite: true,
-        dots: true,
         accessibility: true,
         pauseOnHover: true,
         adaptiveHeight: true,
