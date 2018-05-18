@@ -5,8 +5,6 @@ class CommunityWebContainer extends Component {
   constructor(props) {
     super(props);
     this.handleMouseHoverE = this.handleMouseHoverE.bind(this);
-    this.handleMouseHoverL = this.handleMouseHoverL.bind(this);
-
   }
 
   handleMouseHoverE() {
@@ -15,10 +13,6 @@ class CommunityWebContainer extends Component {
     this.props.toggleHovering(2, false);
     this.props.toggleHovering(3, false);
     this.props.changeSliderIndex(0);
-  }
-
-  handleMouseHoverL() {
-    this.props.toggleHovering(0, false);
   }
 
   render() {

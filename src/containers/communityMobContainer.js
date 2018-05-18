@@ -8,7 +8,6 @@ class CommunityMobContainer extends Component {
       isHovering: false,
     };
     this.handleMouseHoverE = this.handleMouseHoverE.bind(this);
-    this.handleMouseHoverL = this.handleMouseHoverL.bind(this);
   }
 
   handleMouseHoverE() {
@@ -17,10 +16,6 @@ class CommunityMobContainer extends Component {
     this.props.toggleHovering(2, false);
     this.props.toggleHovering(0, false);
     this.props.changeSliderIndex(1);
-  }
-
-  handleMouseHoverL() {
-    this.props.toggleHovering(1, false);
   }
 
   render() {

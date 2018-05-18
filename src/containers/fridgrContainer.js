@@ -8,7 +8,6 @@ class FridgrContainer extends Component {
       isHovering: false,
     };
     this.handleMouseHoverE = this.handleMouseHoverE.bind(this);
-    this.handleMouseHoverL = this.handleMouseHoverL.bind(this);
 
   }
 
@@ -18,10 +17,6 @@ class FridgrContainer extends Component {
     this.props.toggleHovering(0, false);
     this.props.toggleHovering(3, false);
     this.props.changeSliderIndex(2);
-  }
-
-  handleMouseHoverL() {
-    this.props.toggleHovering(2, false);
   }
 
   render() {
