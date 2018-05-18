@@ -25,7 +25,9 @@ class MoodifySlide extends Component {
 
   render() {
     return (
-      <img className="sliderImg" src={Moodify} onClick={this.handleOnClick} alt=""></img>
+      <div id="sliderImgFrame">
+        <img className="sliderImg" src={Moodify} onClick={this.handleOnClick} alt=""></img>
+      </div>
     );
   }
 }

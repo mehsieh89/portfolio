@@ -24,7 +24,9 @@ class CommMobSlide extends Component {
 
   render() {
     return (
-      <img id="sliderImgCommMob" src={CommunityMob} onClick={this.handleOnClick} alt=""></img>
+      <div id="sliderImgFrame">
+        <img id="sliderImgCommMob" src={CommunityMob} onClick={this.handleOnClick} alt=""></img>
+      </div>
     );
   }
 }

@@ -59,6 +59,7 @@
   height: 100px;
   position: relative;
   color: white;
+  box-shadow: 0 8px 7px -7px grey;
 }
 
 .App-title {
@@ -81,6 +82,7 @@
   background-color: #A9B7C0;
   padding: 2.5px 0;
   position: absolute;
+  opacity: 0.6;
   bottom: 0;
   width: 100%;
   border-radius: 25px;
@@ -90,6 +92,7 @@
 #colorBar2 {
   background-color: #A9B7C0;
   padding: 2.5px 0;
+  opacity: 0.6;
   width: 100%;
   position: absolute;
   top: 0;
@@ -173,6 +176,7 @@
   display: flex;
   direction: row;
   justify-content: space-between;
+  box-shadow: 0 0 0 4px #C7D8C6, 0 6px 4px grey;
 }
 
 #email {
@@ -204,6 +208,7 @@
 
 .project:hover {
   color: #A9B7C0;
+  opacity: 0.6;
 }
 
 .projectBox {
@@ -270,6 +275,7 @@
 
 .selfButton:hover {
   color: #A9B7C0;
+  opacity: 0.6;
 }
 
 #sliderContainer {
@@ -303,6 +309,9 @@
 #sliderImgFrame {
   height: 550px;
   width: 850px;
+  display: flex !important;
+  justify-content: center;
+  flex-direction: column;
   overflow: hidden;
   display: inline-block;
 }
