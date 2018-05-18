@@ -42,6 +42,10 @@
   margin-bottom: auto;
 }
 
+#bodyContainer {
+  background-image: url("media/lantern.jpg");
+}
+
 #aboutTitle {
   position: relative;
   top: 10px;
@@ -79,7 +83,7 @@
 }
 
 #colorBar {
-  background-color: #A9B7C0;
+  background-color: #818b91;
   padding: 2.5px 0;
   position: absolute;
   opacity: 0.6;
@@ -90,7 +94,7 @@
 }
 
 #colorBar2 {
-  background-color: #A9B7C0;
+  background-color: #818b91;
   padding: 2.5px 0;
   opacity: 0.6;
   width: 100%;
@@ -207,8 +211,8 @@
 }
 
 .project:hover {
-  color: #A9B7C0;
   opacity: 0.6;
+  color: #818b91;
 }
 
 .projectBox {
@@ -274,8 +278,7 @@
 }
 
 .selfButton:hover {
-  color: #A9B7C0;
-  opacity: 0.6;
+  color: #818b91;
 }
 
 #sliderContainer {
@@ -359,6 +362,18 @@
     outline: none;
     background: transparent;
 }
+
+.slick-dots li button::before {
+  font-size: 12px;
+  color: grey;
+  opacity: 1;
+}
+
+.slick-dots li.slick-active button::before {
+  color: white;
+  opacity: 1;
+}
+
 .slick-prev:hover,
 .slick-prev:focus,
 .slick-next:hover,
