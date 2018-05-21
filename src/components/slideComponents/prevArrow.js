@@ -1,17 +1,17 @@
 import React, { Component } from 'react';
-import TouchRipple from 'material-ui/internal/TouchRipple';
-import LeftArrow from 'react-icons/lib/fa/angle-left';
+import Ionicon from 'react-ionicons';
 
 export default
 class PrevArrow extends Component {
 
   render() {
     return (
-      <TouchRipple>
-        <div>
-          <LeftArrow className="slick-prev" onClick={this.props.onClick}/>
-        </div>
-      </TouchRipple>
+      <Ionicon icon="md-arrow-dropleft"
+        fontSize="100px"
+        color="white"
+        className="slick-prev"
+        onClick={this.props.onClick}
+      />
     );
   };
 }
