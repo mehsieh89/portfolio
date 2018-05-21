@@ -23,7 +23,7 @@ class Moodify extends Component {
 
   render() {
     return (
-      <div className="project animated fadeInUpBig" onClick={this.handleOnClick.bind(this)}> moodify </div>
+      <div className="project animated fadeIn moodify" onClick={this.handleOnClick.bind(this)}> moodify </div>
     );
   }
 }

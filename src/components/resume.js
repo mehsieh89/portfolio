@@ -13,7 +13,7 @@ class Resume extends Component {
 
   render() {
     return (
-      <div className="selfButton animated zoomInLeft" onClick={this.handleOnClick.bind(this)}> resume </div>
+      <div className="selfButton animated fadeIn resumeAnimation" onClick={this.handleOnClick.bind(this)}> resume </div>
     );
   }
 }

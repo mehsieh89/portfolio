@@ -125,6 +125,34 @@ html, body {
   animation-duration: .25s;
 }
 
+.aboutAnimation {
+  animation-delay: 1.33s;
+}
+
+.resumeAnimation {
+  animation-delay: 1s;
+}
+
+.communityWeb {
+  animation-delay: .33s;
+}
+
+.communityMobile {
+  animation-delay: .66s;
+}
+
+.fridgrMobile {
+  animation-delay: 1s;
+}
+
+.moodify {
+  animation-delay: 1.33s;
+}
+
+.sliderContainerAnimation {
+  animation-duration: 3.5s;
+}
+
 #communityMobDesc {
   position: relative;
   color: #A9B7C0;

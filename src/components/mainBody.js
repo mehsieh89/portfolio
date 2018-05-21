@@ -38,7 +38,7 @@ class Main extends Component {
         adaptiveHeight: true,
     };
     return (
-      <div id="sliderContainer" className="animated zoomInUp">
+      <div id="sliderContainer" className="animated fadeIn sliderContainerAnimation">
         <Slider
           {...settings}
           ref={slider => (this.slider = slider)}

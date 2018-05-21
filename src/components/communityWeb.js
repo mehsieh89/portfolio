@@ -23,7 +23,7 @@ class CommunityWeb extends Component {
 
   render() {
     return (
-      <div className="project animated fadeInRightBig" onClick={this.handleOnClick}> community web </div>
+      <div className="project animated fadeIn communityWeb" onClick={this.handleOnClick}> community web </div>
     );
   }
 }
