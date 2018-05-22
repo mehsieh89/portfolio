@@ -4,9 +4,6 @@ import Moodify from '../components/moodify.js';
 class MoodifyContainer extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      isHovering: false,
-    };
     this.handleMouseHoverE = this.handleMouseHoverE.bind(this);
 
   }
@@ -20,8 +17,6 @@ class MoodifyContainer extends Component {
   }
 
   render() {
-    const isHovering = this.state.isHovering;
-
     let bar = null;
     if (this.props.dialog.isHovering[3]) {
       bar = <div id="colorBar" className="animated zoomIn"></div>;

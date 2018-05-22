@@ -14,9 +14,6 @@ import { toggleAboutDialog, toggleProjectDialog, importProjectDialog,
   changeSliderIndex, toggleHovering } from './actions.js';
 import './App.css';
 
-// {/* <svg xmlns="http://www.w3.org/2000/svg" id="logo" viewBox="0 0 1900 300"    width="250px">
-// </svg> */}
-
 class App extends Component {
   render() {
     return (
@@ -26,6 +23,7 @@ class App extends Component {
             <ResumeContainer/>
             <AboutContainer
               dialog={this.props.dialog}
+              changeSliderIndex={this.props.changeSliderIndex}
               toggleAboutDialog={this.props.toggleAboutDialog}
             />
           </div>

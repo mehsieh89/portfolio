@@ -2,9 +2,7 @@ import React, { Component } from 'react';
 import { Dialog } from 'material-ui';
 import selfImage from '../media/selfImage.jpg';
 import resume from '../media/resume.pdf';
-import DocumentText from 'react-icons/lib/io/document-text';
-import Github from 'react-icons/lib/fa/github';
-import LinkedIn from 'react-icons/lib/io/social-linkedin';
+import FontAwesome from 'react-fontawesome';
 
 class AboutDialog extends Component {
   constructor(props) {
@@ -90,27 +88,30 @@ class AboutDialog extends Component {
             <div id="dialogTitleContainer">
               <div id="aboutTitle" className="animated lightSpeedIn"> about me </div>
               <div id="dialogIconContainer">
-                <DocumentText
-                  className="dialogIcon animated rollIn"
+                <FontAwesome
+                  className='dialogIcon animated rollIn'
                   id="resumeIcon"
-                  color={hoverColor3}
-                  size={50}
+                  style={{color: hoverColor3}}
+                  name='file-text-o'
+                  size='2x'
                   onMouseEnter={this.onMouseEnter3}
                   onMouseLeave={this.onMouseLeave3}
                   onClick={this.handleOnResume}
                 />
-                <LinkedIn
-                  className="dialogIcon animated rollIn"
-                  size={50}
-                  color={hoverColor}
+                <FontAwesome
+                  className='dialogIcon animated rollIn'
+                  style={{color: hoverColor}}
+                  name='linkedin-square'
+                  size='2x'
                   onMouseEnter={this.onMouseEnter}
                   onMouseLeave={this.onMouseLeave}
-                  onClick={this.handleOnLinkedin}
+                  onClick={this.handleOnLinked}
                 />
-                <Github
-                  className="dialogIcon animated rollIn"
-                  color={hoverColor2}
-                  size={50}
+                <FontAwesome
+                  className='dialogIcon animated rollIn'
+                  style={{color: hoverColor2}}
+                  name='github'
+                  size='2x'
                   onMouseEnter={this.onMouseEnter2}
                   onMouseLeave={this.onMouseLeave2}
                   onClick={this.handleOnGithub}

@@ -4,9 +4,6 @@ import CommunityMobile from '../components/communityMobile.js';
 class CommunityMobContainer extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      isHovering: false,
-    };
     this.handleMouseHoverE = this.handleMouseHoverE.bind(this);
   }
 
@@ -19,8 +16,6 @@ class CommunityMobContainer extends Component {
   }
 
   render() {
-    const isHovering = this.state.isHovering;
-
     let bar = null;
     if (this.props.dialog.isHovering[1]) {
       bar = <div id="colorBar" className="animated zoomIn"></div>;

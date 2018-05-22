@@ -36,6 +36,7 @@ class FridgrContainer extends Component {
       >
         <About
           dialog={this.props.dialog}
+          changeSliderIndex={this.props.changeSliderIndex}
           toggleAboutDialog={this.props.toggleAboutDialog}
         />
         {bar}

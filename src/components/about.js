@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import { RaisedButton } from 'material-ui';
 
 class About extends Component {
   constructor(props) {
@@ -9,6 +8,7 @@ class About extends Component {
 
   handleOnClick() {
     this.props.toggleAboutDialog();
+    this.props.changeSliderIndex(this.props.dialog.sliderIndex);
   }
 
   render() {

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import TouchRipple from 'material-ui/internal/TouchRipple';
 import Ionicon from 'react-ionicons';
 
 export default
