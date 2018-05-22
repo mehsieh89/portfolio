@@ -82,7 +82,6 @@ html, body {
   height: 100px;
   position: relative;
   color: white;
-  /* box-shadow: 0 8px 7px -7px white; */
   border-bottom: 3px solid;
   border-bottom-color: rgba(255, 255, 255, .7);
 }
@@ -94,7 +93,7 @@ html, body {
   font-size: 20px;
   text-align: right;
   position: relative;
-  right: 38px;
+  right: 33px;
   top: -19px;
 }
 
@@ -243,7 +242,7 @@ html, body {
   cursor: pointer;
   margin-left: 5px;
   margin-right: 5px;
-  box-shadow: 1px 2px 1px #aaaaaa;
+  box-shadow: 2px 2px 1px grey;
   background-color: #C7D8C6;
 }
 
@@ -284,6 +283,7 @@ html, body {
   cursor: pointer;
   font-size: 18px;
   color: white;
+  letter-spacing: 1.5px;
 }
 
 .project:hover {
@@ -348,6 +348,7 @@ html, body {
   cursor: pointer;
   font-size: 18px;
   color: white;
+  letter-spacing: 1.5px;
   position: relative;
   top: 50%;
   left: 50%;

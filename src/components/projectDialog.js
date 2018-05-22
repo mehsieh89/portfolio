@@ -93,7 +93,6 @@ class ProjectDialog extends Component {
 
 const styles = {
   body: {
-    // backgroundColor: '#CCCBC6',
   },
   buttonLabel: {
     textTransform: 'lowercase',
@@ -101,7 +100,6 @@ const styles = {
     fontWeight: 'bold',
     fontSize: '20px',
     color: 'white',
-    // backgroundColor: '#C7D8C6',
   },
   repoButton: {
     position: 'absolute',
@@ -116,7 +114,6 @@ const styles = {
     fontFamily: "HelveticaNeue",
     textAlign: 'center',
     backgroundColor: '#A9B7C0' ,
-    // borderBottom: '2px solid #CCCBC6',
   },
 }
 
