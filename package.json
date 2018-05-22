@@ -12,8 +12,7 @@
     "react-redux": "^5.0.6",
     "react-scripts": "1.1.0",
     "react-slick": "^0.23.1",
-    "redux": "^3.7.2",
-    "snapsvg": "^0.5.1"
+    "redux": "^3.7.2"
   },
   "homepage": "http://mehsieh89.github.io/portfolio",
   "scripts": {

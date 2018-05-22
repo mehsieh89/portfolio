@@ -31,56 +31,6 @@
     <title>Mel Hsieh</title>
   </head>
   <body>
-    <noscript>
-      You need to enable JavaScript to run this app.
-    </noscript>
     <div id="root"></div>
-
-    <script>
-      window.onload = function () {
-      	var l = Snap('#logo');
-      	var p = l.select('path');
-
-      	setTimeout( function() {
-      		// modify this one line below, and see the result !
-      		var title = 'MELVIN HSIEH';
-      		var logoRandom = '';
-      		var titleContainer = l.text(0, '98%', '');
-      		var possible = "-+*/|}{[]~\\\":;?/.><=+-_)(*&^%$#@!)}";
-      		titleContainer.attr({
-      			fontSize: 280,
-            fill: 'white',
-      			fontWeight: '600'
-      		});
-
-      		function generateRandomTitle(i, logoRandom) {
-      			setTimeout( function() {
-      				titleContainer.attr({ text: logoRandom });
-      			}, i*90 );
-      		}
-
-      		for( var i=0; i < title.length+1; i++ ) {
-      			logoRandom = title.substr(0, i);
-      			for( var j=i; j < title.length; j++ ) {
-      				logoRandom += possible.charAt(Math.floor(Math.random() * possible.length));
-      			}
-      			generateRandomTitle(i, logoRandom);
-      			logoRandom = '';
-      		}
-
-      	}, 250 );
-
-      }
-    </script>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
   </body>
 </html>

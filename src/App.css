@@ -88,11 +88,37 @@ html, body {
 }
 
 .App-title {
-  font-size: 34px;
+  display: flex;
+  flex-direction: row-reverse;
+  font-size: 20px;
   text-align: right;
   position: relative;
   right: 38px;
-  top: 9px;
+  top: -19px;
+}
+
+.typewriter h1 {
+  color: #fff;
+  overflow: hidden;
+  border-right: .15em solid #818b91;
+  white-space: nowrap;
+  letter-spacing: .15em;
+  animation:
+    typing 4s steps(46, end),
+    blink-caret .3s step-end 4;
+    border-right: .15em solid transparent;
+  animation-delay: 1s;
+  animation-fill-mode: both;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #818b91 }
 }
 
 #buttonContainer {
