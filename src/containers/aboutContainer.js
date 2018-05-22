@@ -9,7 +9,6 @@ class FridgrContainer extends Component {
     };
     this.handleMouseHoverE = this.handleMouseHoverE.bind(this);
     this.handleMouseHoverL = this.handleMouseHoverL.bind(this);
-    // this.toggleHoverState = this.toggleHoverState.bind(this);
   }
 
   handleMouseHoverE() {
@@ -19,12 +18,6 @@ class FridgrContainer extends Component {
   handleMouseHoverL() {
     this.setState({ isHovering: false });
   }
-
-  // toggleHoverState() {
-  //   return {
-  //     isHovering: !this.state.isHovering,
-  //   };
-  // }
 
   render() {
     const isHovering = this.state.isHovering;

@@ -89,6 +89,7 @@ html, body {
 
 .App-title {
   display: flex;
+  z-index: 0;
   flex-direction: row-reverse;
   font-size: 20px;
   text-align: right;
@@ -176,7 +177,7 @@ html, body {
 }
 
 .sliderContainerAnimation {
-  animation-duration: 3.5s;
+  animation-duration: 4s;
 }
 
 #communityMobDesc {
@@ -340,6 +341,7 @@ html, body {
   margin-left: 30px;
   height: 38px;
   position: relative;
+  z-index: 1;
 }
 
 .selfButton {
