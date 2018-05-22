@@ -11,17 +11,21 @@ class AboutDialog extends Component {
       isHovering: false,
       isHovering2: false,
       isHovering3: false,
+      isHovering4: false
     };
     this.handleClose = this.handleClose.bind(this);
     this.handleOnGithub = this.handleOnGithub.bind(this);
     this.handleOnLinkedin = this.handleOnLinkedin.bind(this);
     this.handleOnResume = this.handleOnResume.bind(this);
+    this.handleOnEmail = this.handleOnEmail.bind(this);
     this.onMouseEnter = this.onMouseEnter.bind(this);
     this.onMouseLeave = this.onMouseLeave.bind(this);
     this.onMouseEnter2 = this.onMouseEnter2.bind(this);
     this.onMouseLeave2 = this.onMouseLeave2.bind(this);
     this.onMouseEnter3 = this.onMouseEnter3.bind(this);
     this.onMouseLeave3 = this.onMouseLeave3.bind(this);
+    this.onMouseEnter4 = this.onMouseEnter4.bind(this);
+    this.onMouseLeave4 = this.onMouseLeave4.bind(this);
   }
 
   handleOnGithub() {
@@ -34,6 +38,10 @@ class AboutDialog extends Component {
 
   handleOnResume() {
     window.open(resume);
+  }
+
+  handleOnEmail() {
+    window.location.href = `mailto:mailto:mehsieh89@gmail.com`;
   }
 
   handleClose() {
@@ -64,10 +72,19 @@ class AboutDialog extends Component {
     this.setState({ isHovering3: false });
   }
 
+  onMouseEnter4() {
+    this.setState({ isHovering4: true });
+  }
+
+  onMouseLeave4() {
+    this.setState({ isHovering4: false });
+  }
+
   render() {
     let hoverColor = "white";
     let hoverColor2 = "white";
     let hoverColor3 = "white";
+    let hoverColor4 = "white";
 
     if(this.state.isHovering) {
       hoverColor = '#A9B7C0';
@@ -79,6 +96,10 @@ class AboutDialog extends Component {
 
     if(this.state.isHovering3) {
       hoverColor3 = '#A9B7C0';
+    }
+
+    if(this.state.isHovering4) {
+      hoverColor4 = '#A9B7C0';
     }
 
     if (this.props.dialog.showAboutDialog) {
@@ -100,6 +121,14 @@ class AboutDialog extends Component {
                 />
                 <FontAwesome
                   className='dialogIcon animated rollIn'
+                  style={{color: hoverColor4}}
+                  name='envelope-o'
+                  onMouseEnter={this.onMouseEnter4}
+                  onMouseLeave={this.onMouseLeave4}
+                  onClick={this.handleOnEmail}
+                />
+                <FontAwesome
+                  className='dialogIcon animated rollIn'
                   style={{color: hoverColor}}
                   name='linkedin-square'
                   size='2x'
@@ -111,7 +140,7 @@ class AboutDialog extends Component {
                   className='dialogIcon animated rollIn'
                   style={{color: hoverColor2}}
                   name='github'
-                  size='2x'
+                  size='3x'
                   onMouseEnter={this.onMouseEnter2}
                   onMouseLeave={this.onMouseLeave2}
                   onClick={this.handleOnGithub}
@@ -130,11 +159,6 @@ class AboutDialog extends Component {
               <div id="aboutDesc" className="animated fadeIn">
                 "Hello!
                 Have a look around and enjoy. Hope to hear from you!" - Mel
-                <br />
-                <br />
-              </div>
-              <div className="e-mailBox animated fadeIn">
-                <a id="email" href="mailto:mehsieh89@gmail.com"> e-mail: mehsieh89@gmail.com </a>
               </div>
             </div>
           </div>

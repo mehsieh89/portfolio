@@ -22,7 +22,8 @@ html, body {
 .e-mailBox {
   font-family: "HelveticaNeue";
   font-weight: bold;
-  font-size: 30px;
+  width: 70%;
+  margin: 0 auto;
 }
 
 #aboutDialogDiv {
@@ -264,8 +265,16 @@ html, body {
 #email {
   color: #C7D8C6;
 }
+
 #email:hover {
   color: #EFD9C1;
+}
+
+.email {
+  font-size: 100px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 0px;
 }
 
 @font-face {
