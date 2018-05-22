@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Dialog, RaisedButton } from 'material-ui';
 import CommMob from '../media/communityMob.jpg';
 import Github from 'react-icons/lib/fa/github';
+import FontAwesome from 'react-fontawesome';
 
 class ProjectDialog extends Component {
   constructor(props) {
@@ -73,10 +74,19 @@ class ProjectDialog extends Component {
           title={
             <div id="dialogTitleContainer">
               <div id="aboutTitle" className="animated lightSpeedIn"> {this.props.dialog.currentProject.name} </div>
-              <Github
+              {/* <Github
                 className="dialogIcon animated rollIn"
                 color={hoverColor2}
                 size={50}
+                onMouseEnter={this.onMouseEnter2}
+                onMouseLeave={this.onMouseLeave2}
+                onClick={this.handleOnClick}
+              /> */}
+              <FontAwesome
+                className='dialogIcon animated rollIn'
+                style={{color: hoverColor2}}
+                name='github'
+                size='2x'
                 onMouseEnter={this.onMouseEnter2}
                 onMouseLeave={this.onMouseLeave2}
                 onClick={this.handleOnClick}

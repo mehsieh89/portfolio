@@ -5,6 +5,7 @@ import ReactDOM from 'react-dom';
 import { MuiThemeProvider } from 'material-ui/styles';
 import allReducers from './reducers/index.js';
 import './index.css';
+import 'font-awesome/css/font-awesome.min.css';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 
