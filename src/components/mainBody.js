@@ -49,6 +49,7 @@ class Main extends Component {
           <div id="sliderImgContainer">
             <CommWebSlide
               dialog={this.props.dialog}
+              changeSliderIndex={this.props.changeSliderIndex}
               toggleProjectDialog={this.props.toggleProjectDialog}
               importProjectDialog={this.props.importProjectDialog}
             />
@@ -56,6 +57,7 @@ class Main extends Component {
           <div id="sliderImgContainer">
             <CommMobSlide
               dialog={this.props.dialog}
+              changeSliderIndex={this.props.changeSliderIndex}
               toggleProjectDialog={this.props.toggleProjectDialog}
               importProjectDialog={this.props.importProjectDialog}
             />
@@ -63,6 +65,7 @@ class Main extends Component {
           <div id="sliderImgContainer">
             <FridgrSlide
               dialog={this.props.dialog}
+              changeSliderIndex={this.props.changeSliderIndex}
               toggleProjectDialog={this.props.toggleProjectDialog}
               importProjectDialog={this.props.importProjectDialog}
             />
@@ -70,6 +73,7 @@ class Main extends Component {
           <div id="sliderImgContainer">
             <MoodifySlide
               dialog={this.props.dialog}
+              changeSliderIndex={this.props.changeSliderIndex}
               toggleProjectDialog={this.props.toggleProjectDialog}
               importProjectDialog={this.props.importProjectDialog}
             />

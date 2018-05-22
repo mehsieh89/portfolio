@@ -19,7 +19,8 @@ class CommMobSlide extends Component {
       },
       description: "Mobile variation of the Community application. Built for socialites who are already out and about or are feeling spontaneous."
     });
-    this.props.toggleProjectDialog()
+    this.props.toggleProjectDialog();
+    this.props.changeSliderIndex(1);
   }
 
   render() {

@@ -21,6 +21,7 @@ class MoodifySlide extends Component {
       description: "Moodify utilizes the Watson API to analyze emotions portrayed in song lyrics. Lyrics are pulled from MusixMatch and song clips are pulled from Spotify.",
     })
     this.props.toggleProjectDialog();
+    this.props.changeSliderIndex(3);
   }
 
   render() {

@@ -20,6 +20,7 @@ class FridgrSlide extends Component {
       description: "Fridgr is a mobile application built for homes with co-habitants. The application manages inventories with interactive lists and includes a barcode scanning input system."
     })
     this.props.toggleProjectDialog();
+    this.props.changeSliderIndex(2);
   }
 
   render() {

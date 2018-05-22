@@ -75,6 +75,7 @@ class App extends Component {
           <Main
             dialog={this.props.dialog}
             toggleHovering={this.props.toggleHovering}
+            changeSliderIndex={this.props.changeSliderIndex}
             toggleProjectDialog={this.props.toggleProjectDialog}
             importProjectDialog={this.props.importProjectDialog}
           />

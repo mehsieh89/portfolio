@@ -20,6 +20,7 @@ class CommWebSlide extends Component {
       description: "What if I told you there is an app on the market that allows you to explore and create social events based on geolocation.",
     });
     this.props.toggleProjectDialog();
+    this.props.changeSliderIndex(0);
   }
 
   render() {
