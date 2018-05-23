@@ -114,7 +114,6 @@ class AboutDialog extends Component {
                   id="resumeIcon"
                   style={{color: hoverColor3}}
                   name='file-text-o'
-                  size='2x'
                   onMouseEnter={this.onMouseEnter3}
                   onMouseLeave={this.onMouseLeave3}
                   onClick={this.handleOnResume}
@@ -131,7 +130,6 @@ class AboutDialog extends Component {
                   className='dialogIcon animated rollIn'
                   style={{color: hoverColor}}
                   name='linkedin-square'
-                  size='2x'
                   onMouseEnter={this.onMouseEnter}
                   onMouseLeave={this.onMouseLeave}
                   onClick={this.handleOnLinked}
@@ -140,7 +138,6 @@ class AboutDialog extends Component {
                   className='dialogIcon animated rollIn'
                   style={{color: hoverColor2}}
                   name='github'
-                  size='3x'
                   onMouseEnter={this.onMouseEnter2}
                   onMouseLeave={this.onMouseLeave2}
                   onClick={this.handleOnGithub}

@@ -30,11 +30,13 @@ class Main extends Component {
   render() {
     const ArrowLeft =
       <PrevArrow
+        className="slick-prev"
         dialog={this.props.dialog}
         changeSliderIndex={this.props.changeSliderIndex}
       />;
     const ArrowRight =
       <NextArrow
+        className="slick-next"
         dialog={this.props.dialog}
         changeSliderIndex={this.props.changeSliderIndex}
       />;

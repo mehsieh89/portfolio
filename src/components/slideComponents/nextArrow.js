@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import Ionicon from 'react-ionicons';
+import FontAwesome from 'react-fontawesome';
+
 
 export default
 class NextArrow extends Component {
@@ -20,12 +21,22 @@ class NextArrow extends Component {
 
   render() {
     return (
-      <Ionicon icon="md-arrow-dropright"
-        fontSize="40px"
-        color="white"
-        className="slick-next"
+      <FontAwesome
+        className='arrowIcon R'
+        style={{color: 'black'}}
+        // style={{color: hoverColor2}}
+        name='caret-right'
+        size='2x'
+        // onMouseEnter={this.onMouseEnter2}
+        // onMouseLeave={this.onMouseLeave2}
         onClick={this.handleOnClick}
       />
+      // {/* <Ionicon icon="md-arrow-dropright"
+      //   fontSize="40px"
+      //   color="white"
+      //   className="slick-next"
+      //   onClick={this.handleOnClick}
+      // /> */}
     );
   };
 }

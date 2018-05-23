@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Ionicon from 'react-ionicons';
+import FontAwesome from 'react-fontawesome';
 
 export default
 class PrevArrow extends Component {
@@ -20,12 +20,19 @@ class PrevArrow extends Component {
 
   render() {
     return (
-      <Ionicon icon="md-arrow-dropleft"
-        fontSize="100px"
-        color="white"
-        className="slick-prev"
+      <FontAwesome
+        className='arrowIcon L'
+        style={{color: 'black'}}
+        name='caret-left'
+        size='2x'
         onClick={this.handleOnClick}
       />
+      // {/* <Ionicon icon="md-arrow-dropleft"
+      //   fontSize="100px"
+      //   color="white"
+      //   className="slick-prev"
+      //   onClick={this.handleOnClick}
+      // /> */}
     );
   };
 }
