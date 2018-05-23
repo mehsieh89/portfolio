@@ -22,17 +22,11 @@ class PrevArrow extends Component {
     return (
       <FontAwesome
         className='arrowIcon L'
-        style={{color: 'black'}}
+        // style={{color: 'black'}}
         name='caret-left'
         size='2x'
         onClick={this.handleOnClick}
       />
-      // {/* <Ionicon icon="md-arrow-dropleft"
-      //   fontSize="100px"
-      //   color="white"
-      //   className="slick-prev"
-      //   onClick={this.handleOnClick}
-      // /> */}
     );
   };
 }

@@ -450,12 +450,13 @@ html, body {
 
     display: block;
 
-    width: 100px;
+    width: 50px;
     height: 100px;
     padding: 0;
     -webkit-transform: translate(0, -50%);
     -ms-transform: translate(0, -50%);
     transform: translate(0, -50%);
+    box-shadow: 0 0 0 4px #C7D8C6, 0 6px 4px grey;
 
     cursor: pointer;
 
@@ -487,18 +488,32 @@ html, body {
     opacity: .25;
 }
 
-.arrowIcon:before,
-.arrowIcon:before
-{
+.L:before {
     font-size: 100px;
     line-height: 1;
+    position: relative;
+    left: 5px;
 
     opacity: .75;
     color: white;
     text-shadow: 2px 4px 4px black;
-    box-shadow: 0 0 0 4px #C7D8C6, 0 6px 4px grey;
+    /* box-shadow: 0 0 0 4px #C7D8C6, 0 6px 4px grey; */
 
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
 
+.R:before {
+    font-size: 100px;
+    line-height: 1;
+    position: relative;
+    left: 10px;
+    /* right: 30px; */
+
+    opacity: .75;
+    color: white;
+    text-shadow: 2px 4px 4px black;
+    /* box-shadow: 0 0 0 4px #C7D8C6, 0 6px 4px grey; */
 
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -506,7 +521,7 @@ html, body {
 
 .L
 {
-    left: -25px;
+    left: 20px;
 }
 [dir='rtl'] .L
 {
@@ -516,7 +531,7 @@ html, body {
 
 .R
 {
-    right: -25px;
+    right: 20px;
 }
 [dir='rtl'] .R
 {

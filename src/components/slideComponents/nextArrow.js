@@ -23,7 +23,7 @@ class NextArrow extends Component {
     return (
       <FontAwesome
         className='arrowIcon R'
-        style={{color: 'black'}}
+        // style={{color: 'black'}}
         // style={{color: hoverColor2}}
         name='caret-right'
         size='2x'
@@ -31,12 +31,6 @@ class NextArrow extends Component {
         // onMouseLeave={this.onMouseLeave2}
         onClick={this.handleOnClick}
       />
-      // {/* <Ionicon icon="md-arrow-dropright"
-      //   fontSize="40px"
-      //   color="white"
-      //   className="slick-next"
-      //   onClick={this.handleOnClick}
-      // /> */}
     );
   };
 }
