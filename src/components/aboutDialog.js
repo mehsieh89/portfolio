@@ -107,7 +107,7 @@ class AboutDialog extends Component {
         <Dialog
           title={
             <div id="dialogTitleContainer">
-              <div id="aboutTitle" className="animated lightSpeedIn"> about me </div>
+              <div id="aboutTitle" className="animated lightSpeedIn"> contact </div>
               <div id="dialogIconContainer">
                 <FontAwesome
                   className='dialogIcon animated rollIn'
