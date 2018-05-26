@@ -132,7 +132,7 @@ class AboutDialog extends Component {
                   name='linkedin-square'
                   onMouseEnter={this.onMouseEnter}
                   onMouseLeave={this.onMouseLeave}
-                  onClick={this.handleOnLinked}
+                  onClick={this.handleOnLinkedin}
                 />
                 <FontAwesome
                   className='dialogIcon animated rollIn'
