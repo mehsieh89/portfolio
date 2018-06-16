@@ -33,7 +33,7 @@ class AboutDialog extends Component {
   }
 
   handleOnLinkedin() {
-    window.open('https://www.linkedin.com/in/melvin-hsieh-5620399b/');
+    window.open('https://www.linkedin.com/in/melvin-hsieh');
   }
 
   handleOnResume() {
