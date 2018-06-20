@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Slider from 'react-slick';
 import CommMobSlide from './slideComponents/commMobSlide.js';
 import CommWebSlide from './slideComponents/commWebSlide.js';
+import ConnectFourSlide from './slideComponents/connectFourSlide.js';
 import FridgrSlide from './slideComponents/fridgrSlide.js';
 import MoodifySlide from './slideComponents/moodifySlide.js';
 import NextArrow from './slideComponents/nextArrow.js';
@@ -82,6 +83,14 @@ class Main extends Component {
           </div>
           <div id="sliderImgContainer">
             <MoodifySlide
+              dialog={this.props.dialog}
+              changeSliderIndex={this.props.changeSliderIndex}
+              toggleProjectDialog={this.props.toggleProjectDialog}
+              importProjectDialog={this.props.importProjectDialog}
+            />
+          </div>
+          <div id="sliderImgContainer">
+            <ConnectFourSlide
               dialog={this.props.dialog}
               changeSliderIndex={this.props.changeSliderIndex}
               toggleProjectDialog={this.props.toggleProjectDialog}

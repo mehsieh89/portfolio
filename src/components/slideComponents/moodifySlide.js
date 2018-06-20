@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import MoodifyImage from '../../media/moodifyDemo.gif'
-import Moodify from '../../media/MoodifyMU.png';
+import Moodify from '../../media/moodifyMUlarge.png';
 
 
 class MoodifySlide extends Component {

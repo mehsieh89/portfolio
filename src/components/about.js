@@ -7,6 +7,7 @@ class About extends Component {
 
   handleOnClick = () => {
     this.props.toggleAboutDialog();
+    this.props.changeSliderIndex(this.props.dialog.sliderIndex);
   }
 
   render() {
