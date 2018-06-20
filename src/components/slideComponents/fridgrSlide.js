@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import FridgrMobMU from '../../media/FridgrMobMU.PNG';
+import FridgrMobMU from '../../media/fridgrMUlarge.png';
 import FridgrMob from '../../media/fridgrMob.png';
 
 
