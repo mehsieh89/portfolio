@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import CommunityWeb from '../../media/communityWeb.png';
+import CommunityWeb from '../../media/CommWebMU.jpeg';
 import CommunityWebDemo from '../../media/communityWebDemo.gif'
 
 class CommWebSlide extends Component {

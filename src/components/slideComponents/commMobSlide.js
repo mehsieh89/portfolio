@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import CommunityMob from '../../media/communityMob.jpg';
+import CommunityMob from '../../media/ComMobSingleMU.jpg';
 import CommunityMobDemo from '../../media/communityMobDemo.gif';
 
 class CommMobSlide extends Component {
@@ -25,8 +25,8 @@ class CommMobSlide extends Component {
 
   render() {
     return (
-      <div id="sliderImgMobFrame">
-        <img id="sliderImgCommMob" src={CommunityMob} onClick={this.handleOnClick} alt=""></img>
+      <div id="sliderImgFrame">
+        <img className="sliderImg" src={CommunityMob} onClick={this.handleOnClick} alt=""></img>
       </div>
     );
   }
