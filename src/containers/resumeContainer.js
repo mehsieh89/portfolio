@@ -23,13 +23,13 @@ class ResumeContainer extends Component {
     const isHovering = this.state.isHovering;
     let bar = null;
     if (isHovering) {
-      bar = <div id="colorBar2" className="animated zoomIn"></div>;
+      bar = <div id="colorBar" className="animated zoomIn"></div>;
     } else {
       bar = null;
     }
 
     return (
-      <b className="selfButtonBox"
+      <b className="projectBox"
         onMouseEnter={this.handleMouseHoverE}
         onMouseLeave={this.handleMouseHoverL}
       >

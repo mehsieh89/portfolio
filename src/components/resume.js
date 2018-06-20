@@ -4,16 +4,15 @@ import resume from '../media/resume.pdf';
 class Resume extends Component {
   constructor(props) {
     super(props);
-    this.handleOnClick = this.handleOnClick.bind(this);
   }
 
-  handleOnClick() {
+  handleOnClick = () => {
     window.open(resume);
   }
 
   render() {
     return (
-      <div className="selfButton animated fadeIn resumeAnimation" onClick={this.handleOnClick.bind(this)}> resume </div>
+      <div className="project animated fadeIn resumeButton" onClick={this.handleOnClick}> resume </div>
     );
   }
 }

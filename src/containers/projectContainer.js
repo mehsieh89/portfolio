@@ -23,7 +23,7 @@ class ProjectContainer extends Component {
     const isHovering = this.state.isHovering;
 
     let bar = null;
-    if (this.props.dialog.isHovering[0]) {
+    if (this.state.isHovering) {
       bar = <div id="colorBar" className="animated zoomIn"></div>;
     } else {
       bar = null;

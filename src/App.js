@@ -20,14 +20,6 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <div id="selfContainer">
-            <ResumeContainer/>
-            <AboutContainer
-              dialog={this.props.dialog}
-              changeSliderIndex={this.props.changeSliderIndex}
-              toggleAboutDialog={this.props.toggleAboutDialog}
-            />
-          </div>
           <div className="App-title typewriter">
             <h1>MELVIN HSIEH</h1>
           </div>
@@ -35,6 +27,12 @@ class App extends Component {
             <ProjectContainer
               dialog={this.props.dialog}
             />
+            <AboutContainer
+              dialog={this.props.dialog}
+              changeSliderIndex={this.props.changeSliderIndex}
+              toggleAboutDialog={this.props.toggleAboutDialog}
+            />
+            <ResumeContainer/>
           </div>
         </header>
         <AboutDialog

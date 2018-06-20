@@ -164,17 +164,17 @@ html, body {
   animation-delay: .33s;
 }
 
-.communityMobile {
+.contactButton {
   animation-delay: .66s;
 }
 
-.fridgrMobile {
+.resumeButton {
   animation-delay: 1s;
 }
 
-.moodify {
+/* .moodify {
   animation-delay: 1.33s;
-}
+} */
 
 .sliderContainerAnimation {
   animation-duration: 4s;
