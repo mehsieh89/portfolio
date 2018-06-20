@@ -91,16 +91,17 @@ html, body {
   display: flex;
   z-index: 0;
   flex-direction: row-reverse;
-  font-size: 20px;
+  font-size: 25px;
   text-align: right;
   position: relative;
   right: 33px;
-  top: -19px;
 }
 
 .typewriter h1 {
   color: #fff;
   overflow: hidden;
+  margin-top: 0;
+  margin-bottom: 0;
   border-right: .15em solid #818b91;
   white-space: nowrap;
   letter-spacing: .15em;
@@ -293,7 +294,7 @@ html, body {
 
 .project {
   cursor: pointer;
-  font-size: 18px;
+  font-size: 24px;
   color: white;
   letter-spacing: 1.5px;
 }
