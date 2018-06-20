@@ -10,7 +10,7 @@ class NextArrow extends Component {
   }
 
   handleOnClick() {
-    if (this.props.dialog.sliderIndex === 3) {
+    if (this.props.dialog.sliderIndex === 4) {
       this.props.changeSliderIndex(0);
     } else {
       let newIndex = this.props.dialog.sliderIndex + 1;

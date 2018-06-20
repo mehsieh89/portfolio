@@ -294,7 +294,7 @@ html, body {
 
 .project {
   cursor: pointer;
-  font-size: 24px;
+  font-size: 26px;
   color: white;
   letter-spacing: 1.5px;
 }
@@ -308,7 +308,7 @@ html, body {
   margin-right: 40px;
   margin-left: 40px;
   position: relative;
-  height: 32px;
+  height: 40px;
 }
 
 .projectDesc {

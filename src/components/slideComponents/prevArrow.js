@@ -10,7 +10,7 @@ class PrevArrow extends Component {
 
   handleOnClick() {
     if (this.props.dialog.sliderIndex === 0) {
-      this.props.changeSliderIndex(3);
+      this.props.changeSliderIndex(4);
     } else {
       let newIndex = this.props.dialog.sliderIndex - 1;
       this.props.changeSliderIndex(newIndex);
