@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ConnectFour from '../../media/connectFourMUlarge.png';
+import ConnectFourGif from '../../media/connectFourGif.gif';
 
 class ConnectFourSlide extends Component {
   constructor(props) {
@@ -10,7 +11,7 @@ class ConnectFourSlide extends Component {
   handleOnClick = () => {
     this.props.importProjectDialog({
       name: 'connect four',
-      pathName: ConnectFour,
+      pathName: ConnectFourGif,
       githubURL: 'https://github.com/mehsieh89/connectFour/tree/master',
       dimensions: {
         height: '325px',
