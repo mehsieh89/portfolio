@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import FridgrMob from '../../media/FridgrMobMU.PNG';
+import FridgrMobMU from '../../media/FridgrMobMU.PNG';
+import FridgrMob from '../../media/fridgrMob.png';
 
 
 class FridgrSlide extends Component {
@@ -26,7 +27,7 @@ class FridgrSlide extends Component {
   render() {
     return (
       <div id="sliderImgFrame">
-        <img className="sliderImg" src={FridgrMob} onClick={this.handleOnClick} alt=""></img>
+        <img className="sliderImg" src={FridgrMobMU} onClick={this.handleOnClick} alt=""></img>
       </div>
     );
   }
