@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import CommunityMob from '../../media/ComMobSingleMU.jpg';
-import CommunityMobDemo from '../../media/communityMobDemo.gif';
+import { commMob } from '../projectData.js';
 
 class CommMobSlide extends Component {
   constructor(props) {
@@ -9,16 +9,7 @@ class CommMobSlide extends Component {
   }
 
   handleOnClick() {
-    this.props.importProjectDialog({
-      name: 'community mobile app',
-      pathName: CommunityMobDemo,
-      githubURL: 'https://github.com/Warriorcodez/community-mobile',
-      dimensions: {
-        height: '',
-        width: '',
-      },
-      description: "Mobile variation of the Community application. Built for socialites who are already out and about or are feeling spontaneous."
-    });
+    this.props.importProjectDialog(commMob);
     this.props.toggleProjectDialog();
     this.props.changeSliderIndex(1);
   }

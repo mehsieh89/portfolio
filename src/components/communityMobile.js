@@ -13,8 +13,8 @@ class CommunityMobile extends Component {
       pathName: CommunityMobDemo,
       githubURL: 'https://github.com/Warriorcodez/community-mobile',
       dimensions: {
-        height: '',
-        width: '',
+        height: '325',
+        width: '500',
       },
       description: "Mobile variation of the Community application. Built for socialites who are already out and about or are feeling spontaneous."
     });

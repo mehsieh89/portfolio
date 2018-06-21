@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ConnectFour from '../../media/connectFourMUlarge.png';
-import ConnectFourGif from '../../media/connectFourGif.gif';
+import { connectFour } from '../projectData.js';
 
 class ConnectFourSlide extends Component {
   constructor(props) {
@@ -9,16 +9,7 @@ class ConnectFourSlide extends Component {
   }
 
   handleOnClick = () => {
-    this.props.importProjectDialog({
-      name: 'connect four',
-      pathName: ConnectFourGif,
-      githubURL: 'https://github.com/mehsieh89/connectFour/tree/master',
-      dimensions: {
-        height: '325px',
-        width: '500px',
-      },
-      description: "Front-end only, Connect Four game. Takes in two player names and alternates their turns as players drop chips!"
-    });
+    this.props.importProjectDialog(connectFour);
     this.props.toggleProjectDialog();
     this.props.changeSliderIndex(4);
   }

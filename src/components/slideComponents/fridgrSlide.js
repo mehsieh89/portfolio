@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import FridgrMobMU from '../../media/fridgrMUlarge.png';
-import FridgrMob from '../../media/fridgrMob.png';
-
+import { fridgr } from '../projectData.js';
 
 class FridgrSlide extends Component {
   constructor(props) {
@@ -10,16 +9,7 @@ class FridgrSlide extends Component {
   }
 
   handleOnClick() {
-    this.props.importProjectDialog({
-      name: 'fridgr mobile app',
-      pathName: FridgrMob,
-      githubURL: 'https://github.com/ninjacodez/fridgr',
-      dimensions: {
-        height: '325',
-        width: '500',
-      },
-      description: "Fridgr is a mobile application built for homes with co-habitants. The application manages inventories with interactive lists and includes a barcode scanning input system."
-    })
+    this.props.importProjectDialog(fridgr);
     this.props.toggleProjectDialog();
     this.props.changeSliderIndex(2);
   }
