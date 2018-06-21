@@ -15,6 +15,10 @@ import { toggleAboutDialog, toggleProjectDialog, importProjectDialog,
   changeSliderIndex, toggleHovering, toggleProjectsHovering } from './actions.js';
 import './App.css';
 
+//remove projects button
+  //remove everything associated with projects button
+//add thumbnail preview for slider instead
+
 class App extends Component {
   render() {
     return (
@@ -24,13 +28,6 @@ class App extends Component {
             <h1>MELVIN HSIEH</h1>
           </div>
           <div id="buttonContainer">
-            <ProjectContainer
-              dialog={this.props.dialog}
-              changeSliderIndex={this.props.changeSliderIndex}
-              toggleProjectDialog={this.props.toggleProjectDialog}
-              importProjectDialog={this.props.importProjectDialog}
-              toggleProjectsHovering={this.props.toggleProjectsHovering}
-            />
             <AboutContainer
               dialog={this.props.dialog}
               changeSliderIndex={this.props.changeSliderIndex}

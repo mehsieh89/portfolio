@@ -7,7 +7,7 @@ class ProjectDialog extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      isHovering2: false
+      isHovering2: false,
     }
   }
 

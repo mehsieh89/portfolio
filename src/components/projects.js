@@ -12,13 +12,15 @@ class Projects extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      open: false
+      open: false,
+      anchorEl: null,
     }
   }
 
-  handleOnClick = () => {
+  handleOnClick = (event) => {
     this.setState({
-      open: true
+      open: true,
+      anchorEl: event.currentTarget
     })
     this.props.toggleProjectsHovering(true);
   }
@@ -39,6 +41,7 @@ class Projects extends Component {
         </div>
         <Menu
           id="long-menu"
+          anchorEl={this.state.anchorEl}
           open={this.state.open}
           onClose={this.handleClose}
           PaperProps={{
