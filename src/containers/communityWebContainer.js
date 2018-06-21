@@ -4,10 +4,9 @@ import CommunityWeb from '../components/communityWeb.js';
 class CommunityWebContainer extends Component {
   constructor(props) {
     super(props);
-    this.handleMouseHoverE = this.handleMouseHoverE.bind(this);
   }
 
-  handleMouseHoverE() {
+  handleMouseHoverE = () => {
     this.props.toggleHovering(0, true);
     this.props.toggleHovering(1, false);
     this.props.toggleHovering(2, false);

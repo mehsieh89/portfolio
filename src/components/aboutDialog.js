@@ -142,7 +142,9 @@ class AboutDialog extends Component {
             <div id="aboutTextDiv">
               <div id="aboutDesc" className="animated fadeIn">
                 "Hello!
-                Have a look around and enjoy. Hope to hear from you!" - Mel
+                Have a look around and enjoy.
+                This site is always being worked on! 
+                Hope to hear from you!" - Mel
               </div>
             </div>
           </div>
