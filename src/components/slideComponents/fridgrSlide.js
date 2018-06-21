@@ -5,10 +5,9 @@ import { fridgr } from '../projectData.js';
 class FridgrSlide extends Component {
   constructor(props) {
     super(props);
-    this.handleOnClick = this.handleOnClick.bind(this);
   }
 
-  handleOnClick() {
+  handleOnClick = () => {
     this.props.importProjectDialog(fridgr);
     this.props.toggleProjectDialog();
     this.props.changeSliderIndex(2);

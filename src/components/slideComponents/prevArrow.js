@@ -5,10 +5,9 @@ export default
 class PrevArrow extends Component {
   constructor(props) {
     super(props);
-    this.handleOnClick = this.handleOnClick.bind(this);
   }
 
-  handleOnClick() {
+  handleOnClick = () => {
     if (this.props.dialog.sliderIndex === 0) {
       this.props.changeSliderIndex(4);
     } else {

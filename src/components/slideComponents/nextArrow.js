@@ -6,10 +6,9 @@ export default
 class NextArrow extends Component {
   constructor(props) {
     super(props);
-    this.handleOnClick = this.handleOnClick.bind(this);
   }
 
-  handleOnClick() {
+  handleOnClick = () => {
     if (this.props.dialog.sliderIndex === 4) {
       this.props.changeSliderIndex(0);
     } else {

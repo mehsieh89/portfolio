@@ -9,25 +9,21 @@ class ProjectDialog extends Component {
     this.state = {
       isHovering2: false
     }
-    this.handleClose = this.handleClose.bind(this);
-    this.handleOnClick = this.handleOnClick.bind(this);
-    this.onMouseEnter2 = this.onMouseEnter2.bind(this);
-    this.onMouseLeave2 = this.onMouseLeave2.bind(this);
   }
 
-  handleOnClick() {
+  handleOnClick = () => {
     window.open(this.props.dialog.currentProject.githubURL);
   }
 
-  handleClose() {
+  handleClose = () => {
     this.props.toggleProjectDialog();
   }
 
-  onMouseEnter2() {
+  onMouseEnter2 = () => {
     this.setState({ isHovering2: true });
   }
 
-  onMouseLeave2() {
+  onMouseLeave2 = () => {
     this.setState({ isHovering2: false });
   }
 

@@ -6,10 +6,9 @@ import { commWeb } from '../projectData.js';
 class CommWebSlide extends Component {
   constructor(props) {
     super(props);
-    this.handleOnClick = this.handleOnClick.bind(this);
   }
 
-  handleOnClick() {
+  handleOnClick = () => {
     this.props.importProjectDialog(commWeb);
     this.props.toggleProjectDialog();
     this.props.changeSliderIndex(0);

@@ -13,70 +13,57 @@ class AboutDialog extends Component {
       isHovering3: false,
       isHovering4: false
     };
-    this.handleClose = this.handleClose.bind(this);
-    this.handleOnGithub = this.handleOnGithub.bind(this);
-    this.handleOnLinkedin = this.handleOnLinkedin.bind(this);
-    this.handleOnResume = this.handleOnResume.bind(this);
-    this.handleOnEmail = this.handleOnEmail.bind(this);
-    this.onMouseEnter = this.onMouseEnter.bind(this);
-    this.onMouseLeave = this.onMouseLeave.bind(this);
-    this.onMouseEnter2 = this.onMouseEnter2.bind(this);
-    this.onMouseLeave2 = this.onMouseLeave2.bind(this);
-    this.onMouseEnter3 = this.onMouseEnter3.bind(this);
-    this.onMouseLeave3 = this.onMouseLeave3.bind(this);
-    this.onMouseEnter4 = this.onMouseEnter4.bind(this);
-    this.onMouseLeave4 = this.onMouseLeave4.bind(this);
   }
 
-  handleOnGithub() {
+  handleOnGithub = () => {
     window.open('https://github.com/mehsieh89');
   }
 
-  handleOnLinkedin() {
+  handleOnLinkedin = () => {
     window.open('https://www.linkedin.com/in/melvin-hsieh');
   }
 
-  handleOnResume() {
+  handleOnResume = () => {
     window.open(resume);
   }
 
-  handleOnEmail() {
+  handleOnEmail = () => {
     window.location.href = `mailto:mailto:mehsieh89@gmail.com`;
   }
 
-  handleClose() {
+  handleClose = () => {
     this.props.toggleAboutDialog();
   }
 
-  onMouseEnter() {
+  onMouseEnter = () => {
     this.setState({ isHovering: true });
   }
 
-  onMouseLeave() {
+  onMouseLeave = () => {
     this.setState({ isHovering: false });
   }
 
-  onMouseEnter2() {
+  onMouseEnter2 = () => {
     this.setState({ isHovering2: true });
   }
 
-  onMouseLeave2() {
+  onMouseLeave2 = () => {
     this.setState({ isHovering2: false });
   }
 
-  onMouseEnter3() {
+  onMouseEnter3 = () => {
     this.setState({ isHovering3: true });
   }
 
-  onMouseLeave3() {
+  onMouseLeave3 = () => {
     this.setState({ isHovering3: false });
   }
 
-  onMouseEnter4() {
+  onMouseEnter4 = () => {
     this.setState({ isHovering4: true });
   }
 
-  onMouseLeave4() {
+  onMouseLeave4 = () => {
     this.setState({ isHovering4: false });
   }
 

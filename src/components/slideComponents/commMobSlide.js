@@ -5,10 +5,9 @@ import { commMob } from '../projectData.js';
 class CommMobSlide extends Component {
   constructor(props) {
     super(props);
-    this.handleOnClick = this.handleOnClick.bind(this);
   }
 
-  handleOnClick() {
+  handleOnClick = () => {
     this.props.importProjectDialog(commMob);
     this.props.toggleProjectDialog();
     this.props.changeSliderIndex(1);

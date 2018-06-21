@@ -5,7 +5,6 @@ import { connectFour } from '../projectData.js';
 class ConnectFourSlide extends Component {
   constructor(props) {
     super(props);
-    this.handleOnClick = this.handleOnClick.bind(this);
   }
 
   handleOnClick = () => {
