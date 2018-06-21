@@ -5,25 +5,21 @@ class ProjectContainer extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      isHovering: false,
     };
-    this.handleMouseHoverE = this.handleMouseHoverE.bind(this);
-    this.handleMouseHoverL = this.handleMouseHoverL.bind(this);
   }
 
-  handleMouseHoverE() {
-    this.setState({ isHovering: true });
+  handleMouseHoverE = () => {
+    this.props.toggleProjectsHovering(true);
   }
 
-  handleMouseHoverL() {
-    this.setState({ isHovering: false });
+  handleMouseHoverL = () => {
+    this.props.toggleProjectsHovering(false);
   }
 
   render() {
-    const isHovering = this.state.isHovering;
 
     let bar = null;
-    if (this.state.isHovering) {
+    if (this.props.dialog.projectsHover) {
       bar = <div id="colorBar" className="animated zoomIn"></div>;
     } else {
       bar = null;
@@ -39,6 +35,7 @@ class ProjectContainer extends Component {
           changeSliderIndex={this.props.changeSliderIndex}
           toggleProjectDialog={this.props.toggleProjectDialog}
           importProjectDialog={this.props.importProjectDialog}
+          toggleProjectsHovering={this.props.toggleProjectsHovering}
         />
         {bar}
       </b>

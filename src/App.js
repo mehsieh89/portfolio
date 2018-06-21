@@ -12,7 +12,7 @@ import MoodifyContainer from './containers/moodifyContainer.js';
 import Main from './components/mainBody.js';
 import ProjectDialog from './components/projectDialog.js';
 import { toggleAboutDialog, toggleProjectDialog, importProjectDialog,
-  changeSliderIndex, toggleHovering } from './actions.js';
+  changeSliderIndex, toggleHovering, toggleProjectsHovering } from './actions.js';
 import './App.css';
 
 class App extends Component {
@@ -29,6 +29,7 @@ class App extends Component {
               changeSliderIndex={this.props.changeSliderIndex}
               toggleProjectDialog={this.props.toggleProjectDialog}
               importProjectDialog={this.props.importProjectDialog}
+              toggleProjectsHovering={this.props.toggleProjectsHovering}
             />
             <AboutContainer
               dialog={this.props.dialog}
@@ -45,6 +46,7 @@ class App extends Component {
         <ProjectDialog
           dialog={this.props.dialog}
           toggleProjectDialog={this.props.toggleProjectDialog}
+          toggleProjectsHovering={this.props.toggleProjectsHovering}
         />
         <div id="bodyContainer">
           <Main
@@ -72,7 +74,8 @@ const matchDispatchToProps = (dispatch) => {
     toggleProjectDialog: toggleProjectDialog,
     importProjectDialog: importProjectDialog,
     changeSliderIndex: changeSliderIndex,
-    toggleHovering: toggleHovering
+    toggleHovering: toggleHovering,
+    toggleProjectsHovering: toggleProjectsHovering,
   }, dispatch);
 };
 

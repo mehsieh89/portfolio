@@ -20,12 +20,14 @@ class Projects extends Component {
     this.setState({
       open: true
     })
+    this.props.toggleProjectsHovering(true);
   }
 
   handleClose = () => {
     this.setState({
       open: false
     })
+    this.props.toggleProjectsHovering(false);
   }
 
   render() {
@@ -50,6 +52,7 @@ class Projects extends Component {
             changeSliderIndex={this.props.changeSliderIndex}
             toggleProjectDialog={this.props.toggleProjectDialog}
             importProjectDialog={this.props.importProjectDialog}
+            toggleProjectsHovering={this.props.toggleProjectsHovering}
           />
         </Menu>
       </div>

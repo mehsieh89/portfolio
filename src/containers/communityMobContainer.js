@@ -32,6 +32,7 @@ class CommunityMobContainer extends Component {
           dialog={this.props.dialog}
           toggleProjectDialog={this.props.toggleProjectDialog}
           importProjectDialog={this.props.importProjectDialog}
+          toggleProjectsHovering={this.props.toggleProjectsHovering}
         />
         {bar}
       </b>

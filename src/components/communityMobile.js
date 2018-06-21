@@ -10,6 +10,7 @@ class CommunityMobile extends Component {
   handleOnClick = () => {
     this.props.importProjectDialog(commMob);
     this.props.toggleProjectDialog()
+    this.props.toggleProjectsHovering(true);
   }
 
   render() {

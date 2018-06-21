@@ -31,3 +31,10 @@ export const toggleHovering = (index, bool) => {
     index: index,
   };
 };
+
+export const toggleProjectsHovering = (bool) => {
+  return {
+    type: 'TOGGLE_PROJECTS_HOVERING',
+    payload: bool,
+  };
+};

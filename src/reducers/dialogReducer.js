@@ -2,7 +2,8 @@ const initialState = {
   showAboutDialog: false,
   showProjectDialog: false,
   sliderIndex: 0,
-  isHovering: [false, false, false, false],
+  projectsHover: false,
+  isHovering: [false, false, false, false, false],
   currentProject: {
     name: null,
     pathName: null,
@@ -25,19 +26,24 @@ export default function(state = initialState, action) {
     return Object.assign({}, state, { showProjectDialog: !state.showProjectDialog });
 
   case 'IMPORT_PROJECT_DIALOG' :
-    let newState = Object.assign({}, state);
+    var newState = Object.assign({}, state);
     newState.currentProject = action.payload;
     return newState;
 
   case 'CHANGE_SLIDER_INDEX' :
-    let newState2 = Object.assign({}, state);
-    newState2.sliderIndex = action.payload;
-    return newState2;
+    var newState = Object.assign({}, state);
+    newState.sliderIndex = action.payload;
+    return newState;
 
   case 'TOGGLE_IS_HOVERING':
-    let newState5 = Object.assign({}, state);
-    newState5.isHovering[action.index] = action.payload;
-    return newState5;
+    var newState = Object.assign({}, state);
+    newState.isHovering[action.index] = action.payload;
+    return newState;
+
+  case 'TOGGLE_PROJECTS_HOVERING':
+    var newState = Object.assign({}, state);
+    newState.projectsHover = action.payload;
+    return newState;
 
   default:
     return state;

@@ -11,6 +11,12 @@ class ProjectDialog extends Component {
     }
   }
 
+  componentWilMount = () => {
+    if (this.props.dialog.showProjectDialog) {
+      this.props.toggleProjectsDialog(true);
+    }
+  }
+
   handleOnClick = () => {
     window.open(this.props.dialog.currentProject.githubURL);
   }
