@@ -37,7 +37,8 @@ class ProjectContainer extends Component {
         <Projects
           dialog={this.props.dialog}
           changeSliderIndex={this.props.changeSliderIndex}
-          toggleAboutDialog={this.props.toggleAboutDialog}
+          toggleProjectDialog={this.props.toggleProjectDialog}
+          importProjectDialog={this.props.importProjectDialog}
         />
         {bar}
       </b>

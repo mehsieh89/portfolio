@@ -26,6 +26,9 @@ class App extends Component {
           <div id="buttonContainer">
             <ProjectContainer
               dialog={this.props.dialog}
+              changeSliderIndex={this.props.changeSliderIndex}
+              toggleProjectDialog={this.props.toggleProjectDialog}
+              importProjectDialog={this.props.importProjectDialog}
             />
             <AboutContainer
               dialog={this.props.dialog}

@@ -1,29 +1,20 @@
 import React, { Component } from 'react';
-import CommunityMobDemo from '../media/communityMobDemo.gif'
+import { commMob } from './projectData.js';
+import MenuItem from '@material-ui/core/MenuItem';
 
 class CommunityMobile extends Component {
   constructor(props) {
     super(props);
-    this.handleOnClick = this.handleOnClick.bind(this);
   }
 
-  handleOnClick() {
-    this.props.importProjectDialog({
-      name: 'community mobile app',
-      pathName: CommunityMobDemo,
-      githubURL: 'https://github.com/Warriorcodez/community-mobile',
-      dimensions: {
-        height: '325',
-        width: '500',
-      },
-      description: "Mobile variation of the Community application. Built for socialites who are already out and about or are feeling spontaneous."
-    });
+  handleOnClick = () => {
+    this.props.importProjectDialog(commMob);
     this.props.toggleProjectDialog()
   }
 
   render() {
     return (
-      <div className="project animated fadeIn communityMobile" onClick={this.handleOnClick.bind(this)}> community mobile </div>
+      <MenuItem onClick={this.handleOnClick}>community mobile</MenuItem>
     );
   }
 }

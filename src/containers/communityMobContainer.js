@@ -8,11 +8,11 @@ class CommunityMobContainer extends Component {
   }
 
   handleMouseHoverE() {
-    this.props.toggleHovering(1, true);
-    this.props.toggleHovering(3, false);
-    this.props.toggleHovering(2, false);
-    this.props.toggleHovering(0, false);
-    this.props.changeSliderIndex(1);
+    // this.props.toggleHovering(1, true);
+    // this.props.toggleHovering(3, false);
+    // this.props.toggleHovering(2, false);
+    // this.props.toggleHovering(0, false);
+    // this.props.changeSliderIndex(1);
   }
 
   render() {
