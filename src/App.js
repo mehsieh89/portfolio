@@ -13,9 +13,10 @@ import './App.css';
 //another font?
 //fix thumbnail spacing?
 //change theme colors?
+//change slide image transform?
 //create button for connectfour, rather than clicking into gif
 //more information/change layout for project dialog to include tech stacks
-//CTA concept integration? 
+//CTA concept integration?
 
 class App extends Component {
   render() {

@@ -411,7 +411,7 @@ html, body {
 }
 
 .sliderImg:hover {
-  transform: scale(1.10);
+  transform: scale(1.035);
 }
 
 #dotThumb {
