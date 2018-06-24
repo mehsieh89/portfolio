@@ -1,5 +1,10 @@
 import React, { Component } from 'react';
 import Slider from 'react-slick';
+import ComMobSingleMU from '../media/ComMobSingleMU.jpg';
+import CommWebMU from '../media/CommWebMU.jpeg';
+import connectFourMUlarge from '../media/connectFourMUlarge.png';
+import fridgrMUlarge from '../media/fridgrMUlarge.png';
+import moodifyMUlarge from '../media/moodifyMUlarge.png';
 import CommMobSlide from './slideComponents/commMobSlide.js';
 import CommWebSlide from './slideComponents/commWebSlide.js';
 import ConnectFourSlide from './slideComponents/connectFourSlide.js';
@@ -8,17 +13,18 @@ import MoodifySlide from './slideComponents/moodifySlide.js';
 import NextArrow from './slideComponents/nextArrow.js';
 import PrevArrow from './slideComponents/prevArrow.js';
 
+const imageThumbs = [CommWebMU, ComMobSingleMU, fridgrMUlarge, moodifyMUlarge, connectFourMUlarge];
+
 class Main extends Component {
   constructor(props) {
     super(props);
-    this.handleOnChange = this.handleOnChange.bind(this);
   }
 
   componentDidUpdate() {
     this.slider.slickGoTo(this.props.dialog.sliderIndex);
   }
 
-  handleOnChange(something, newIndex) {
+  handleOnChange = (something, newIndex) => {
     for (var i = 0; i < this.props.dialog.isHovering.length; i++) {
       if (newIndex === i) {
         this.props.toggleHovering(i, true);
@@ -43,10 +49,20 @@ class Main extends Component {
       />;
 
     const settings = {
+        customPaging: (i) => {
+           return (
+             <a>
+               <img src={imageThumbs[i]} id="dotThumb" />
+             </a>
+           );
+         },
         infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
         accessibility: true,
-        pauseOnHover: true,
         adaptiveHeight: true,
+        dots: true,
+        dotsClass: "slick-dots slick-thumb"
     };
     return (
       <div id="sliderContainer" className="animated fadeIn sliderContainerAnimation">

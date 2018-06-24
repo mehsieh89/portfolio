@@ -414,6 +414,12 @@ html, body {
   transform: scale(1.10);
 }
 
+#dotThumb {
+  float: left;
+  height: 80px;
+  width: 80px;
+}
+
 .arrowIcon
 {
     /* font-size: 50px; */
