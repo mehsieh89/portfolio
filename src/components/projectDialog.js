@@ -7,7 +7,9 @@ class ProjectDialog extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      isHovering2: false,
+      isHovering: false,
+      normal: "white",
+      hovered: "#A9B7C0"
     }
   }
 
@@ -25,27 +27,49 @@ class ProjectDialog extends Component {
     this.props.toggleProjectDialog();
   }
 
-  onMouseEnter2 = () => {
-    this.setState({ isHovering2: true });
+  onMouseEnter = () => {
+    this.setState({ isHovering: true });
   }
 
-  onMouseLeave2 = () => {
-    this.setState({ isHovering2: false });
+  onMouseLeave = () => {
+    this.setState({ isHovering: false });
+  }
+
+  handleConnectFourClick = () => {
+    window.open('https://mehsieh89.github.io/connectFour/')
+  }
+
+  connectFourCheck = () => {
+    const mediaHeight = this.props.dialog.currentProject.dimensions.height;
+    const mediaWidth = this.props.dialog.currentProject.dimensions.width;
+    console.log(this.props);
+    if (!(this.props.dialog.currentProject.name === "connect four")) {
+      return (
+        <img className="projectIMG animated fadeIn"
+          src={this.props.dialog.currentProject.pathName}
+          alt="" height={mediaHeight}
+          width={mediaWidth}/>
+      )
+    } else {
+      return (
+        <img className="projectIMG animated fadeIn connectFourGif"
+          src={this.props.dialog.currentProject.pathName}
+          alt="" height={mediaHeight}
+          width={mediaWidth}
+          onClick={this.handleConnectFourClick}/>
+      )
+    }
   }
 
   render() {
-    const mediaHeight = this.props.dialog.currentProject.dimensions.height;
-    const mediaWidth = this.props.dialog.currentProject.dimensions.width;
-    let hoverColor2 = "white";
-    if(this.state.isHovering2) {
-      hoverColor2 = '#A9B7C0';
-    }
-
     const layoutAdjust = () => {
       if (this.props.dialog.currentProject.name === "community mobile app") {
         return (
           <div id="dialogDivMob">
-            <img id="communityMobImage" className="animated fadeIn" src={this.props.dialog.currentProject.pathName} alt=""></img>
+            <img id="communityMobImage"
+              className="animated fadeIn"
+              src={this.props.dialog.currentProject.pathName}
+              alt=""></img>
             <div id="communityMobTxt">
               <p id="communityMobDesc" className="animated fadeIn"> {this.props.dialog.currentProject.description} </p>
               <img id="communityMobImage2" className="animated fadeIn" src={CommMob} alt=""></img>
@@ -56,13 +80,11 @@ class ProjectDialog extends Component {
         return (
           <div id="dialogDiv">
             <p className="projectDesc animated fadeIn" > {this.props.dialog.currentProject.description} </p>
-            <img className="projectIMG animated fadeIn" src={this.props.dialog.currentProject.pathName} alt="" height={mediaHeight} width={mediaWidth}>
-            </img>
+            {this.connectFourCheck()}
           </div>
         )
       }
     }
-
 
     if (this.props.dialog.showProjectDialog) {
       return (
@@ -77,11 +99,11 @@ class ProjectDialog extends Component {
               <div id="aboutTitle" className="animated lightSpeedIn"> {this.props.dialog.currentProject.name} </div>
               <FontAwesome
                 className='dialogIcon animated rollIn'
-                style={{color: hoverColor2}}
+                style={this.state.isHovering ? {color: this.state.hovered} : {color: this.state.normal}}
                 name='github'
                 size='2x'
-                onMouseEnter={this.onMouseEnter2}
-                onMouseLeave={this.onMouseLeave2}
+                onMouseEnter={this.onMouseEnter}
+                onMouseLeave={this.onMouseLeave}
                 onClick={this.handleOnClick}
               />
             </div>

@@ -56,5 +56,5 @@ export const connectFour = {
     height: '325px',
     width: '500px',
   },
-  description: "Front-end only, Connect Four game. Takes in two player names and alternates their turns as players drop chips!"
+  description: "Front-end only, Connect Four game. Takes in two player names and alternates their turns as players drop chips. Click the Gif to play!"
 }

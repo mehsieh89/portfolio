@@ -425,6 +425,10 @@ html, body {
   filter: grayscale(0%);
 }
 
+.connectFourGif {
+  cursor: pointer;
+}
+
 .arrowIcon
 {
     /* font-size: 50px; */

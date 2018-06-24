@@ -16,9 +16,6 @@ import PrevArrow from './slideComponents/prevArrow.js';
 const imageThumbs = [CommWebMU, ComMobSingleMU, fridgrMUlarge, moodifyMUlarge, connectFourMUlarge];
 
 class Main extends Component {
-  constructor(props) {
-    super(props);
-  }
 
   componentDidUpdate() {
     this.slider.slickGoTo(this.props.dialog.sliderIndex);
@@ -54,6 +51,7 @@ class Main extends Component {
               <a>
                 <img src={imageThumbs[i]}
                  id="dotThumb"
+                 alt=""
                  onClick={() => this.props.changeSliderIndex(i)}
                 />
               </a>
