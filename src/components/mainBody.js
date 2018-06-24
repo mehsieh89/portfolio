@@ -51,11 +51,14 @@ class Main extends Component {
     const settings = {
         customPaging: (i) => {
            return (
-             <a>
-               <img src={imageThumbs[i]} id="dotThumb" />
-             </a>
-           );
-         },
+              <a>
+                <img src={imageThumbs[i]}
+                 id="dotThumb"
+                 onClick={() => this.props.changeSliderIndex(i)}
+                />
+              </a>
+            );
+          },
         infinite: true,
         slidesToShow: 1,
         slidesToScroll: 1,

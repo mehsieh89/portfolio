@@ -416,8 +416,13 @@ html, body {
 
 #dotThumb {
   float: left;
+  filter: grayscale(100%);
   height: 80px;
   width: 80px;
+}
+
+#dotThumb:hover {
+  filter: grayscale(0%);
 }
 
 .arrowIcon
