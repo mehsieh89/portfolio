@@ -31,19 +31,19 @@ export default function(state = initialState, action) {
     return newState;
 
   case 'CHANGE_SLIDER_INDEX' :
-    var newState = Object.assign({}, state);
-    newState.sliderIndex = action.payload;
-    return newState;
+    var newState2 = Object.assign({}, state);
+    newState2.sliderIndex = action.payload;
+    return newState2;
 
   case 'TOGGLE_IS_HOVERING':
-    var newState = Object.assign({}, state);
-    newState.isHovering[action.index] = action.payload;
-    return newState;
+    var newState3 = Object.assign({}, state);
+    newState3.isHovering[action.index] = action.payload;
+    return newState3;
 
   case 'TOGGLE_PROJECTS_HOVERING':
-    var newState = Object.assign({}, state);
-    newState.projectsHover = action.payload;
-    return newState;
+    var newState4 = Object.assign({}, state);
+    newState4.projectsHover = action.payload;
+    return newState4;
 
   default:
     return state;

@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 
 class About extends Component {
-  constructor(props) {
-    super(props);
-  }
 
   handleOnClick = () => {
     this.props.toggleAboutDialog();

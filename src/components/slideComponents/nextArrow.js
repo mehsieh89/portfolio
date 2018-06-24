@@ -1,12 +1,8 @@
 import React, { Component } from 'react';
 import FontAwesome from 'react-fontawesome';
 
-
 export default
 class NextArrow extends Component {
-  constructor(props) {
-    super(props);
-  }
 
   handleOnClick = () => {
     if (this.props.dialog.sliderIndex === 4) {

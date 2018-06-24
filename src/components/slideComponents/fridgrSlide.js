@@ -3,9 +3,6 @@ import FridgrMobMU from '../../media/fridgrMUlarge.png';
 import { fridgr } from '../projectData.js';
 
 class FridgrSlide extends Component {
-  constructor(props) {
-    super(props);
-  }
 
   handleOnClick = () => {
     this.props.importProjectDialog(fridgr);

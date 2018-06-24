@@ -3,9 +3,6 @@ import CommunityMob from '../../media/ComMobSingleMU.jpg';
 import { commMob } from '../projectData.js';
 
 class CommMobSlide extends Component {
-  constructor(props) {
-    super(props);
-  }
 
   handleOnClick = () => {
     this.props.importProjectDialog(commMob);

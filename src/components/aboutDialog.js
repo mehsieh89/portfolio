@@ -8,10 +8,12 @@ class AboutDialog extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      isHovering: false,
-      isHovering2: false,
-      isHovering3: false,
-      isHovering4: false
+      resume: false,
+      email: false,
+      linkedIn: false,
+      github: false,
+      normal: "white",
+      hovered: "#A9B7C0"
     };
   }
 
@@ -35,60 +37,17 @@ class AboutDialog extends Component {
     this.props.toggleAboutDialog();
   }
 
-  onMouseEnter = () => {
-    this.setState({ isHovering: true });
+  onMouseEnter = (event) => {
+    const stateKey = event.target.dataset.name;
+    this.setState({ [stateKey]: true });
   }
 
-  onMouseLeave = () => {
-    this.setState({ isHovering: false });
-  }
-
-  onMouseEnter2 = () => {
-    this.setState({ isHovering2: true });
-  }
-
-  onMouseLeave2 = () => {
-    this.setState({ isHovering2: false });
-  }
-
-  onMouseEnter3 = () => {
-    this.setState({ isHovering3: true });
-  }
-
-  onMouseLeave3 = () => {
-    this.setState({ isHovering3: false });
-  }
-
-  onMouseEnter4 = () => {
-    this.setState({ isHovering4: true });
-  }
-
-  onMouseLeave4 = () => {
-    this.setState({ isHovering4: false });
+  onMouseLeave = (event) => {
+    const stateKey = event.target.dataset.name;
+    this.setState({ [stateKey]: false });
   }
 
   render() {
-    let hoverColor = "white";
-    let hoverColor2 = "white";
-    let hoverColor3 = "white";
-    let hoverColor4 = "white";
-
-    if(this.state.isHovering) {
-      hoverColor = '#A9B7C0';
-    }
-
-    if(this.state.isHovering2) {
-      hoverColor2 = '#A9B7C0';
-    }
-
-    if(this.state.isHovering3) {
-      hoverColor3 = '#A9B7C0';
-    }
-
-    if(this.state.isHovering4) {
-      hoverColor4 = '#A9B7C0';
-    }
-
     if (this.props.dialog.showAboutDialog) {
       return (
         <Dialog
@@ -99,23 +58,26 @@ class AboutDialog extends Component {
                 <FontAwesome
                   className='dialogIcon animated rollIn'
                   id="resumeIcon"
-                  style={{color: hoverColor3}}
+                  data-name="resume"
+                  style={this.state.resume ? {color: this.state.hovered} : {color: this.state.normal}}
                   name='file-text-o'
-                  onMouseEnter={this.onMouseEnter3}
-                  onMouseLeave={this.onMouseLeave3}
+                  onMouseEnter={this.onMouseEnter}
+                  onMouseLeave={this.onMouseLeave}
                   onClick={this.handleOnResume}
                 />
                 <FontAwesome
                   className='dialogIcon animated rollIn'
-                  style={{color: hoverColor4}}
+                  style={this.state.email ? {color: this.state.hovered} : {color: this.state.normal}}
+                  data-name="email"
                   name='envelope-o'
-                  onMouseEnter={this.onMouseEnter4}
-                  onMouseLeave={this.onMouseLeave4}
+                  onMouseEnter={this.onMouseEnter}
+                  onMouseLeave={this.onMouseLeave}
                   onClick={this.handleOnEmail}
                 />
                 <FontAwesome
                   className='dialogIcon animated rollIn'
-                  style={{color: hoverColor}}
+                  data-name="linkedIn"
+                  style={this.state.linkedIn ? {color: this.state.hovered} : {color: this.state.normal}}
                   name='linkedin-square'
                   onMouseEnter={this.onMouseEnter}
                   onMouseLeave={this.onMouseLeave}
@@ -123,10 +85,11 @@ class AboutDialog extends Component {
                 />
                 <FontAwesome
                   className='dialogIcon animated rollIn'
-                  style={{color: hoverColor2}}
+                  data-name="github"
+                  style={this.state.github ? {color: this.state.hovered} : {color: this.state.normal}}
                   name='github'
-                  onMouseEnter={this.onMouseEnter2}
-                  onMouseLeave={this.onMouseLeave2}
+                  onMouseEnter={this.onMouseEnter}
+                  onMouseLeave={this.onMouseLeave}
                   onClick={this.handleOnGithub}
                 />
               </div>
@@ -142,8 +105,9 @@ class AboutDialog extends Component {
             <div id="aboutTextDiv">
               <div id="aboutDesc" className="animated fadeIn">
                 "Hello!
+                I'm a full stack software engineer in the Bay Area.
                 Have a look around and enjoy.
-                This site is always being worked on! 
+                This site is always being worked on!
                 Hope to hear from you!" - Mel
               </div>
             </div>
@@ -155,9 +119,6 @@ class AboutDialog extends Component {
 }
 
 const styles = {
-  body: {
-    // backgroundColor: '#CCCBC6',
-  },
   buttonLabel: {
     textTransform: 'lowercase',
     fontFamily: "HelveticaNeue",
@@ -196,7 +157,6 @@ const styles = {
     color: 'white',
     fontFamily: "HelveticaNeue",
     textAlign: 'left',
-    // borderBottom: '2px solid #CCCBC6',
     backgroundColor: '#A9B7C0',
   },
 }

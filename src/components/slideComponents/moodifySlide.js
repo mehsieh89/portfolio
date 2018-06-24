@@ -3,9 +3,6 @@ import Moodify from '../../media/moodifyMUlarge.png';
 import { moodify } from '../projectData.js';
 
 class MoodifySlide extends Component {
-  constructor(props) {
-    super(props);
-  }
 
   handleOnClick = () => {
     this.props.importProjectDialog(moodify);

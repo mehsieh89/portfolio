@@ -3,9 +3,6 @@ import FontAwesome from 'react-fontawesome';
 
 export default
 class PrevArrow extends Component {
-  constructor(props) {
-    super(props);
-  }
 
   handleOnClick = () => {
     if (this.props.dialog.sliderIndex === 0) {

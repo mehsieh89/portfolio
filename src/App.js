@@ -1,14 +1,9 @@
 import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import ProjectContainer from './containers/projectContainer.js';
 import ResumeContainer from './containers/resumeContainer.js';
 import AboutContainer from './containers/aboutContainer.js';
 import AboutDialog from './components/aboutDialog.js';
-import CommunityWebContainer from './containers/communityWebContainer.js';
-import CommunityMobContainer from './containers/communityMobContainer.js';
-import FridgrContainer from './containers/fridgrContainer.js';
-import MoodifyContainer from './containers/moodifyContainer.js';
 import Main from './components/mainBody.js';
 import ProjectDialog from './components/projectDialog.js';
 import { toggleAboutDialog, toggleProjectDialog, importProjectDialog,

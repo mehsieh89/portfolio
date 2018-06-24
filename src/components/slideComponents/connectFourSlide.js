@@ -3,9 +3,6 @@ import ConnectFour from '../../media/connectFourMUlarge.png';
 import { connectFour } from '../projectData.js';
 
 class ConnectFourSlide extends Component {
-  constructor(props) {
-    super(props);
-  }
 
   handleOnClick = () => {
     this.props.importProjectDialog(connectFour);
