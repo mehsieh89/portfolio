@@ -10,9 +10,12 @@ import { toggleAboutDialog, toggleProjectDialog, importProjectDialog,
   changeSliderIndex, toggleHovering, toggleProjectsHovering } from './actions.js';
 import './App.css';
 
-//remove projects button
-  //remove everything associated with projects button
-//add thumbnail preview for slider instead
+//another font?
+//fix thumbnail spacing?
+//change theme colors?
+//create button for connectfour, rather than clicking into gif
+//more information/change layout for project dialog to include tech stacks
+//CTA concept integration? 
 
 class App extends Component {
   render() {
