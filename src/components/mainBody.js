@@ -50,7 +50,6 @@ class Main extends Component {
            return (
               <a>
                 <img src={imageThumbs[i]}
-                 id="dotThumb"
                  alt=""
                  onClick={() => this.props.changeSliderIndex(i)}
                 />
