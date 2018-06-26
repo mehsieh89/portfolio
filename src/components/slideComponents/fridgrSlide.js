@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import FridgrMobMU from '../../media/fridgrMUlarge.png';
+import FridgrMobMU from '../../media/fridgrMU.jpg';
 import { fridgr } from '../projectData.js';
 
 class FridgrSlide extends Component {

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ConnectFour from '../../media/connectFourMUlarge.png';
+import ConnectFour from '../../media/connectFourMU.jpg';
 import { connectFour } from '../projectData.js';
 
 class ConnectFourSlide extends Component {

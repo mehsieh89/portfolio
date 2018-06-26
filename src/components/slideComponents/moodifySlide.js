@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Moodify from '../../media/moodifyMUlarge.png';
+import Moodify from '../../media/moodifyMUjpg';
 import { moodify } from '../projectData.js';
 
 class MoodifySlide extends Component {
