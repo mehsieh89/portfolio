@@ -31,6 +31,10 @@ class Main extends Component {
     }
   }
 
+  handleOnLoad = () => {
+    console.log('yay');
+  }
+
   render() {
     const ArrowLeft =
       <PrevArrow
@@ -65,7 +69,9 @@ class Main extends Component {
         dotsClass: "slick-dots slick-thumb"
     };
     return (
-      <div id="sliderContainer" className="animated fadeIn sliderContainerAnimation">
+      <div id="sliderContainer"
+        className="animated fadeIn sliderContainerAnimation"
+        onLoad={this.handleOnLoad}>
         <Slider
           {...settings}
           ref={slider => (this.slider = slider)}
