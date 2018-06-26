@@ -9,7 +9,11 @@ class Thumbnail extends Component {
   render() {
     return (
       <a>
-        <Tooltip id="tooltip-top-start" title={this.props.projectName} placement="top">
+        <Tooltip id="tooltip-top-start"
+          title={this.props.projectName}
+          placement="top"
+          enterDelay={200}
+        >
           <img src={this.props.image}
             alt=""
             onClick={this.handleClick}
