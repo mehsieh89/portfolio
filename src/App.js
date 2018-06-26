@@ -10,14 +10,6 @@ import { toggleAboutDialog, toggleProjectDialog, importProjectDialog,
   changeSliderIndex, toggleHovering, toggleProjectsHovering } from './actions.js';
 import './App.css';
 
-//another font?
-//fix thumbnail spacing?
-//change theme colors?
-//change slide image transform?
-//create button for connectfour, rather than clicking into gif
-//more information/change layout for project dialog to include tech stacks
-//CTA concept integration?
-
 class App extends Component {
   render() {
     return (
@@ -76,32 +68,3 @@ const matchDispatchToProps = (dispatch) => {
 };
 
 export default connect(mapStateToProps, matchDispatchToProps)(App);
-
-/* <CommunityWebContainer
-  dialog={this.props.dialog}
-  changeSliderIndex={this.props.changeSliderIndex}
-  toggleProjectDialog={this.props.toggleProjectDialog}
-  importProjectDialog={this.props.importProjectDialog}
-  toggleHovering={this.props.toggleHovering}
-/>
-<CommunityMobContainer
-  dialog={this.props.dialog}
-  changeSliderIndex={this.props.changeSliderIndex}
-  toggleProjectDialog={this.props.toggleProjectDialog}
-  importProjectDialog={this.props.importProjectDialog}
-  toggleHovering={this.props.toggleHovering}
-/>
-<FridgrContainer
-  dialog={this.props.dialog}
-  changeSliderIndex={this.props.changeSliderIndex}
-  toggleProjectDialog={this.props.toggleProjectDialog}
-  importProjectDialog={this.props.importProjectDialog}
-  toggleHovering={this.props.toggleHovering}
-/>
-<MoodifyContainer
-  dialog={this.props.dialog}
-  changeSliderIndex={this.props.changeSliderIndex}
-  toggleProjectDialog={this.props.toggleProjectDialog}
-  importProjectDialog={this.props.importProjectDialog}
-  toggleHovering={this.props.toggleHovering}
-/> */

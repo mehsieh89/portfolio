@@ -1,10 +1,6 @@
 import React, { Component } from 'react';
 import Slider from 'react-slick';
-import ComMobSingleMU from '../media/ComMobSingleMU.jpg';
-import CommWebMU from '../media/CommWebMU.jpeg';
-import connectFourMUlarge from '../media/connectFourMU.jpg';
-import fridgrMUlarge from '../media/fridgrMU.jpg';
-import moodifyMUlarge from '../media/moodifyMU.jpg';
+import {commMob, commWeb, fridgr, moodify, connectFour} from './projectData.js';
 import CommMobSlide from './slideComponents/commMobSlide.js';
 import CommWebSlide from './slideComponents/commWebSlide.js';
 import ConnectFourSlide from './slideComponents/connectFourSlide.js';
@@ -12,8 +8,9 @@ import FridgrSlide from './slideComponents/fridgrSlide.js';
 import MoodifySlide from './slideComponents/moodifySlide.js';
 import NextArrow from './slideComponents/nextArrow.js';
 import PrevArrow from './slideComponents/prevArrow.js';
+import Thumbnail from './thumbnail.js';
 
-const imageThumbs = [CommWebMU, ComMobSingleMU, fridgrMUlarge, moodifyMUlarge, connectFourMUlarge];
+const imageThumbs = [commWeb, commMob, fridgr, moodify, connectFour];
 
 class Main extends Component {
 
@@ -48,12 +45,12 @@ class Main extends Component {
     const settings = {
         customPaging: (i) => {
            return (
-              <a>
-                <img src={imageThumbs[i]}
-                 alt=""
-                 onClick={() => this.props.changeSliderIndex(i)}
-                />
-              </a>
+             <Thumbnail
+               image={imageThumbs[i].mockUp}
+               projectName={imageThumbs[i].name}
+               index={i}
+               changeSliderIndex={this.props.changeSliderIndex}
+             />
             );
           },
         infinite: true,

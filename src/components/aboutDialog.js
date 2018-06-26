@@ -3,6 +3,7 @@ import { Dialog } from 'material-ui';
 import selfImage from '../media/selfImage.jpg';
 import resume from '../media/resume.pdf';
 import FontAwesome from 'react-fontawesome';
+import Tooltip from '@material-ui/core/Tooltip';
 
 class AboutDialog extends Component {
   constructor(props) {
@@ -54,44 +55,53 @@ class AboutDialog extends Component {
           title={
             <div id="dialogTitleContainer">
               <div id="aboutTitle" className="animated lightSpeedIn"> contact </div>
-              <div id="dialogIconContainer">
-                <FontAwesome
-                  className='dialogIcon animated rollIn'
-                  id="resumeIcon"
-                  data-name="resume"
-                  style={this.state.resume ? {color: this.state.hovered} : {color: this.state.normal}}
-                  name='file-text-o'
-                  onMouseEnter={this.onMouseEnter}
-                  onMouseLeave={this.onMouseLeave}
-                  onClick={this.handleOnResume}
-                />
-                <FontAwesome
-                  className='dialogIcon animated rollIn'
-                  style={this.state.email ? {color: this.state.hovered} : {color: this.state.normal}}
-                  data-name="email"
-                  name='envelope-o'
-                  onMouseEnter={this.onMouseEnter}
-                  onMouseLeave={this.onMouseLeave}
-                  onClick={this.handleOnEmail}
-                />
-                <FontAwesome
-                  className='dialogIcon animated rollIn'
-                  data-name="linkedIn"
-                  style={this.state.linkedIn ? {color: this.state.hovered} : {color: this.state.normal}}
-                  name='linkedin-square'
-                  onMouseEnter={this.onMouseEnter}
-                  onMouseLeave={this.onMouseLeave}
-                  onClick={this.handleOnLinkedin}
-                />
-                <FontAwesome
-                  className='dialogIcon animated rollIn'
-                  data-name="github"
-                  style={this.state.github ? {color: this.state.hovered} : {color: this.state.normal}}
-                  name='github'
-                  onMouseEnter={this.onMouseEnter}
-                  onMouseLeave={this.onMouseLeave}
-                  onClick={this.handleOnGithub}
-                />
+              <div id="dialogIconContainerBox">
+                <div id="dialogIconContainer" className="animated rollIn">
+                    <FontAwesome
+                      className='dialogIcon'
+                      id="resumeIcon"
+                      data-name="resume"
+                      style={this.state.resume ? {color: this.state.hovered} : {color: this.state.normal}}
+                      name='file-text'
+                      onMouseEnter={this.onMouseEnter}
+                      onMouseLeave={this.onMouseLeave}
+                      onClick={this.handleOnResume}
+                    />
+                </div>
+                <div id="dialogIconContainer" className="animated rollIn">
+                  <FontAwesome
+                    className='dialogIcon'
+                    id="email"
+                    style={this.state.email ? {color: this.state.hovered} : {color: this.state.normal}}
+                    data-name="email"
+                    name='envelope-square'
+                    onMouseEnter={this.onMouseEnter}
+                    onMouseLeave={this.onMouseLeave}
+                    onClick={this.handleOnEmail}
+                  />
+                </div>
+                <div id="dialogIconContainer" className="animated rollIn">
+                  <FontAwesome
+                    className='dialogIcon'
+                    data-name="linkedIn"
+                    style={this.state.linkedIn ? {color: this.state.hovered} : {color: this.state.normal}}
+                    name='linkedin-square'
+                    onMouseEnter={this.onMouseEnter}
+                    onMouseLeave={this.onMouseLeave}
+                    onClick={this.handleOnLinkedin}
+                  />
+                </div>
+                <div id="dialogIconContainer" className="animated rollIn">
+                  <FontAwesome
+                    className='dialogIcon'
+                    data-name="github"
+                    style={this.state.github ? {color: this.state.hovered} : {color: this.state.normal}}
+                    name='github'
+                    onMouseEnter={this.onMouseEnter}
+                    onMouseLeave={this.onMouseLeave}
+                    onClick={this.handleOnGithub}
+                  />
+                </div>
               </div>
             </div>
           }

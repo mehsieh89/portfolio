@@ -1,10 +1,6 @@
 html, body {
   height: 100%;
 }
-#aboutButtonContainer {
-  display: flex;
-  flex-direction: row;
-}
 
 #aboutDesc {
   font-family: "HelveticaNeue";
@@ -17,13 +13,6 @@ html, body {
   padding-bottom: 10px;
   margin-top: 20px;
   background-color: white;
-}
-
-.e-mailBox {
-  font-family: "HelveticaNeue";
-  font-weight: bold;
-  width: 70%;
-  margin: 0 auto;
 }
 
 #aboutDialogDiv {
@@ -48,9 +37,6 @@ html, body {
 
 #bodyContainer {
   position: relative;
-  /* display: flex;
-  flex-direction: column;
-  justify-content: center; */
 }
 #bodyContainer:after {
   background-size: cover;
@@ -240,18 +226,47 @@ html, body {
   direction: row;
 }
 
-.dialogIcon {
+#dialogIconContainer {
+  height: 90%;
+  width: 18%;
   cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
   padding: 3px;
-  font-size: 50px;
   margin-left: 5px;
   margin-right: 5px;
   box-shadow: 2px 2px 1px grey;
-  text-shadow: 0 2px 2px grey;
   background-color: #C7D8C6;
+  float: left;
 }
 
-#dialogIconContainer {
+#projectDialogIconContainer {
+  height: 90%;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: 3px;
+  margin-left: 5px;
+  margin-right: 5px;
+  box-shadow: 2px 2px 1px grey;
+  background-color: #C7D8C6;
+  float: left;
+}
+
+.dialogIcon {
+  font-size: 50px;
+  text-shadow: 0 2px 2px grey;
+}
+
+#resumeIcon {
+  font-size: 42px;
+}
+
+#dialogIconContainerBox {
   position: 'absolute';
   right: 0px;
 }
@@ -337,9 +352,7 @@ html, body {
   margin-top: 50px;
 }
 
-#resumeIcon {
-  position: relative;
-}
+
 
 #selfContainer {
   display: flex;

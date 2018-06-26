@@ -42,7 +42,6 @@ class ProjectDialog extends Component {
   connectFourCheck = () => {
     const mediaHeight = this.props.dialog.currentProject.dimensions.height;
     const mediaWidth = this.props.dialog.currentProject.dimensions.width;
-    console.log(this.props);
     if (!(this.props.dialog.currentProject.name === "connect four")) {
       return (
         <img className="projectIMG animated fadeIn"
@@ -97,15 +96,17 @@ class ProjectDialog extends Component {
           title={
             <div id="dialogTitleContainer">
               <div id="aboutTitle" className="animated lightSpeedIn"> {this.props.dialog.currentProject.name} </div>
-              <FontAwesome
-                className='dialogIcon animated rollIn'
-                style={this.state.isHovering ? {color: this.state.hovered} : {color: this.state.normal}}
-                name='github'
-                size='2x'
-                onMouseEnter={this.onMouseEnter}
-                onMouseLeave={this.onMouseLeave}
-                onClick={this.handleOnClick}
-              />
+              <div id="projectDialogIconContainer" className="animated rollIn">
+                <FontAwesome
+                  className='dialogIcon'
+                  style={this.state.isHovering ? {color: this.state.hovered} : {color: this.state.normal}}
+                  name='github'
+                  size='2x'
+                  onMouseEnter={this.onMouseEnter}
+                  onMouseLeave={this.onMouseLeave}
+                  onClick={this.handleOnClick}
+                />
+              </div>
             </div>
           }>
           {layoutAdjust()}
