@@ -31,10 +31,6 @@ class Main extends Component {
     }
   }
 
-  handleOnLoad = () => {
-    console.log('yay');
-  }
-
   render() {
     const ArrowLeft =
       <PrevArrow
@@ -70,8 +66,7 @@ class Main extends Component {
     };
     return (
       <div id="sliderContainer"
-        className="animated fadeIn sliderContainerAnimation"
-        onLoad={this.handleOnLoad}>
+        className="animated fadeIn sliderContainerAnimation">
         <Slider
           {...settings}
           ref={slider => (this.slider = slider)}
