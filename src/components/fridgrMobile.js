@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import FridgrMobileImg from '../media/fridgrMob.png'
+import FridgrMobileImg from '../media/fridgrMobJPG.jpg'
 
 class FridgrMobile extends Component {
   constructor(props) {

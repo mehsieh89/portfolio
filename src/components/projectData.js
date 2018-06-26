@@ -1,6 +1,6 @@
 import CommunityMobDemo from '../media/communityMobDemo.gif';
 import CommunityWebDemo from '../media/communityWebDemo.gif';
-import FridgrMob from '../media/fridgrMob.png';
+import FridgrMob from '../media/fridgrMobJPG.jpg';
 import MoodifyImage from '../media/moodifyDemo.gif';
 import ConnectFourGif from '../media/connectFourGif.gif';
 
