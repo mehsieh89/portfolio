@@ -44,15 +44,15 @@ class Main extends Component {
 
     const settings = {
         customPaging: (i) => {
-           return (
-             <Thumbnail
-               image={imageThumbs[i].mockUp}
-               projectName={imageThumbs[i].name}
-               index={i}
-               changeSliderIndex={this.props.changeSliderIndex}
-             />
-            );
-          },
+          return (
+            <Thumbnail
+              image={imageThumbs[i].mockUp}
+              projectName={imageThumbs[i].name}
+              index={i}
+              changeSliderIndex={this.props.changeSliderIndex}
+            />
+          );
+        },
         infinite: true,
         slidesToShow: 1,
         slidesToScroll: 1,

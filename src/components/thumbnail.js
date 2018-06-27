@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Tooltip from '@material-ui/core/Tooltip';
+import ReactTooltip from 'react-tooltip';
 
 class Thumbnail extends Component {
   handleClick = () => {
@@ -7,19 +7,24 @@ class Thumbnail extends Component {
   }
 
   render() {
+    console.log(this.props.projectName);
     return (
-      <a>
-        <Tooltip id="tooltip-top-start"
-          title={this.props.projectName}
-          placement="top"
-          enterDelay={200}
-        >
-          <img src={this.props.image}
+      <span>
+        <a>
+          <img
+            data-tip data-for={this.props.projectName}
+            src={this.props.image}
             alt=""
             onClick={this.handleClick}
           />
-        </Tooltip>
-      </a>
+        </a>
+        <ReactTooltip
+          id={this.props.projectName}
+          effect='solid'
+        >
+          <span> {this.props.projectName} </span>
+        </ReactTooltip>
+      </span>
     );
   }
 }
