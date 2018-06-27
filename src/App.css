@@ -495,7 +495,7 @@ li {
 {
     /* color: #CCCBC6; */
     outline: none;
-    background: #818b91;
+    background: rgba(112, 112, 112, 1);
     /* background: transparent; */
 }
 .arrowIcon:hover:before,
