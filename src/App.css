@@ -1,5 +1,7 @@
 html, body {
   height: 100%;
+  background-image: url("media/greenTintWood.jpg");
+  background-size: cover;
 }
 
 #aboutDesc {
@@ -47,7 +49,7 @@ html, body {
   top: 0;
   left: 0;
   width: 100%;
-  height: 103%;
+  height: 102.7%;
   opacity : 0.8;
   z-index: -1;
 }
@@ -65,10 +67,12 @@ html, body {
 
 .App-header {
   font-family: "HelveticaNeue";
-  background-color: #C7D8C6;
+  background-color: rgba(112, 112, 112, 0.3);
+  /* background-color: #C7D8C6; */
   height: 100px;
   position: relative;
   color: white;
+  text-shadow: 3px 3px 4px #000000;
   border-bottom: 3px solid;
   border-bottom-color: rgba(255, 255, 255, .7);
 }
@@ -445,11 +449,14 @@ li {
 
 .thumbnail {
   font-size: 18px !important;
-  background-color: #C7D8C6 !important;
+  text-shadow: 3px 3px 4px #000000;
+  background-color: rgba(112, 112, 112, 1) !important;
+  opacity: 1 !important;
 }
 
 .thumbnail:after {
-  border-top-color: #C7D8C6 !important;
+  opacity: 1 !important;
+  border-top-color: rgba(112, 112, 112, 1) !important;
   border-top-style: solid !important;
   border-top-width: 6px !important;
 }
