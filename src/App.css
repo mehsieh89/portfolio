@@ -57,6 +57,7 @@ html, body {
 #aboutTitle {
   position: relative;
   top: 10px;
+  text-shadow: 0 2px 2px grey;
 }
 
 .App {
@@ -72,7 +73,7 @@ html, body {
   height: 100px;
   position: relative;
   color: white;
-  text-shadow: 3px 3px 4px #000000;
+  text-shadow: 2px 2px 5px #000000;
   border-bottom: 3px solid;
   border-bottom-color: rgba(255, 255, 255, .7);
 }
@@ -449,7 +450,7 @@ li {
 
 .thumbnail {
   font-size: 18px !important;
-  text-shadow: 3px 3px 4px #000000;
+  text-shadow: 2px 2px 5px #000000;
   background-color: rgba(112, 112, 112, 1) !important;
   opacity: 1 !important;
 }
