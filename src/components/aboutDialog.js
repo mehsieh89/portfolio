@@ -3,7 +3,7 @@ import { Dialog } from 'material-ui';
 import selfImage from '../media/selfImage.jpg';
 import resume from '../media/resume.pdf';
 import FontAwesome from 'react-fontawesome';
-import Tooltip from '@material-ui/core/Tooltip';
+import ReactTooltip from 'react-tooltip';
 
 class AboutDialog extends Component {
   constructor(props) {
@@ -57,20 +57,30 @@ class AboutDialog extends Component {
               <div id="aboutTitle" className="animated lightSpeedIn"> contact </div>
               <div id="dialogIconContainerBox">
                 <div id="dialogIconContainer" className="animated rollIn">
-                    <FontAwesome
-                      className='dialogIcon'
-                      id="resumeIcon"
-                      data-name="resume"
-                      style={this.state.resume ? {color: this.state.hovered} : {color: this.state.normal}}
-                      name='file-text'
-                      onMouseEnter={this.onMouseEnter}
-                      onMouseLeave={this.onMouseLeave}
-                      onClick={this.handleOnResume}
-                    />
+                  <FontAwesome
+                    className='dialogIcon'
+                    data-tip data-for="resume"
+                    id="resumeIcon"
+                    data-name="resume"
+                    style={this.state.resume ? {color: this.state.hovered} : {color: this.state.normal}}
+                    name='file-text'
+                    onMouseEnter={this.onMouseEnter}
+                    onMouseLeave={this.onMouseLeave}
+                    onClick={this.handleOnResume}
+                  />
                 </div>
+                <ReactTooltip
+                  delayShow={200}
+                  className='contactTooltip'
+                  id="resume"
+                  effect='solid'
+                >
+                  <span> resume </span>
+                </ReactTooltip>
                 <div id="dialogIconContainer" className="animated rollIn">
                   <FontAwesome
                     className='dialogIcon'
+                    data-tip data-for="e-mail"
                     id="email"
                     style={this.state.email ? {color: this.state.hovered} : {color: this.state.normal}}
                     data-name="email"
@@ -80,9 +90,18 @@ class AboutDialog extends Component {
                     onClick={this.handleOnEmail}
                   />
                 </div>
+                <ReactTooltip
+                  delayShow={200}
+                  className='contactTooltip'
+                  id="e-mail"
+                  effect='solid'
+                >
+                  <span> e-mail </span>
+                </ReactTooltip>
                 <div id="dialogIconContainer" className="animated rollIn">
                   <FontAwesome
                     className='dialogIcon'
+                    data-tip data-for="linkedIn"
                     data-name="linkedIn"
                     style={this.state.linkedIn ? {color: this.state.hovered} : {color: this.state.normal}}
                     name='linkedin-square'
@@ -91,9 +110,18 @@ class AboutDialog extends Component {
                     onClick={this.handleOnLinkedin}
                   />
                 </div>
+                <ReactTooltip
+                  delayShow={200}
+                  className='contactTooltip'
+                  id="linkedIn"
+                  effect='solid'
+                >
+                  <span> LinkedIn </span>
+                </ReactTooltip>
                 <div id="dialogIconContainer" className="animated rollIn">
                   <FontAwesome
                     className='dialogIcon'
+                    data-tip data-for="github"
                     data-name="github"
                     style={this.state.github ? {color: this.state.hovered} : {color: this.state.normal}}
                     name='github'
@@ -102,6 +130,14 @@ class AboutDialog extends Component {
                     onClick={this.handleOnGithub}
                   />
                 </div>
+                <ReactTooltip
+                  delayShow={200}
+                  className='contactTooltip'
+                  id="github"
+                  effect='solid'
+                >
+                  <span> Github </span>
+                </ReactTooltip>
               </div>
             </div>
           }
