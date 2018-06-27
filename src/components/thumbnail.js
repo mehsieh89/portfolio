@@ -7,7 +7,6 @@ class Thumbnail extends Component {
   }
 
   render() {
-    console.log(this.props.projectName);
     return (
       <span>
         <a>
@@ -19,6 +18,8 @@ class Thumbnail extends Component {
           />
         </a>
         <ReactTooltip
+          delayShow={200}
+          className='thumbnail'
           id={this.props.projectName}
           effect='solid'
         >

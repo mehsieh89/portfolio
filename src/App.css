@@ -139,14 +139,6 @@ html, body {
   animation-duration: .25s;
 }
 
-.aboutAnimation {
-  animation-delay: 1.33s;
-}
-
-.resumeAnimation {
-  animation-delay: 1s;
-}
-
 .projectsButton {
   animation-delay: .33s;
 }
@@ -158,10 +150,6 @@ html, body {
 .resumeButton {
   animation-delay: 1s;
 }
-
-/* .moodify {
-  animation-delay: 1.33s;
-} */
 
 .sliderContainerAnimation {
   animation-duration: 4s;
@@ -352,8 +340,6 @@ html, body {
   margin-top: 50px;
 }
 
-
-
 #selfContainer {
   display: flex;
   flex-direction: row-reverse;
@@ -455,6 +441,17 @@ li {
 
 .connectFourGif {
   cursor: pointer;
+}
+
+.thumbnail {
+  font-size: 18px !important;
+  background-color: #C7D8C6 !important;
+}
+
+.thumbnail:after {
+  border-top-color: #C7D8C6 !important;
+  border-top-style: solid !important;
+  border-top-width: 6px !important;
 }
 
 .arrowIcon
