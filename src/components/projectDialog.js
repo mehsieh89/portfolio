@@ -115,6 +115,7 @@ class ProjectDialog extends Component {
                 className='projectTooltip'
                 id="githubCode"
                 effect='solid'
+                border={true}
               >
                 <span> Click here for codebase! </span>
               </ReactTooltip>

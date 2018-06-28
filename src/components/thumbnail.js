@@ -24,6 +24,7 @@ class Thumbnail extends Component {
                 className='thumbnail animated fadeIn'
                 id={this.props.projectName}
                 effect='solid'
+                border={true}
               >
                 <span> {this.props.projectName} </span>
               </ReactTooltip>)

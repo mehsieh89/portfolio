@@ -29,6 +29,7 @@ class AboutDialog extends Component {
                 className='contactTooltip animated fadeIn'
                 id={name}
                 effect='solid'
+                border={true}
               >
                 <span> {output} </span>
               </ReactTooltip>)
