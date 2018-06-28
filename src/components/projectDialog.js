@@ -130,8 +130,6 @@ class ProjectDialog extends Component {
 
 
 const styles = {
-  body: {
-  },
   buttonLabel: {
     textTransform: 'lowercase',
     fontFamily: "HelveticaNeue",

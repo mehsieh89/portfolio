@@ -157,38 +157,6 @@ class AboutDialog extends Component {
 }
 
 const styles = {
-  buttonLabel: {
-    textTransform: 'lowercase',
-    fontFamily: "HelveticaNeue",
-    fontWeight: 'bold',
-    fontSize: '20px',
-    color: 'white',
-  },
-  button1: {
-    position: 'relative',
-    right: '10px',
-    marginTop: '20px',
-    marginLeft: 'auto',
-    marginRight: 'auto',
-    width: '100px',
-    display: 'block',
-  },
-  button2: {
-    marginTop: '20px',
-    marginLeft: 'auto',
-    marginRight: 'auto',
-    width: '100px',
-    display: 'block',
-  },
-  button3: {
-    position: 'relative',
-    left: '10px',
-    marginTop: '20px',
-    marginLeft: 'auto',
-    marginRight: 'auto',
-    width: '100px',
-    display: 'block',
-  },
   title: {
     fontSize: '30px',
     fontWeight: 'bold',
