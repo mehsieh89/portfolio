@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Dialog } from 'material-ui';
 import CommMob from '../media/communityMob.jpg';
 import FontAwesome from 'react-fontawesome';
+import ReactTooltip from 'react-tooltip';
 
 class ProjectDialog extends Component {
   constructor(props) {
@@ -99,6 +100,7 @@ class ProjectDialog extends Component {
               <div id="projectDialogIconContainer" className="animated rollIn">
                 <FontAwesome
                   className='dialogIcon'
+                  data-tip data-for="githubCode"
                   style={this.state.isHovering ? {color: this.state.hovered} : {color: this.state.normal}}
                   name='github'
                   size='2x'
@@ -107,6 +109,15 @@ class ProjectDialog extends Component {
                   onClick={this.handleOnClick}
                 />
               </div>
+              <ReactTooltip
+                delayShow={200}
+                place="left"
+                className='projectTooltip'
+                id="githubCode"
+                effect='solid'
+              >
+                <span> Click here for codebase! </span>
+              </ReactTooltip>
             </div>
           }>
           {layoutAdjust()}
