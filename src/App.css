@@ -271,11 +271,11 @@ html, body {
   box-shadow: 0 0 0 4px #C7D8C6, 0 6px 4px grey;
 }
 
-#email {
+#emailIcon {
   color: #C7D8C6;
 }
 
-#email:hover {
+#emailIcon:hover {
   color: #EFD9C1;
 }
 
@@ -453,6 +453,7 @@ li {
   text-shadow: 2px 2px 5px #000000;
   background-color: rgba(112, 112, 112, 1) !important;
   opacity: 1 !important;
+  animation-duration: .66s;
 }
 
 .thumbnail:after {
@@ -472,6 +473,7 @@ li {
   text-shadow: 2px 2px 5px #000000;
   background-color: rgba(112, 112, 112, 1) !important;
   opacity: 1 !important;
+  animation-duration: .66s;
 }
 
 .contactTooltip:after {

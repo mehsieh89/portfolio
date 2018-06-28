@@ -18,6 +18,25 @@ class AboutDialog extends Component {
     };
   }
 
+  renderCheck = (name) => {
+    let output = name;
+    if (name === "email") {
+      output = "e-mail";
+    }
+    if (this.state[name]) {
+      return (<ReactTooltip
+                delayShow={200}
+                className='contactTooltip animated fadeIn'
+                id={name}
+                effect='solid'
+              >
+                <span> {output} </span>
+              </ReactTooltip>)
+    } else {
+      return null;
+    }
+  }
+
   handleOnGithub = () => {
     window.open('https://github.com/mehsieh89');
   }
@@ -69,19 +88,12 @@ class AboutDialog extends Component {
                     onClick={this.handleOnResume}
                   />
                 </div>
-                <ReactTooltip
-                  delayShow={200}
-                  className='contactTooltip'
-                  id="resume"
-                  effect='solid'
-                >
-                  <span> resume </span>
-                </ReactTooltip>
+                {this.renderCheck('resume')}
                 <div id="dialogIconContainer" className="animated rollIn">
                   <FontAwesome
                     className='dialogIcon'
-                    data-tip data-for="e-mail"
-                    id="email"
+                    data-tip data-for="email"
+                    id="emailIcon"
                     style={this.state.email ? {color: this.state.hovered} : {color: this.state.normal}}
                     data-name="email"
                     name='envelope-square'
@@ -90,14 +102,7 @@ class AboutDialog extends Component {
                     onClick={this.handleOnEmail}
                   />
                 </div>
-                <ReactTooltip
-                  delayShow={200}
-                  className='contactTooltip'
-                  id="e-mail"
-                  effect='solid'
-                >
-                  <span> e-mail </span>
-                </ReactTooltip>
+                {this.renderCheck('email')}
                 <div id="dialogIconContainer" className="animated rollIn">
                   <FontAwesome
                     className='dialogIcon'
@@ -110,14 +115,7 @@ class AboutDialog extends Component {
                     onClick={this.handleOnLinkedin}
                   />
                 </div>
-                <ReactTooltip
-                  delayShow={200}
-                  className='contactTooltip'
-                  id="linkedIn"
-                  effect='solid'
-                >
-                  <span> LinkedIn </span>
-                </ReactTooltip>
+                {this.renderCheck('linkedIn')}
                 <div id="dialogIconContainer" className="animated rollIn">
                   <FontAwesome
                     className='dialogIcon'
@@ -130,14 +128,7 @@ class AboutDialog extends Component {
                     onClick={this.handleOnGithub}
                   />
                 </div>
-                <ReactTooltip
-                  delayShow={200}
-                  className='contactTooltip'
-                  id="github"
-                  effect='solid'
-                >
-                  <span> Github </span>
-                </ReactTooltip>
+                {this.renderCheck('github')}
               </div>
             </div>
           }
