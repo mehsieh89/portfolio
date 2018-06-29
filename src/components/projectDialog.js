@@ -3,20 +3,31 @@ import { Dialog } from 'material-ui';
 import CommMob from '../media/communityMob.jpg';
 import FontAwesome from 'react-fontawesome';
 import ReactTooltip from 'react-tooltip';
+import { findDOMNode } from 'react-dom'
 
 class ProjectDialog extends Component {
   constructor(props) {
     super(props);
     this.state = {
       isHovering: false,
+      triggered: true,
       normal: "white",
       hovered: "#A9B7C0"
     }
   }
 
-  componentWilMount = () => {
-    if (this.props.dialog.showProjectDialog) {
-      this.props.toggleProjectsDialog(true);
+  //encountered bug with update causing rerender of initial ReactTooltip
+  //create custom fadeout for tooltip
+
+  componentDidUpdate = () => {
+    if (this.state.triggered) {
+      new Promise((resolve, reject) => {
+        setTimeout(() => {
+          resolve(ReactTooltip.show(findDOMNode(this.refs.icon)));
+        }, 1500)
+      }).then(result => {
+        setTimeout(() => { ReactTooltip.hide(findDOMNode(this.refs.icon)); }, 2500)
+      })
     }
   }
 
@@ -29,11 +40,11 @@ class ProjectDialog extends Component {
   }
 
   onMouseEnter = () => {
-    this.setState({ isHovering: true });
+    this.setState({ isHovering: true, triggered: false });
   }
 
   onMouseLeave = () => {
-    this.setState({ isHovering: false });
+    this.setState({ isHovering: false, triggered: false });
   }
 
   handleConnectFourClick = () => {
@@ -41,10 +52,11 @@ class ProjectDialog extends Component {
   }
 
   renderCheck = () => {
-    if (this.state.isHovering) {
+    if (this.state.triggered || this.state.isHovering) {
       return (<ReactTooltip
                 delayShow={200}
                 place="left"
+                ref="tooltip"
                 className='projectTooltip animated fadeIn'
                 id="githubCode"
                 effect='solid'
@@ -117,6 +129,7 @@ class ProjectDialog extends Component {
               <div id="projectDialogIconContainer" className="animated rollIn">
                 <FontAwesome
                   className='dialogIcon'
+                  ref='icon'
                   data-tip data-for="githubCode"
                   style={this.state.isHovering ? {color: this.state.hovered} : {color: this.state.normal}}
                   name='github'

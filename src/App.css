@@ -503,6 +503,10 @@ li {
   border-top-width: 6px !important;
 }
 
+.delay {
+  animation-delay: 2s;
+}
+
 .arrowIcon
 {
     /* font-size: 50px; */
