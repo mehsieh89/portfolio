@@ -40,6 +40,23 @@ class ProjectDialog extends Component {
     window.open('https://mehsieh89.github.io/connectFour/')
   }
 
+  renderCheck = () => {
+    if (this.state.isHovering) {
+      return (<ReactTooltip
+                delayShow={200}
+                place="left"
+                className='projectTooltip animated fadeIn'
+                id="githubCode"
+                effect='solid'
+                border={true}
+              >
+                <span> Click here for the codebase! </span>
+              </ReactTooltip>)
+    } else {
+      return null;
+    }
+  }
+
   connectFourCheck = () => {
     const mediaHeight = this.props.dialog.currentProject.dimensions.height;
     const mediaWidth = this.props.dialog.currentProject.dimensions.width;
@@ -109,16 +126,7 @@ class ProjectDialog extends Component {
                   onClick={this.handleOnClick}
                 />
               </div>
-              <ReactTooltip
-                delayShow={200}
-                place="left"
-                className='projectTooltip'
-                id="githubCode"
-                effect='solid'
-                border={true}
-              >
-                <span> Click here for codebase! </span>
-              </ReactTooltip>
+              {this.renderCheck()}
             </div>
           }>
           {layoutAdjust()}
