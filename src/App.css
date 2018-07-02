@@ -503,20 +503,16 @@ li {
   border-top-width: 6px !important;
 }
 
-@keyframes fadeOut {
-  from {
-    opacity: 1;
-  }
-
-  to {
-    opacity: 0;
-  }
+@keyframes customAni {
+  0%   {opacity: 0;}
+  40%  {opacity: 1;}
+  60%  {opacity: 1;}
+  100% {opacity: 0;}
 }
 
-.fadeOut {
-  animation-name: fadeOut;
-  animation-duration: 1s;
-  animation-delay: 2s;
+.customAni {
+  animation-name: customAni;
+  animation-duration: 3.5s;
 }
 
 .arrowIcon

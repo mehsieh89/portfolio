@@ -10,6 +10,7 @@ class ProjectDialog extends Component {
     super(props);
     this.state = {
       isHovering: false,
+      triggered: true,
       normal: "white",
       hovered: "#A9B7C0"
     }
@@ -20,7 +21,6 @@ class ProjectDialog extends Component {
   }
 
   handleClose = () => {
-    this.setState({triggered: true});
     this.props.toggleProjectDialog();
   }
 
@@ -36,18 +36,56 @@ class ProjectDialog extends Component {
     window.open('https://mehsieh89.github.io/connectFour/')
   }
 
-  renderCheck = () => {
-    if (this.props.dialog.showProjectDialog || this.state.isHovering) {
+  renderCheckCodeTooltip = () => {
+    if (this.props.dialog.showProjectDialog && this.state.triggered) {
       return (<ReactTooltip
                 delayShow={200}
                 place="left"
                 ref="tooltip"
-                className='projectTooltip animated fadeIn fadeOut'
+                className='projectTooltip customAni'
                 id="githubCode"
                 effect='solid'
                 border={true}
               >
                 <span> Click here for the codebase! </span>
+              </ReactTooltip>)
+    } else {
+      return null;
+    }
+  }
+
+  checkCodeTimeout = () => {
+    if (this.props.dialog.showProjectDialog) {
+      new Promise((resolve, reject) => {
+        setTimeout(() => {
+          resolve(ReactTooltip.show(findDOMNode(this.refs.icon)));
+        }, 1500)
+      }).then(result => {
+        new Promise((resolve, reject) => {
+          setTimeout(() => {
+            resolve(ReactTooltip.hide(findDOMNode(this.refs.icon)));
+          }, 3400)
+        }).then(result => {
+          this.setState({
+            triggered: false
+          })
+        })
+      })
+    }
+  }
+
+  renderGithubTooltip = () => {
+    if (this.state.isHovering) {
+      return (<ReactTooltip
+                delayShow={200}
+                place="top"
+                ref="tooltip"
+                className='contactTooltip animated fadeIn'
+                id="githubCode"
+                effect='solid'
+                border={true}
+              >
+                <span> github </span>
               </ReactTooltip>)
     } else {
       return null;
@@ -99,21 +137,8 @@ class ProjectDialog extends Component {
         )
       }
     }
-
-    if (this.props.dialog.showProjectDialog) {
-      console.log('meow');
-      new Promise((resolve, reject) => {
-        setTimeout(() => {
-          resolve(ReactTooltip.show(findDOMNode(this.refs.icon)));
-        }, 1500)
-      }).then(result => {
-        new Promise((resolve, reject) => {
-          setTimeout(() => {
-            resolve(ReactTooltip.hide(findDOMNode(this.refs.icon)));
-           }, 2500)
-        }).then(result => {
-        })
-      })
+    if (this.state.triggered) {
+      this.checkCodeTimeout();
     }
 
     if (this.props.dialog.showProjectDialog) {
@@ -140,7 +165,9 @@ class ProjectDialog extends Component {
                   onClick={this.handleOnClick}
                 />
               </div>
-              {this.renderCheck()}
+              {this.renderCheckCodeTooltip()}
+              {this.renderGithubTooltip()}
+
             </div>
           }>
           {layoutAdjust()}
