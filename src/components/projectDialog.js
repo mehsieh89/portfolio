@@ -22,6 +22,9 @@ class ProjectDialog extends Component {
 
   handleClose = () => {
     this.props.toggleProjectDialog();
+    this.setState({
+      triggered: true
+    })
   }
 
   onMouseEnter = () => {
