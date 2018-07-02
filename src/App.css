@@ -503,13 +503,24 @@ li {
   border-top-width: 6px !important;
 }
 
-.delay {
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+.fadeOut {
+  animation-name: fadeOut;
+  animation-duration: 1s;
   animation-delay: 2s;
 }
 
 .arrowIcon
 {
-    /* font-size: 50px; */
     line-height: 0;
 
     position: absolute;

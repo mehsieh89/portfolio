@@ -10,24 +10,8 @@ class ProjectDialog extends Component {
     super(props);
     this.state = {
       isHovering: false,
-      triggered: true,
       normal: "white",
       hovered: "#A9B7C0"
-    }
-  }
-
-  //encountered bug with update causing rerender of initial ReactTooltip
-  //create custom fadeout for tooltip
-
-  componentDidUpdate = () => {
-    if (this.state.triggered) {
-      new Promise((resolve, reject) => {
-        setTimeout(() => {
-          resolve(ReactTooltip.show(findDOMNode(this.refs.icon)));
-        }, 1500)
-      }).then(result => {
-        setTimeout(() => { ReactTooltip.hide(findDOMNode(this.refs.icon)); }, 2500)
-      })
     }
   }
 
@@ -36,6 +20,7 @@ class ProjectDialog extends Component {
   }
 
   handleClose = () => {
+    this.setState({triggered: true});
     this.props.toggleProjectDialog();
   }
 
@@ -52,12 +37,12 @@ class ProjectDialog extends Component {
   }
 
   renderCheck = () => {
-    if (this.state.triggered || this.state.isHovering) {
+    if (this.props.dialog.showProjectDialog || this.state.isHovering) {
       return (<ReactTooltip
                 delayShow={200}
                 place="left"
                 ref="tooltip"
-                className='projectTooltip animated fadeIn'
+                className='projectTooltip animated fadeIn fadeOut'
                 id="githubCode"
                 effect='solid'
                 border={true}
@@ -113,6 +98,22 @@ class ProjectDialog extends Component {
           </div>
         )
       }
+    }
+
+    if (this.props.dialog.showProjectDialog) {
+      console.log('meow');
+      new Promise((resolve, reject) => {
+        setTimeout(() => {
+          resolve(ReactTooltip.show(findDOMNode(this.refs.icon)));
+        }, 1500)
+      }).then(result => {
+        new Promise((resolve, reject) => {
+          setTimeout(() => {
+            resolve(ReactTooltip.hide(findDOMNode(this.refs.icon)));
+           }, 2500)
+        }).then(result => {
+        })
+      })
     }
 
     if (this.props.dialog.showProjectDialog) {
