@@ -28,11 +28,11 @@ class ProjectDialog extends Component {
   }
 
   onMouseEnter = () => {
-    this.setState({ isHovering: true, triggered: false });
+    this.setState({ isHovering: true});
   }
 
   onMouseLeave = () => {
-    this.setState({ isHovering: false, triggered: false });
+    this.setState({ isHovering: false});
   }
 
   handleConnectFourClick = () => {
