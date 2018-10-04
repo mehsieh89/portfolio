@@ -39,43 +39,43 @@ class ProjectDialog extends Component {
     window.open('https://mehsieh89.github.io/connectFour/')
   }
 
-  renderCheckCodeTooltip = () => {
-    if (this.props.dialog.showProjectDialog && this.state.triggered) {
-      return (<ReactTooltip
-                delayShow={200}
-                place="left"
-                ref="tooltip"
-                className='projectTooltip customAni'
-                id="githubCode"
-                effect='solid'
-                border={true}
-              >
-                <span> Click here for the codebase! </span>
-              </ReactTooltip>)
-    } else {
-      return null;
-    }
-  }
+  // renderCheckCodeTooltip = () => {
+  //   if (this.props.dialog.showProjectDialog && this.state.triggered) {
+  //     return (<ReactTooltip
+  //               delayShow={200}
+  //               place="left"
+  //               ref="tooltip"
+  //               className='projectTooltip customAni'
+  //               id="githubCode"
+  //               effect='solid'
+  //               border={true}
+  //             >
+  //               <span> Click here for the codebase! </span>
+  //             </ReactTooltip>)
+  //   } else {
+  //     return null;
+  //   }
+  // }
 
-  checkCodeTimeout = () => {
-    if (this.props.dialog.showProjectDialog) {
-      new Promise((resolve, reject) => {
-        setTimeout(() => {
-          resolve(ReactTooltip.show(findDOMNode(this.refs.icon)));
-        }, 1500)
-      }).then(result => {
-        new Promise((resolve, reject) => {
-          setTimeout(() => {
-            resolve(ReactTooltip.hide(findDOMNode(this.refs.icon)));
-          }, 3400)
-        }).then(result => {
-          this.setState({
-            triggered: false
-          })
-        })
-      })
-    }
-  }
+  // checkCodeTimeout = () => {
+  //   if (this.props.dialog.showProjectDialog) {
+  //     new Promise((resolve, reject) => {
+  //       setTimeout(() => {
+  //         resolve(ReactTooltip.show(findDOMNode(this.refs.icon)));
+  //       }, 1500)
+  //     }).then(result => {
+  //       new Promise((resolve, reject) => {
+  //         setTimeout(() => {
+  //           resolve(ReactTooltip.hide(findDOMNode(this.refs.icon)));
+  //         }, 3400)
+  //       }).then(result => {
+  //         this.setState({
+  //           triggered: false
+  //         })
+  //       })
+  //     })
+  //   }
+  // }
 
   renderGithubTooltip = () => {
     if (this.state.isHovering) {
@@ -140,9 +140,7 @@ class ProjectDialog extends Component {
         )
       }
     }
-    if (this.state.triggered) {
-      this.checkCodeTimeout();
-    }
+
 
     if (this.props.dialog.showProjectDialog) {
       return (
@@ -168,7 +166,6 @@ class ProjectDialog extends Component {
                   onClick={this.handleOnClick}
                 />
               </div>
-              {this.renderCheckCodeTooltip()}
               {this.renderGithubTooltip()}
 
             </div>
