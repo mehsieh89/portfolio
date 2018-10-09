@@ -38,6 +38,10 @@ html, body {
 }
 
 #bodyContainer {
+  height: 85vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   position: relative;
 }
 #bodyContainer:after {
@@ -182,20 +186,17 @@ html, body {
 
 #communityMobImage2 {
   width: 440px;
-  margin: 0 auto;
+  margin: 2rem auto 0 auto;
   height: 200px;
-  position: relative;
-  right: 40px;
-  top: 20px;
 }
 
 #communityMobTxt {
-  width: 350px;
   height: 100%;
-  position: relative;
-  left: 30px;
-  margin: auto;
-  align-items: center;
+  width: 60%;
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 #commMobSlideComponent {
@@ -379,7 +380,7 @@ html, body {
 #sliderContainer {
   position: relative;
   top: 15px;
-  margin: 0 auto;
+  margin: auto auto;
   padding: 40px;
   width: 80%;
   justify-content: center;
