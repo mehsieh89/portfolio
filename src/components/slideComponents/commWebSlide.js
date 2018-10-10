@@ -11,6 +11,10 @@ class CommWebSlide extends Component {
     this.props.changeSliderIndex(0);
   }
 
+  // mouseEnter = () => {
+  //   console.log('meow');
+  // }
+
   render() {
     return (
       <div id="sliderImgFrame">
