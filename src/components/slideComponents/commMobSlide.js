@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import CommunityMob from '../../media/ComMobSingleMU.jpg';
 import { commMob } from '../projectData.js';
+import ProjectOverlay from './projectOverlay.js';
 
 class CommMobSlide extends Component {
 
@@ -13,6 +14,7 @@ class CommMobSlide extends Component {
   render() {
     return (
       <div id="sliderImgFrame">
+        <ProjectOverlay/>
         <img className="sliderImg" src={CommunityMob} onClick={this.handleOnClick} alt=""></img>
       </div>
     );

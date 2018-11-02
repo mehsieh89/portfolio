@@ -346,6 +346,12 @@ html, body {
   margin-top: 50px;
 }
 
+.projectOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 #selfContainer {
   display: flex;
   flex-direction: row-reverse;
@@ -405,6 +411,7 @@ html, body {
 }
 
 #sliderImgFrame {
+  position:relative;
   height: 550px;
   width: 850px;
   display: flex !important;
