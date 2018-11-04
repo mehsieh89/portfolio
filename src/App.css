@@ -350,6 +350,14 @@ html, body {
   position: absolute;
   top: 0;
   left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  visibility:hidden;
+}
+
+.projectOverlay:hover {
+  visibility:visible;
 }
 
 #selfContainer {
@@ -421,9 +429,9 @@ html, body {
   display: inline-block;
 }
 
-.sliderImg:hover {
-  transform: scale(1.035);
-}
+/* .sliderImg:hover {
+  transform: scale(1.025);
+} */
 
 .slick-dots {
   position: relative;
