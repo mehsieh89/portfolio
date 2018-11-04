@@ -352,13 +352,11 @@ html, body {
   left: 0;
   height: 100%;
   width: 100%;
-  background-color: black;
-  visibility:hidden;
 }
 
-.projectOverlay:hover {
+/* .projectOverlay:hover {
   visibility:visible;
-}
+} */
 
 #selfContainer {
   display: flex;
