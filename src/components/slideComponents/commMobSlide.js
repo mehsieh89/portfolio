@@ -30,6 +30,8 @@ class CommMobSlide extends Component {
     })
   }
 
+
+
   render() {
     return (
       <div id="sliderImgFrame"

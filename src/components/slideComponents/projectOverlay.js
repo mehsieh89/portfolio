@@ -2,39 +2,17 @@ import React, { Component } from 'react';
 
 export default
 class ProjectOverlay extends Component {
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {
-  //     isHovering: false,
-  //   }
-  // }
-
-  // mouseEnter = () => {
-  //   this.setState({
-  //     isHovering: true
-  //   })
-  // }
-  //
-  // mouseLeave = () => {
-  //   this.setState({
-  //     isHovering: false
-  //   })
-  // }
 
   render() {
-    let overlayStyle;
+    let overlayStyle = {opacity: "0"};
     if (this.props.isHovering) {
-      overlayStyle = {backgroundColor: "black"}
-    } else {
-      overlayStyle = {backgroundColor: "red"}
+      overlayStyle = {backgroundColor: "rgba(50, 50, 50, 0.7)"}
     }
     return (
       <div class="projectOverlay"
         style={overlayStyle}
-        // onMouseEnter={this.mouseEnter}
-        // onMouseLeave={this.mouseLeave}
       >
-        Hello
+        <p>Hello</p>
       </div>
     );
   };
