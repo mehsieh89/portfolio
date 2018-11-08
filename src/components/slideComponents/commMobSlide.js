@@ -11,7 +11,6 @@ class CommMobSlide extends Component {
     }
   }
 
-
   handleOnClick = () => {
     this.props.importProjectDialog(commMob);
     this.props.toggleProjectDialog();
@@ -30,17 +29,24 @@ class CommMobSlide extends Component {
     })
   }
 
-
+  overlayRender = () => {
+    if (this.state.isHovering) {
+      return (
+        <ProjectOverlay
+          isHovering={this.state.isHovering}
+        />
+      )
+    }
+  }
 
   render() {
+
     return (
       <div id="sliderImgFrame"
         onMouseEnter={this.mouseEnter}
         onMouseLeave={this.mouseLeave}
       >
-        <ProjectOverlay
-          isHovering={this.state.isHovering}
-        />
+        {this.overlayRender()}
         <img className="sliderImg" src={CommunityMob} onClick={this.handleOnClick} alt=""></img>
       </div>
     );
