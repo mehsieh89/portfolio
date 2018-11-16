@@ -350,6 +350,7 @@ html, body {
   position: absolute;
   top: 0;
   left: 0;
+  cursor: pointer;
   height: 100%;
   width: 100%;
   animation: fadeIn .25s ease-in;
@@ -405,7 +406,6 @@ html, body {
   margin: 0 auto;
   height: 550px;
   width: 850px;
-  cursor: pointer;
   transition: transform .2s;
 }
 
@@ -547,7 +547,7 @@ li {
     -webkit-transform: translate(0, -50%);
     -ms-transform: translate(0, -50%);
     transform: translate(0, -50%);
-    box-shadow: 0 0 0 4px #C7D8C6, 0 6px 4px grey;
+    box-shadow: 0 0 0 4px #C7D8C6, 0 4px 4px grey;
 
     cursor: pointer;
 

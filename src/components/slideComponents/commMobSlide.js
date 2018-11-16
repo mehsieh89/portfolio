@@ -45,9 +45,10 @@ class CommMobSlide extends Component {
       <div id="sliderImgFrame"
         onMouseEnter={this.mouseEnter}
         onMouseLeave={this.mouseLeave}
+        onClick={this.handleOnClick}
       >
         {this.overlayRender()}
-        <img className="sliderImg" src={CommunityMob} onClick={this.handleOnClick} alt=""></img>
+        <img className="sliderImg" src={CommunityMob} alt=""></img>
       </div>
     );
   }

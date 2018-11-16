@@ -44,9 +44,10 @@ class FridgrSlide extends Component {
       <div id="sliderImgFrame"
         onMouseEnter={this.mouseEnter}
         onMouseLeave={this.mouseLeave}
+        onClick={this.handleOnClick}
       >
         {this.overlayRender()}
-        <img className="sliderImg" src={FridgrMobMU} onClick={this.handleOnClick} alt=""></img>
+        <img className="sliderImg" src={FridgrMobMU} alt=""></img>
       </div>
     );
   }

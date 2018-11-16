@@ -44,9 +44,10 @@ class MoodifySlide extends Component {
       <div id="sliderImgFrame"
         onMouseEnter={this.mouseEnter}
         onMouseLeave={this.mouseLeave}
+        onClick={this.handleOnClick}
       >
         {this.overlayRender()}
-        <img className="sliderImg" src={Moodify} onClick={this.handleOnClick} alt=""></img>
+        <img className="sliderImg" src={Moodify} alt=""></img>
       </div>
     );
   }

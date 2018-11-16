@@ -44,9 +44,10 @@ class ConnectFourSlide extends Component {
       <div id="sliderImgFrame"
         onMouseEnter={this.mouseEnter}
         onMouseLeave={this.mouseLeave}
+        onClick={this.handleOnClick}
       >
         {this.overlayRender()}
-        <img className="sliderImg" src={ConnectFour} onClick={this.handleOnClick} alt=""></img>
+        <img className="sliderImg" src={ConnectFour} alt=""></img>
       </div>
     );
   }
