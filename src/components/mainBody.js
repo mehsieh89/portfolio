@@ -9,6 +9,7 @@ import MoodifySlide from './slideComponents/moodifySlide.js';
 import NextArrow from './slideComponents/nextArrow.js';
 import PrevArrow from './slideComponents/prevArrow.js';
 import Thumbnail from './thumbnail.js';
+import KorroBoxSlide from './slideComponents/commMobSlide.js';
 
 const imageThumbs = [commWeb, commMob, fridgr, moodify, connectFour];
 
@@ -71,6 +72,14 @@ class Main extends Component {
           nextArrow={ArrowRight}
           beforeChange={this.handleOnChange}
         >
+          {/* <div id="sliderImgContainer">
+            <KorroBoxSlide
+              dialog={this.props.dialog}
+              changeSliderIndex={this.props.changeSliderIndex}
+              toggleProjectDialog={this.props.toggleProjectDialog}
+              importProjectDialog={this.props.importProjectDialog}
+            />
+          </div> */}
           <div id="sliderImgContainer">
             <CommWebSlide
               dialog={this.props.dialog}
